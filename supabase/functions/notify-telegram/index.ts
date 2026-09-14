@@ -11,30 +11,60 @@ const corsHeaders = {
 };
 
 interface NotificationPayload {
-  eventType: "session_completed" | "streak_milestone" | "daily_reminder" | "test";
+  eventType?: "new_user" | "session_completed" | "streak_milestone" | "daily_reminder" | "test";
+  type?: "INSERT" | "UPDATE" | "DELETE";
+  table?: string;
+  schema?: string;
+  record?: {
+    id?: string;
+    email?: string;
+    display_name?: string;
+    created_at?: string;
+    raw_user_meta_data?: { name?: string };
+  };
   userName?: string;
+  userEmail?: string;
   wordsLearned?: number;
   streakDays?: number;
   accuracy?: number;
   nextReviewAt?: string;
   customMessage?: string;
-  targetChatId?: string; // Optional user-specific override
 }
 
+const escapeHtml = (value: unknown) => String(value ?? "")
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;")
+  .replaceAll("'", "&#39;");
+
+const maskEmail = (email: string) => {
+  const [name, domain] = email.split("@");
+  if (!domain) return "Không có email";
+  return `${name.slice(0, 2)}***@${domain}`;
+};
+
 serve(async (req: Request) => {
-  // 1. Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
 
   try {
+    if (req.method !== "POST") {
+      return new Response(JSON.stringify({ error: "Method not allowed" }), {
+        status: 405,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      });
+    }
+
     const botToken = Deno.env.get("TELEGRAM_BOT_TOKEN");
     const defaultChatId = Deno.env.get("TELEGRAM_CHAT_ID");
+    const chatId = defaultChatId;
 
-    if (!botToken) {
+    if (!botToken || !defaultChatId) {
       return new Response(
         JSON.stringify({
-          error: "TELEGRAM_BOT_TOKEN is not configured on server secrets.",
+          error: "Telegram server secrets are not fully configured.",
           status: "unconfigured"
         }),
         { status: 503, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -42,47 +72,43 @@ serve(async (req: Request) => {
     }
 
     const payload: NotificationPayload = await req.json().catch(() => ({}));
-    const chatId = payload.targetChatId || defaultChatId;
-
-    if (!chatId) {
-      return new Response(
-        JSON.stringify({
-          error: "TELEGRAM_CHAT_ID is missing. Please provide chatId or configure server secret.",
-          status: "missing_chat_id"
-        }),
-        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
-    // 2. Format rich HTML message with Panda Lingua brand
-    const user = payload.userName || "Học viên Panda";
+    const isDatabaseInsert = payload.type === "INSERT" && payload.record;
+    const eventType = payload.eventType || (isDatabaseInsert ? "new_user" : "session_completed");
+    const record = payload.record || {};
+    const rawName = payload.userName || record.display_name || record.raw_user_meta_data?.name || "Học viên Panda";
+    const rawEmail = payload.userEmail || record.email || "";
+    const user = escapeHtml(rawName);
+    const email = escapeHtml(maskEmail(rawEmail));
     const streak = payload.streakDays || 1;
     const words = payload.wordsLearned || 8;
     const acc = payload.accuracy !== undefined ? `${payload.accuracy}%` : "100%";
-    const dueTime = payload.nextReviewAt || "Ngày mai";
+    const dueTime = escapeHtml(payload.nextReviewAt || "Ngày mai");
 
     let telegramText = "";
 
-    if (payload.eventType === "streak_milestone") {
+    if (eventType === "new_user") {
+      const createdAt = escapeHtml(record.created_at || new Date().toISOString());
+      telegramText = `🐼 <b>[Panda Lingua] Có học viên mới!</b>\n\n` +
+        `👤 Tên: <b>${user}</b>\n` +
+        `📧 Email: <b>${email}</b>\n` +
+        `🕒 Đăng ký lúc: <b>${createdAt}</b>\n\n` +
+        `<a href="https://panda-chili.vercel.app">Mở Panda Lingua</a>`;
+    } else if (eventType === "streak_milestone") {
       telegramText = `🐼 <b>[Panda Lingua] Chúc mừng ${user}!</b>\n\n` +
         `🔥 <b>Chuỗi học tập: ${streak} ngày liên tiếp!</b>\n` +
-        `<i>Bạn đang giữ nhịp học tập xuất sắc! Đừng để ngọn lửa lụi tàn nhé.</i>\n\n` +
+        `<i>Bạn đang giữ nhịp học tập xuất sắc!</i>\n\n` +
         `⏰ <i>Phiên ôn tập tiếp theo: ${dueTime}</i>\n` +
-        `📲 <a href="https://panda-lingua.vercel.app">Vào học ngay trên Panda Lingua</a>`;
-    } else if (payload.eventType === "test") {
-      telegramText = `🐼 <b>[Panda Lingua] Kiểm tra kết nối Telegram Bot thành công!</b>\n\n` +
-        `Xin chào <b>${user}</b>,\n` +
-        `Hệ thống thông báo tiến độ học tiếng Trung HSK 1–2 đã sẵn sàng hoạt động.\n\n` +
-        `Chúc bạn học tập hăng say mỗi ngày! ✨`;
+        `📲 <a href="https://panda-chili.vercel.app">Vào học ngay</a>`;
+    } else if (eventType === "test") {
+      telegramText = `🐼 <b>[Panda Lingua] Kết nối Telegram thành công!</b>\n\n` +
+        `Hệ thống thông báo học viên mới đã sẵn sàng hoạt động. ✨`;
     } else {
-      // Default: session_completed
       telegramText = `🐼 <b>[Panda Lingua] Báo cáo tiến độ học tập</b>\n\n` +
         `👤 Học viên: <b>${user}</b>\n` +
         `📚 Đã học xong: <b>${words} từ vựng mới</b>\n` +
         `🎯 Độ chính xác Quiz: <b>${acc}</b>\n` +
         `🔥 Chuỗi streak: <b>${streak} ngày</b>\n\n` +
-        `⏰ Lần ôn tập SRS tiếp theo: <b>${dueTime}</b>\n\n` +
-        `<i>"Học ăn, học nói, học tiếng Trung mỗi ngày!"</i> 🐼🎒`;
+        `⏰ Lần ôn tập SRS tiếp theo: <b>${dueTime}</b>`;
     }
 
     // 3. Send message via Telegram Bot API

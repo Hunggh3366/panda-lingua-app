@@ -3746,6 +3746,11 @@ class PandaApp{
       }
 
       const session=result.data?.session;
+      if(this.authTab==='signup'){
+        supabase.functions.invoke('notify-telegram', {
+          body: { eventType: 'new_user', userName: name, userEmail: email }
+        }).catch(()=>{});
+      }
       if(session){
         const ok=await this.applyAuthSession(session);
         if(!ok)throw new Error('ACCOUNT_BLOCKED');
