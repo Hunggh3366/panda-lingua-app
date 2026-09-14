@@ -6,8 +6,12 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [viteSingleFile()],
     define: {
-      __SUPABASE_URL__: JSON.stringify(env.VITE_SUPABASE_URL || ''),
-      __SUPABASE_ANON_KEY__: JSON.stringify(env.VITE_SUPABASE_ANON_KEY || ''),
+      __SUPABASE_URL__: JSON.stringify(
+        env.VITE_SUPABASE_URL || 'https://rtxwfvnfansnaqxfgrgw.supabase.co'
+      ),
+      __SUPABASE_ANON_KEY__: JSON.stringify(
+        env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_2jzdnJASo9_WoPbdg2bIBQ_uVGfTfYQ'
+      ),
     },
   };
 });
