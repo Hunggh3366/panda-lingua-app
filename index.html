@@ -193,63 +193,7 @@
     </div>
   </div>
 
-  <!-- PANDA AI SETTINGS MODAL -->
-  <div id="panda-ai-settings-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title" aria-hidden="true">
-    <div class="relative w-[92vw] max-w-md bg-white rounded-2xl shadow-xl p-6 border border-[#DCE4E1] transform scale-95 transition-transform duration-200">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-2.5">
-          <span class="text-2xl">⚙️</span>
-          <div>
-            <h3 id="ai-settings-title" class="text-base font-bold text-[#173B6C]">Cấu hình Gia sư Panda AI</h3>
-            <p class="text-xs text-[#64717D]">Đa tầng thông minh: Google Gemini & OpenRouter</p>
-          </div>
-        </div>
-        <button id="ai-settings-close" class="w-8 h-8 rounded-full hover:bg-slate-100 text-[#64717D] flex items-center justify-center">
-          <span class="material-symbols-outlined text-xl">close</span>
-        </button>
-      </div>
 
-      <div class="space-y-4 text-xs">
-          <div class="rounded-xl border border-[#C8E6C9] bg-[#E8F5E9] p-3">
-            <p class="font-semibold text-[#006C44] flex items-center gap-1.5"><span class="material-symbols-outlined text-base">verified</span> Động cơ kép (Dual-Engine Resilient AI)</p>
-            <p class="text-[11px] text-[#2E7D32] mt-1">Hệ thống ưu tiên <strong>Google Gemini Flash</strong> tốc độ cao và hạn mức lớn, tự động chuyển sang <strong>OpenRouter</strong> hoặc bộ tri thức ngoại tuyến nếu mất mạng.</p>
-          </div>
-
-        <div>
-          <label class="block font-semibold text-[#173B6C] mb-1">Mô hình hoạt động chính:</label>
-          <div class="w-full px-3 py-2.5 rounded-xl border border-[#DCE4E1] bg-[#F7FAF8] text-xs font-semibold text-[#173B6C] flex items-center justify-between">
-            <span>✨ Google Gemini Flash-Lite (Nhanh & tiết kiệm)</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#E8F5E9] text-[#006C44] font-bold">Hoạt động</span>
-          </div>
-        </div>
-
-        <div class="p-3 bg-[#FFF8E1] rounded-xl border border-[#FFE082] text-[#7A4F00]">
-          <p class="font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">shield</span> Bảo vệ phiên học liên tục:</p>
-          <p class="mt-0.5 text-[11px] leading-relaxed">Khi không có kết nối internet hoặc API ngoài chạm trần, app kích hoạt ngay kho chiết tự sư phạm tích hợp sẵn (Offline-first) để buổi học không bao giờ bị ngắt quãng.</p>
-        </div>
-
-        <div class="p-3 bg-[#E3F2FD]/50 rounded-xl border border-[#BBDEFB]">
-          <div class="flex items-center justify-between mb-1.5">
-            <span class="font-bold text-[#173B6C] flex items-center gap-1 text-xs">
-              <span>✈️</span><span>Thông báo Telegram Bot</span>
-            </span>
-            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#173B6C] border border-[#BBDEFB]">Edge Function</span>
-          </div>
-          <p class="text-[11px] text-[#64717D] leading-relaxed mb-2">Nhận thông báo hoàn thành bài học, chúc mừng streak và lịch ôn tập SRS về điện thoại.</p>
-          <div class="flex gap-2">
-            <input id="setting-telegram-chatid" type="text" placeholder="Chat ID (vd: 123456789)" class="flex-1 px-3 py-1.5 rounded-lg border border-[#DCE4E1] text-xs font-mono bg-white outline-none focus:border-[#173B6C]"/>
-            <button type="button" id="btn-test-telegram" class="px-3 py-1.5 bg-[#173B6C] hover:bg-[#102B50] text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap shadow-sm">Gửi test</button>
-          </div>
-          <p id="telegram-test-feedback" class="text-[11px] mt-1.5 hidden"></p>
-        </div>
-
-        <div class="flex gap-2 pt-2">
-          <button id="ai-settings-save" class="flex-1 py-2.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl font-bold shadow-sm">Lưu cấu hình</button>
-          <button id="ai-settings-clear-cache" class="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-[#64717D] rounded-xl font-medium" title="Xóa cache để tải lại mới">Xóa cache AI</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- AUTH & GUEST UPGRADE MODAL (F02 / P-06 / P-07) -->
   <div id="panda-auth-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-slate-900/45 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" aria-hidden="true">
@@ -3484,7 +3428,6 @@ class PandaApp{
     save();
     this.bindAiEvents();
     this.bindAuthEvents();
-    this.bindTelegramEvents();
     await this.initAuth();
   }
   async initAuth(){
@@ -3527,21 +3470,7 @@ class PandaApp{
   bindAiEvents(){
     document.getElementById('ai-btn-close')?.addEventListener('click',()=>this.closeAiAssistant());
     document.getElementById('panda-ai-drawer')?.addEventListener('click',e=>{if(e.target===e.currentTarget)this.closeAiAssistant();});
-    document.getElementById('ai-btn-settings')?.addEventListener('click',()=>this.openAiSettings());
-    document.getElementById('ai-settings-close')?.addEventListener('click',()=>this.closeAiSettings());
-    document.getElementById('panda-ai-settings-modal')?.addEventListener('click',e=>{if(e.target===e.currentTarget)this.closeAiSettings();});
 
-    document.getElementById('ai-settings-save')?.addEventListener('click',()=>{
-      this.closeAiSettings();
-      if(this.currentAiVocab)this.executeAiQuery(this.currentAiVocab,this.currentAiType);
-    });
-
-    document.getElementById('ai-settings-clear-cache')?.addEventListener('click',()=>{
-      clearAiCache();
-      const contentBox=document.getElementById('ai-content');
-      if(contentBox)contentBox.innerHTML='<div class="text-xs text-[#006C44] py-2">✓ Đã làm sạch cache Panda AI.</div>';
-      if(this.currentAiVocab)this.executeAiQuery(this.currentAiVocab,this.currentAiType);
-    });
 
     document.querySelectorAll('.ai-chip').forEach(btn=>{
       btn.addEventListener('click',()=>{
@@ -3605,24 +3534,13 @@ class PandaApp{
   }
 
   openAiSettings(){
-    const cfg=getAiConfig();
-    const keyInput=document.getElementById('setting-ai-key');
-    const modelInput=document.getElementById('setting-ai-model');
-    if(keyInput)keyInput.value=cfg.apiKey||'';
-    if(modelInput)modelInput.value=cfg.model||'openrouter/free';
-    const modal=document.getElementById('panda-ai-settings-modal');
-    if(modal){
-      modal.setAttribute('aria-hidden','false');
-      requestAnimationFrame(()=>modal.classList.add('show'));
-    }
+    this.navigate('overview');
+    setTimeout(()=>{
+      document.getElementById('roadmap-card-root')?.scrollIntoView({behavior:'smooth'});
+    },150);
   }
 
-  closeAiSettings(){
-    const modal=document.getElementById('panda-ai-settings-modal');
-    if(!modal)return;
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden','true');
-  }
+  closeAiSettings(){}
 
   async executeAiQuery(vocab,type,custom=''){
     const contentBox=document.getElementById('ai-content');
@@ -3871,84 +3789,23 @@ class PandaApp{
     list.querySelectorAll('[data-action]').forEach(btn=>btn.onclick=async()=>{const card=btn.closest('[data-admin-user]'),id=card.dataset.adminUser,action=btn.dataset.action;if(action==='delete'&&!confirm('Xóa vĩnh viễn tài khoản và toàn bộ dữ liệu học?'))return;if(action==='ban'&&!confirm('Khóa tài khoản này?'))return;btn.disabled=true;try{await this.adminRequest(action,id);await this.loadAdminUsers();}catch{alert('Thao tác chưa thành công. Vui lòng thử lại.');}finally{btn.disabled=false;}});
   }
 
-  bindTelegramEvents(){
-    const input = document.getElementById('setting-telegram-chatid');
-    const testBtn = document.getElementById('btn-test-telegram');
-    const feedback = document.getElementById('telegram-test-feedback');
-
-    if(input){
-      input.value = state.telegram?.chatId || '';
-      input.addEventListener('change', () => {
-        state.telegram.chatId = input.value.trim();
-        save();
-      });
-    }
-
-    testBtn?.addEventListener('click', async () => {
-      const chatId = input?.value.trim() || state.telegram?.chatId;
-      if(!chatId){
-        if(feedback){
-          feedback.className = 'text-[11px] text-[#C94A4A] mt-1.5 block';
-          feedback.textContent = '⚠️ Vui lòng nhập Chat ID Telegram của bạn trước khi test.';
-        }
-        input?.focus();
-        return;
-      }
-
-      state.telegram.chatId = chatId;
-      save();
-
-      testBtn.disabled = true;
-      testBtn.textContent = 'Đang gửi...';
-
-      if(feedback){
-        feedback.className = 'text-[11px] text-[#173B6C] mt-1.5 block animate-pulse';
-        feedback.textContent = '✈️ Đang kết nối Edge Function notify-telegram...';
-      }
-
-      try {
-        const res = await fetch('/api/notify-telegram', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            eventType: 'test',
-            userName: state.user?.name || 'Học viên Panda',
-            targetChatId: chatId
-          })
-        });
-
-        if(res.ok){
-          const data = await res.json();
-          if(feedback){
-            feedback.className = 'text-[11px] text-[#006C44] font-semibold mt-1.5 block';
-            feedback.textContent = '✓ Đã gửi tin nhắn thông báo thành công đến Telegram!';
-          }
-        } else {
-          throw new Error('Server returned ' + res.status);
-        }
-      } catch (err) {
-        if(feedback){
-          feedback.className = 'text-[11px] text-[#006C44] mt-1.5 block bg-white p-2 rounded-lg border border-[#BBDEFB]';
-          feedback.innerHTML = `✓ <b>Đã kích hoạt Edge Function!</b><br>Payload: <code>test → ChatID: ${esc(chatId)}</code>. Khi deploy Supabase với BOT_TOKEN, tin nhắn sẽ đến máy của bạn.`;
-        }
-      } finally {
-        testBtn.disabled = false;
-        testBtn.textContent = 'Gửi test';
-      }
-    });
-  }
-
   renderShell(){
     const app=document.getElementById('app');
     if(!document.getElementById('layout-wrapper')){
       app.innerHTML=`<div id="layout-wrapper" class="bg-[#F7FAF8] text-[#17212B] min-h-screen flex flex-col md:flex-row pb-20 md:pb-0"><div id="sidebar-slot"></div><div class="flex-1 flex flex-col min-h-screen"><div id="header-slot"></div><main id="main-content-container" class="flex-1 flex flex-col"></main></div><div id="bottom-nav-slot"></div></div>`;
     }
-    document.getElementById('header-slot').innerHTML=`<header class="md:hidden bg-surface flex justify-between items-center px-4 py-3 w-full sticky top-0 border-b border-border z-40 shadow-sm"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full overflow-hidden bg-[#edf4ff] border border-[#DCE4E1] flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_HEADER}" alt="Panda"></div><h1 class="text-lg font-bold text-[#173B6C]">Gia sư từ vựng</h1></div><div class="flex items-center gap-2"><button id="header-ai-btn" class="px-2.5 py-1 bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-bold flex items-center gap-1 transition-all"><span>🐼 AI</span></button><button id="header-user-btn" class="px-2.5 py-1 bg-white hover:bg-[#edf4ff] text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-all"><span class="w-2 h-2 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="max-w-[70px] truncate">${state.user?.isGuest===false?esc(state.user.name):'Khách'}</span></button></div></header>`;
-    document.getElementById('sidebar-slot').innerHTML=`<nav class="hidden md:flex flex-col py-6 bg-[#edf4ff]/60 h-screen w-64 border-r border-border shadow-sm flex-shrink-0 sticky top-0"><div class="px-5 mb-4 flex items-center gap-3"><div class="w-12 h-12 rounded-full overflow-hidden bg-surface border-2 border-white shadow-sm flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_SIDEBAR}" alt="Panda Coach"></div><div><h2 class="text-base font-bold text-[#173B6C]">Gia sư Panda</h2><span class="inline-block mt-0.5 px-2 py-0.5 bg-[#173B6C] text-white text-[10px] font-bold rounded-full">HSK 1-2</span></div></div><div class="px-3 mb-4"><button id="sidebar-user-btn" class="w-full py-2 px-3 rounded-xl bg-white border border-[#DCE4E1] hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2 overflow-hidden"><span class="w-2.5 h-2.5 shrink-0 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="truncate">${state.user?.isGuest===false?esc(state.user.name):'Chế độ Khách (Offline)'}</span></div><span class="material-symbols-outlined text-base text-[#64717D]">account_circle</span></button></div><ul class="flex flex-col gap-1.5 px-3">${NAV.map(n=>{const active=this.currentTab===n.id,b=n.badge?n.badge():0;return `<li><button data-tab="${n.id}" class="nav-tab-btn w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-150 ${active?'bg-[#173B6C] text-white shadow-sm':'text-[#64717D] hover:bg-[#edf4ff] hover:text-[#173B6C]'}"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-xl">${n.icon}</span><span>${n.desktop}</span></div>${b?`<span class="px-2 py-0.5 text-xs rounded-full ${active?'bg-[#4CAF7D] text-white':'bg-[#E8F5E9] text-[#006C44]'}">${b}</span>`:''}</button></li>`}).join('')}</ul><div class="mt-auto px-4 flex flex-col gap-2.5"><button id="sidebar-ai-btn" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#edf4ff] to-[#e8f5e9] border border-[#173B6C]/20 hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2"><span>🐼✨</span><span>Gia sư AI (OpenRouter)</span></div><span class="material-symbols-outlined text-base text-[#006C44]">settings</span></button><div class="bg-surface rounded-xl p-3.5 border border-[#DCE4E1] shadow-sm text-center"><p class="text-xs font-semibold text-[#173B6C]">“Học ăn, học nói, học tiếng Trung mỗi ngày!”</p><span class="text-[10px] text-[#64717D] mt-1 block">Mục tiêu: 10 phút/ngày</span></div></div></nav>`;
+    document.getElementById('header-slot').innerHTML=`<header class="md:hidden bg-surface flex justify-between items-center px-4 py-3 w-full sticky top-0 border-b border-border z-40 shadow-sm"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full overflow-hidden bg-[#edf4ff] border border-[#DCE4E1] flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_HEADER}" alt="Panda"></div><h1 class="text-lg font-bold text-[#173B6C]">Gia sư từ vựng</h1></div><div class="flex items-center gap-2"><button id="header-ai-btn" class="px-2.5 py-1 bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-bold flex items-center gap-1 transition-all"><span>🐼 Lộ trình AI</span></button><button id="header-user-btn" class="px-2.5 py-1 bg-white hover:bg-[#edf4ff] text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-all"><span class="w-2 h-2 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="max-w-[70px] truncate">${state.user?.isGuest===false?esc(state.user.name):'Khách'}</span></button></div></header>`;
+    document.getElementById('sidebar-slot').innerHTML=`<nav class="hidden md:flex flex-col py-6 bg-[#edf4ff]/60 h-screen w-64 border-r border-border shadow-sm flex-shrink-0 sticky top-0"><div class="px-5 mb-4 flex items-center gap-3"><div class="w-12 h-12 rounded-full overflow-hidden bg-surface border-2 border-white shadow-sm flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_SIDEBAR}" alt="Panda Coach"></div><div><h2 class="text-base font-bold text-[#173B6C]">Gia sư Panda</h2><span class="inline-block mt-0.5 px-2 py-0.5 bg-[#173B6C] text-white text-[10px] font-bold rounded-full">HSK 1-2</span></div></div><div class="px-3 mb-4"><button id="sidebar-user-btn" class="w-full py-2 px-3 rounded-xl bg-white border border-[#DCE4E1] hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2 overflow-hidden"><span class="w-2.5 h-2.5 shrink-0 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="truncate">${state.user?.isGuest===false?esc(state.user.name):'Chế độ Khách (Offline)'}</span></div><span class="material-symbols-outlined text-base text-[#64717D]">account_circle</span></button></div><ul class="flex flex-col gap-1.5 px-3">${NAV.map(n=>{const active=this.currentTab===n.id,b=n.badge?n.badge():0;return `<li><button data-tab="${n.id}" class="nav-tab-btn w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-150 ${active?'bg-[#173B6C] text-white shadow-sm':'text-[#64717D] hover:bg-[#edf4ff] hover:text-[#173B6C]'}"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-xl">${n.icon}</span><span>${n.desktop}</span></div>${b?`<span class="px-2 py-0.5 text-xs rounded-full ${active?'bg-[#4CAF7D] text-white':'bg-[#E8F5E9] text-[#006C44]'}">${b}</span>`:''}</button></li>`}).join('')}</ul><div class="mt-auto px-4 flex flex-col gap-2.5"><button id="sidebar-ai-btn" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#edf4ff] to-[#e8f5e9] border border-[#173B6C]/20 hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2"><span>🐼✨</span><span>Lộ trình học AI</span></div><span class="material-symbols-outlined text-base text-[#006C44]">arrow_forward</span></button><div class="bg-surface rounded-xl p-3.5 border border-[#DCE4E1] shadow-sm text-center"><p class="text-xs font-semibold text-[#173B6C]">“Học ăn, học nói, học tiếng Trung mỗi ngày!”</p><span class="text-[10px] text-[#64717D] mt-1 block">Mục tiêu: 10 phút/ngày</span></div></div></nav>`;
     document.getElementById('bottom-nav-slot').innerHTML=`<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/95 backdrop-blur-md border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.04)] grid grid-cols-6 items-center h-16 px-1 safe-bottom">${NAV.map(n=>{const active=this.currentTab===n.id,b=n.badge?n.badge():0;return `<button data-tab="${n.id}" class="nav-tab-btn flex flex-col items-center justify-center py-1 transition-all duration-150 relative ${active?'text-[#173B6C] font-bold scale-105':'text-[#64717D] hover:text-[#173B6C]'}"><div class="relative"><span class="material-symbols-outlined text-[22px]">${n.icon}</span>${b?`<span class="absolute -top-1 -right-1.5 min-w-4 h-4 px-0.5 bg-[#C94A4A] text-white text-[8px] font-bold rounded-full flex items-center justify-center border-2 border-white">${Math.min(b,99)}</span>`:''}</div><span class="text-[9px] mt-0.5 whitespace-nowrap">${n.mobile}</span></button>`}).join('')}</nav>`;
     document.querySelectorAll('.nav-tab-btn').forEach(btn=>btn.addEventListener('click',()=>this.navigate(btn.dataset.tab)));
-    document.getElementById('header-ai-btn')?.addEventListener('click',()=>this.openAiSettings());
-    document.getElementById('sidebar-ai-btn')?.addEventListener('click',()=>this.openAiSettings());
+    document.getElementById('header-ai-btn')?.addEventListener('click',()=>{
+      this.navigate('overview');
+      setTimeout(()=>{document.getElementById('roadmap-card-root')?.scrollIntoView({behavior:'smooth'});},150);
+    });
+    document.getElementById('sidebar-ai-btn')?.addEventListener('click',()=>{
+      this.navigate('overview');
+      setTimeout(()=>{document.getElementById('roadmap-card-root')?.scrollIntoView({behavior:'smooth'});},150);
+    });
     document.getElementById('header-user-btn')?.addEventListener('click',()=>this.openAuthModal());
     document.getElementById('sidebar-user-btn')?.addEventListener('click',()=>this.openAuthModal());
   }
