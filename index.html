@@ -3820,20 +3820,33 @@ class PandaApp{
         result=await supabase.auth.signInWithPassword({email,password:pass});
       }
       if(result.error) throw result.error;
+
+      // Khi email đã tồn tại, Supabase có thể trả user giả với identities rỗng
+      // để tránh dò tài khoản. Không được hiển thị "đăng ký thành công" trong trường hợp này.
+      if(this.authTab==='signup' && result.data?.user && Array.isArray(result.data.user.identities) && result.data.user.identities.length===0){
+        throw new Error('ACCOUNT_ALREADY_EXISTS');
+      }
+
       const session=result.data?.session;
       if(session){
         const ok=await this.applyAuthSession(session);
         if(!ok)throw new Error('ACCOUNT_BLOCKED');
         if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#E8F5E9] text-[#006C44] border border-[#C8E6C9] block';feedback.innerHTML=`<strong>✓ ${this.authTab==='signup'?'Đăng ký':'Đăng nhập'} thành công.</strong>`;}
         passInput.value='';setTimeout(()=>{this.closeAuthModal();this.renderShell();this.navigate('overview');},500);
-      }else if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFF8E1] text-[#7A4F00] border border-[#FFE082] block';feedback.textContent='Tài khoản đã được tạo. Hãy kiểm tra email xác nhận trước khi đăng nhập.';}
+      }else if(this.authTab==='signup'){
+        // Project vẫn yêu cầu xác nhận email: gửi lại confirmation để user không bị mắc kẹt.
+        await supabase.auth.resend({type:'signup',email,options:{emailRedirectTo:window.location.origin}}).catch(()=>{});
+        if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFF8E1] text-[#7A4F00] border border-[#FFE082] block';feedback.innerHTML='<strong>Tài khoản đã được tạo nhưng chưa kích hoạt.</strong><br>Hãy mở email xác nhận rồi quay lại đăng nhập. Email xác nhận vừa được gửi lại.';}
+      }else{
+        throw new Error('AUTH_SESSION_MISSING');
+      }
     }catch(error){
       const raw=String(error?.message||'');
       let message='Chưa thể xác thực tài khoản. Vui lòng thử lại.';
-      if(/invalid login credentials/i.test(raw))message='Email hoặc mật khẩu không đúng. Nếu vừa đăng ký, hãy dùng đúng mật khẩu đã tạo.';
-      else if(/email not confirmed/i.test(raw))message='Email chưa được xác nhận. Hãy mở email xác nhận rồi đăng nhập lại.';
+      if(/invalid login credentials/i.test(raw))message='Email hoặc mật khẩu không đúng. Nếu tài khoản vừa tạo, hãy kiểm tra email xác nhận trước.';
+      else if(/email not confirmed/i.test(raw))message='Tài khoản đã tồn tại nhưng email chưa được xác nhận. Hãy mở email xác nhận rồi đăng nhập lại.';
+      else if(/ACCOUNT_ALREADY_EXISTS|already registered|already been registered/i.test(raw))message='Email này đã có tài khoản. Hãy chuyển sang Đăng nhập hoặc đặt lại mật khẩu.';
       else if(/banned|ACCOUNT_BLOCKED/i.test(raw))message='Tài khoản đang bị khóa. Vui lòng liên hệ quản trị viên.';
-      else if(/already registered|already been registered/i.test(raw))message='Email này đã có tài khoản. Hãy chuyển sang Đăng nhập.';
       else if(/rate limit|too many/i.test(raw))message='Bạn thao tác quá nhanh. Vui lòng thử lại sau ít phút.';
       else if(/fetch|network/i.test(raw))message='Không kết nối được dịch vụ đăng nhập. Kiểm tra mạng và thử lại.';
       if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFEBEE] text-[#C94A4A] border border-[#FFCDD2] block';feedback.textContent=message;}
