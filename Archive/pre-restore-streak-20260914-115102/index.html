@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panda Lingua — Tiếng Trung HSK 1–2</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: "#0F172A", // Slate 900
+              hover: "#1E293B",
+              accent: "#0F766E",  // Deep Jade / Teal 700
+              accentSoft: "#F0FDFA" // Teal 50
+            },
+            surface: {
+              DEFAULT: "#FFFFFF",
+              subtle: "#FAFAF9", // Warm neutral 50
+              muted: "#F4F4F5"   // Zinc 100
+            },
+            line: {
+              DEFAULT: "#E4E4E7", // Zinc 200
+              subtle: "#F4F4F5"
+            },
+            txt: {
+              main: "#09090B",   // Zinc 950
+              secondary: "#52525B", // Zinc 600
+              muted: "#71717A",  // Zinc 500
+              subtle: "#A1A1AA"  // Zinc 400
+            }
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "'Inter'", "sans-serif"],
+            hanzi: ["'Noto Sans SC'", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      background-color: #FAFAF9;
+      color: #09090B;
+      -webkit-tap-highlight-color: transparent;
+      letter-spacing: -0.01em;
+    }
+    
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .srs-card-flip {
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .srs-card-flip.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .srs-card-front, .srs-card-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .srs-card-back {
+      transform: rotateY(180deg);
+    }
+    
+    /* Smooth focus rings */
+    *:focus-visible {
+      outline: 2px solid #0F766E;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-surface-subtle text-txt-main antialiased selection:bg-brand selection:text-white">
+  <div id="app"></div>
+
+  <!-- Main Application Script -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

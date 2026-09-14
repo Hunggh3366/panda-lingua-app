@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gia sư từ vựng - Ôn tập SRS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d1dbe9",
+                        "surface-container-low": "#edf4ff",
+                        "tertiary-fixed": "#ffdcc3",
+                        "primary": "#002550",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#6b3a0a",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#747780",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#da965f",
+                        "surface-container-high": "#dfe9f7",
+                        "tertiary": "#3d1d00",
+                        "on-primary-container": "#87a6de",
+                        "surface-tint": "#3f5f92",
+                        "on-secondary-fixed": "#002112",
+                        "danger": "#C94A4A",
+                        "surface-variant": "#d9e3f1",
+                        "on-background": "#121c26",
+                        "tertiary-fixed-dim": "#ffb77e",
+                        "surface": "#FFFFFF",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#77daa4",
+                        "on-primary-fixed-variant": "#254778",
+                        "secondary": "#006c44",
+                        "primary-container": "#173b6c",
+                        "primary-fixed": "#d6e3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-dark": "#102B50",
+                        "on-primary-fixed": "#001b3d",
+                        "inverse-on-surface": "#e8f2ff",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "secondary-fixed": "#93f7bf",
+                        "tertiary-container": "#5d2f00",
+                        "surface-bright": "#f7f9ff",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-secondary-container": "#007349",
+                        "surface-container": "#e4effd",
+                        "inverse-surface": "#27313c",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-surface": "#121c26",
+                        "inverse-primary": "#a9c7ff",
+                        "secondary-container": "#93f7bf",
+                        "outline-variant": "#c3c6d0",
+                        "on-secondary-fixed-variant": "#005232",
+                        "on-surface-variant": "#43474f",
+                        "muted-text": "#64717D",
+                        "border": "#DCE4E1",
+                        "background": "#F7FAF8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "lg": "24px",
+                        "xs": "8px",
+                        "sm": "12px",
+                        "container-max": "1200px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .flip-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-border docked full-width top-0 z-40">
+<div class="flex justify-between items-center px-md py-xs w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A cute, friendly vector illustration of a panda mascot wearing a small graduation cap, designed in a modern flat style with soft lighting. The panda is smiling warmly, conveying a sense of encouragement and approachability for a language learning app. The color palette features deep navy, soft whites, and gentle warm accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJzQ18IY1ju30jj3LX--jPfEWfulZrSYh-U2ZHQVkGUWhnmbxPw7OSV9l-2eXbYDvNPvulbFkON9L5_WTCYm6DDB3QTMlxqKMgqFDOFbCgyQ9FA946UQ_ySBSl0FsB2WRlX3mBxSd4G0RZG5pA0s-XEZpgrXnq0xNIV3ClOPYl-IngbabNj3g5l5fqKkgrppaoU0G3l0Q8ORJwd9dVZZPaaX39DvLq5Mol_M_aMacLnu8pd6I7c9ZI"/>
+<h1 class="font-headline-md text-headline-md-mobile text-primary font-bold">Gia sư từ vựng</h1>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-lg">
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">home</span>
+                    Trang chủ
+                </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">menu_book</span>
+                    Học tập
+                </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">quiz</span>
+                    Kiểm tra
+                </a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-md text-label-md px-3 py-2 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">history</span>
+                    Ôn tập
+                </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors px-3 py-2 rounded-lg flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">bar_chart</span>
+                    Thống kê
+                </a>
+</div>
+<div class="flex items-center">
+<button class="text-primary hover:bg-surface-container p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 flex max-w-container-max mx-auto w-full relative">
+<!-- NavigationDrawer (Desktop) -->
+<aside class="hidden md:flex flex-col py-lg h-screen w-64 rounded-r-xl border-r border-border shadow-sm bg-surface-container-low flex-shrink-0 sticky top-[64px]">
+<div class="px-md mb-lg flex items-center gap-3">
+<img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="A portrait illustration of a cheerful panda mascot wearing reading glasses and a cozy sweater, functioning as a virtual coach. The style is modern, soft, and approachable, using a palette of calming blues and warm whites, set against a pristine, bright background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1NGzKrWBr7TZJnOYhijph4sioD71MHpLfuo9Z6xaPyE9QVM8Hl_Mf3cTadkCudH5MUThdbengKmWCq8fRYCArJfiUpMPIqtWYgyk8p2ZIuBMfQQiGQyQJZmCyEZ1FaUHUw_cbK-VAeM3AUOFMoS7D3UBcW_MHpPEnN0wykdc8TYgH6cykE1SzRuA1x7lYWkXJDBpvqn_k4yaoo1JJiB1NCWh5DjHpGyVeiO_TCO843efbd2E-yGC5"/>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Gia sư Panda</h2>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Cố lên bạn ơi!</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-primary-container text-on-primary-container text-xs rounded-full font-label-sm font-semibold">HSK 1-2</span>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant mx-2 my-1 rounded-lg hover:bg-surface-variant transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                    Tổng quan
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant mx-2 my-1 rounded-lg hover:bg-surface-variant transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+                    Bài học mới
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant mx-2 my-1 rounded-lg hover:bg-surface-variant transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">edit_note</span>
+                    Luyện tập
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary text-on-secondary font-semibold rounded-lg mx-2 my-1 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">refresh</span>
+                    SRS Review
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant mx-2 my-1 rounded-lg hover:bg-surface-variant transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+                    Tiến độ
+                </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col items-center justify-start p-md md:p-lg pb-24 md:pb-lg w-full max-w-2xl mx-auto">
+<!-- Progress Section -->
+<div class="w-full mb-lg">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Phiên ôn tập hiện tại</span>
+<span class="font-label-md text-label-md text-primary font-semibold">12 / 20 từ</span>
+</div>
+<div class="w-full h-2 bg-border rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-300" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Flashcard Area -->
+<div class="w-full aspect-[4/3] max-h-[400px] mb-lg relative perspective-1000 flip-card cursor-pointer" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner w-full h-full absolute inset-0 rounded-xl shadow-[0px_4px_12px_rgba(23,59,108,0.05)] border border-border bg-surface">
+<!-- Front (Hanzi) -->
+<div class="flip-card-front w-full h-full absolute inset-0 flex flex-col items-center justify-center p-md bg-surface rounded-xl">
+<span class="text-[80px] md:text-[120px] font-bold text-primary leading-none">你好</span>
+<div class="absolute bottom-4 text-muted-text flex items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+<span class="font-label-sm text-label-sm">Nhấn để lật</span>
+</div>
+</div>
+<!-- Back (Meaning/Pinyin) -->
+<div class="flip-card-back w-full h-full absolute inset-0 flex flex-col items-center justify-center p-md bg-surface-bright rounded-xl border border-surface-variant">
+<span class="text-[32px] md:text-[40px] font-headline-lg text-primary mb-sm">nǐ hǎo</span>
+<div class="w-16 h-1 bg-surface-variant rounded-full mb-md"></div>
+<span class="font-body-lg text-body-lg text-on-surface text-center">Xin chào</span>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant text-center max-w-[80%]">
+                            Dùng để chào hỏi một người một cách thân thiện.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons (Evaluation) -->
+<div class="w-full grid grid-cols-3 gap-sm opacity-50 pointer-events-none transition-opacity duration-300" id="eval-buttons">
+<button class="flex flex-col items-center justify-center p-sm rounded-xl border-2 border-danger bg-[#FFF5F5] text-danger hover:bg-danger hover:text-white transition-all group">
+<span class="font-label-md text-label-md font-bold mb-1">Khó</span>
+<span class="text-[10px] opacity-70 group-hover:opacity-100">1 ngày</span>
+</button>
+<button class="flex flex-col items-center justify-center p-sm rounded-xl border-2 border-[#F59E0B] bg-[#FFFBEB] text-[#D97706] hover:bg-[#F59E0B] hover:text-white transition-all group">
+<span class="font-label-md text-label-md font-bold mb-1">Vừa</span>
+<span class="text-[10px] opacity-70 group-hover:opacity-100">3 ngày</span>
+</button>
+<button class="flex flex-col items-center justify-center p-sm rounded-xl border-2 border-secondary bg-[#F0FDF4] text-secondary hover:bg-secondary hover:text-white transition-all group shadow-sm">
+<span class="font-label-md text-label-md font-bold mb-1">Dễ</span>
+<span class="text-[10px] opacity-70 group-hover:opacity-100">5 ngày</span>
+</button>
+</div>
+<script>
+                document.querySelector('.flip-card').addEventListener('click', function() {
+                    const evalBtns = document.getElementById('eval-buttons');
+                    if(this.classList.contains('flipped')) {
+                        evalBtns.classList.remove('opacity-50', 'pointer-events-none');
+                    } else {
+                        evalBtns.classList.add('opacity-50', 'pointer-events-none');
+                    }
+                });
+            </script>
+</main>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 border-t border-border bg-surface/90 backdrop-blur-md shadow-lg h-16 flex justify-around items-center px-gutter">
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+<span class="font-label-sm text-label-sm mt-0.5">Học tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]">quiz</span>
+<span class="font-label-sm text-label-sm mt-0.5">Kiểm tra</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-90 duration-150 flex-1 mx-1" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Ôn tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<span class="font-label-sm text-label-sm mt-0.5">Thống kê</span>
+</a>
+</nav>
+</body></html>

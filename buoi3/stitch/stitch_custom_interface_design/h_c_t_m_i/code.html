@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Học từ mới</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-secondary-container": "#007349",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#3d1d00",
+                        "on-background": "#121c26",
+                        "surface-tint": "#3f5f92",
+                        "outline": "#747780",
+                        "surface-container": "#e4effd",
+                        "inverse-surface": "#27313c",
+                        "on-primary-fixed-variant": "#254778",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#93f7bf",
+                        "danger": "#C94A4A",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "primary-container": "#173b6c",
+                        "secondary-fixed": "#93f7bf",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a6de",
+                        "on-tertiary-container": "#da965f",
+                        "on-tertiary-fixed-variant": "#6b3a0a",
+                        "surface-dim": "#d1dbe9",
+                        "outline-variant": "#c3c6d0",
+                        "on-secondary-fixed-variant": "#005232",
+                        "tertiary-container": "#5d2f00",
+                        "on-surface": "#121c26",
+                        "background": "#F7FAF8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#edf4ff",
+                        "surface-variant": "#d9e3f1",
+                        "border": "#DCE4E1",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-surface-variant": "#43474f",
+                        "muted-text": "#64717D",
+                        "primary": "#002550",
+                        "surface": "#FFFFFF",
+                        "surface-container-high": "#dfe9f7",
+                        "on-secondary": "#ffffff",
+                        "primary-dark": "#102B50",
+                        "on-secondary-fixed": "#002112",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb77e",
+                        "secondary-fixed-dim": "#77daa4",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-bright": "#f7f9ff",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface-container-highest": "#d9e3f1",
+                        "secondary": "#006c44"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "container-max": "1200px",
+                        "xs": "8px",
+                        "xl": "32px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- Header / Progress Area -->
+<header class="bg-surface shadow-sm px-gutter py-sm flex flex-col gap-sm sticky top-0 z-10">
+<div class="flex items-center justify-between">
+<button class="p-2 -ml-2 rounded-full hover:bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary">Bài học 1</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-surface-variant text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="flex items-center gap-sm">
+<div class="flex-1 h-2 bg-border rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-1/3 rounded-full transition-all duration-300"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text whitespace-nowrap">7/20 từ</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-gutter py-lg gap-lg max-w-container-max mx-auto w-full md:items-center">
+<!-- Flashcard Area -->
+<div class="bg-surface rounded-xl shadow-[0px_4px_12px_rgba(23,59,108,0.05)] border border-border p-lg flex flex-col items-center gap-md w-full md:max-w-md relative overflow-hidden">
+<!-- Character Display -->
+<div class="flex flex-col items-center gap-xs mt-lg mb-md">
+<span class="text-muted-text font-body-lg text-body-lg">nǐ</span>
+<h2 class="text-7xl font-bold text-primary tracking-tight">你</h2>
+<button class="mt-xs p-3 bg-surface-container-low rounded-full text-primary hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-2xl" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<div class="w-full h-px bg-border my-sm"></div>
+<!-- Meaning & Example -->
+<div class="w-full flex flex-col gap-sm">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-muted-text mt-1 text-sm" data-icon="translate">translate</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-muted-text">Nghĩa</span>
+<p class="font-body-lg text-body-lg text-on-surface font-medium">bạn, anh, chị (ngôi thứ 2)</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-sm border border-border mt-xs">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label-sm text-label-sm text-muted-text uppercase tracking-wider">Ví dụ</span>
+<button class="text-primary p-1 -mt-1 -mr-1 rounded hover:bg-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface"><b>你</b>好！ (Nǐ hǎo!)</p>
+<p class="font-body-md text-body-md text-muted-text mt-1">Xin chào!</p>
+</div>
+</div>
+<!-- Decorative Panda Hint -->
+<div class="absolute -bottom-4 -right-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl" data-icon="pets">pets</span>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="p-gutter bg-background md:bg-transparent sticky bottom-0 md:static md:w-full md:max-w-md md:mx-auto pb-8">
+<button class="w-full bg-secondary text-on-secondary font-headline-md text-headline-md py-3 rounded-lg shadow-md hover:bg-secondary/90 transition-all active:scale-[0.98] flex items-center justify-center gap-xs">
+            Tiếp tục
+            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</body></html>

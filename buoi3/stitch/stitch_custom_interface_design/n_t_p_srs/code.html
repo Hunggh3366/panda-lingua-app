@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gia sư từ vựng - Ôn tập SRS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-secondary-container": "#007349",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#3d1d00",
+                        "on-background": "#121c26",
+                        "surface-tint": "#3f5f92",
+                        "outline": "#747780",
+                        "surface-container": "#e4effd",
+                        "inverse-surface": "#27313c",
+                        "on-primary-fixed-variant": "#254778",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#93f7bf",
+                        "danger": "#C94A4A",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "primary-container": "#173b6c",
+                        "secondary-fixed": "#93f7bf",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a6de",
+                        "on-tertiary-container": "#da965f",
+                        "on-tertiary-fixed-variant": "#6b3a0a",
+                        "surface-dim": "#d1dbe9",
+                        "outline-variant": "#c3c6d0",
+                        "on-secondary-fixed-variant": "#005232",
+                        "tertiary-container": "#5d2f00",
+                        "on-surface": "#121c26",
+                        "background": "#F7FAF8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#edf4ff",
+                        "surface-variant": "#d9e3f1",
+                        "border": "#DCE4E1",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-surface-variant": "#43474f",
+                        "muted-text": "#64717D",
+                        "primary": "#002550",
+                        "surface": "#FFFFFF",
+                        "surface-container-high": "#dfe9f7",
+                        "on-secondary": "#ffffff",
+                        "primary-dark": "#102B50",
+                        "on-secondary-fixed": "#002112",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb77e",
+                        "secondary-fixed-dim": "#77daa4",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-bright": "#f7f9ff",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface-container-highest": "#d9e3f1",
+                        "secondary": "#006c44"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "container-max": "1200px",
+                        "xs": "8px",
+                        "xl": "32px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    },
+                    "boxShadow": {
+                        "soft": "0px 4px 12px rgba(23, 59, 108, 0.05)",
+                        "active": "0px 6px 16px rgba(23, 59, 108, 0.1)"
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); }
+        .srs-card-flip {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .srs-card-flip.flipped {
+            transform: rotateY(180deg);
+        }
+        .srs-card-front, .srs-card-back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .srs-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="text-on-background flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface border-b border-border docked full-width top-0 z-10 flex justify-between items-center px-md py-xs w-full max-w-container-max mx-auto shadow-sm">
+<div class="flex items-center gap-xs text-primary">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-border">
+<img alt="Panda Mascot Logo" class="w-full h-full object-cover" data-alt="A cute, simple illustration of a panda mascot wearing glasses and holding a book, acting as a friendly learning coach. The style is flat, modern corporate with a playful twist, using bright clean colors against a solid white background, suitable for an app avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0yehbknga47W9Cbw2nAyI0F6rMXR_ne1V2yA7gZgf4YsYRpcwuQbqps6vSLZho2M_Que_V0jytczKDB7rlUczvEsix69Dr3lH_LtTQl--TwqXhA5EiHrqPbGrtXk6YhFZfEt4gNo8kRRmavNPV8hDjWxVrNpFw8gWvf3oo-gMkiUW_tSmNs2aDOsJJuDc0czk4jZgSt4Z7fiUz8oFUIN32LAjclPegJLC7RLeeRamWgmLBv6XM4rg"/>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile text-primary font-bold tracking-tight">Gia sư từ vựng</h1>
+</div>
+<button class="text-primary hover:bg-surface-container p-2 rounded-full transition-transform active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto w-full max-w-container-max mx-auto pb-24 md:pb-8 flex flex-col md:flex-row">
+<!-- NavigationDrawer (Hidden on Mobile) -->
+<nav class="hidden md:flex flex-col py-lg bg-surface-container-low h-[calc(100vh-64px)] w-64 rounded-r-xl border-r border-border shadow-sm sticky top-16">
+<div class="px-md mb-lg">
+<div class="flex items-center gap-sm">
+<img alt="Panda Coach" class="w-12 h-12 rounded-full border border-border bg-white" data-alt="A small, friendly panda avatar smiling, used as a learning coach profile picture. Clean, minimalist vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtrd7T0Tgm8Uigtr0faDsZqc5nhno0FmRuhYH5oMD2n7XVEqWPJ0ioF5OwaoCV8C3Y8aGXjrvkImBQR4akFhiV65lzieJXZtYR1FIg3R1hbE2MaZsKIsK2GOk9MB3dz-ThY-al8SZ2RoJDPHAlu7XFder2bayYgWnVOgKmPLya0IRRxb2RLQ81stooVSouG4Gi4VYi95qzuGexVmfx72iT57Ok_8A8v2-ZhcO0ScN322DDrUXHn2jP"/>
+<div>
+<div class="font-headline-md text-headline-md text-primary font-bold">Gia sư Panda</div>
+<div class="font-body-sm text-muted-text text-sm">Cố lên bạn ơi!</div>
+<span class="inline-block mt-1 px-2 py-0.5 bg-primary-container text-on-primary-container rounded-full text-xs font-semibold">HSK 1-2</span>
+</div>
+</div>
+</div>
+<a class="flex items-center gap-sm px-md py-3 text-on-surface-variant hover:bg-surface-variant mx-2 my-1 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Tổng quan</span>
+</a>
+<a class="flex items-center gap-sm px-md py-3 text-on-surface-variant hover:bg-surface-variant mx-2 my-1 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-md text-label-md">Bài học mới</span>
+</a>
+<a class="flex items-center gap-sm px-md py-3 text-on-surface-variant hover:bg-surface-variant mx-2 my-1 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="edit_note">edit_note</span>
+<span class="font-label-md text-label-md">Luyện tập</span>
+</a>
+<a class="flex items-center gap-sm px-md py-3 bg-secondary text-on-secondary font-semibold rounded-lg mx-2 my-1 active:translate-x-1 transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+<span class="font-label-md text-label-md">SRS Review</span>
+</a>
+<a class="flex items-center gap-sm px-md py-3 text-on-surface-variant hover:bg-surface-variant mx-2 my-1 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="trending_up">trending_up</span>
+<span class="font-label-md text-label-md">Tiến độ</span>
+</a>
+</nav>
+<!-- Canvas: SRS Review Content -->
+<div class="flex-1 px-md py-lg flex flex-col items-center">
+<!-- Progress & Context -->
+<div class="w-full max-w-md mb-lg">
+<div class="flex justify-between items-center mb-2">
+<h2 class="font-headline-md text-headline-md-mobile text-primary-dark font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="refresh">refresh</span>
+                        Ôn tập định kỳ
+                    </h2>
+<span class="font-label-md text-label-md text-muted-text font-medium bg-surface px-3 py-1 rounded-full border border-border shadow-sm">12 / 25 từ</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden border border-border">
+<div class="h-full bg-secondary rounded-full" style="width: 48%;"></div>
+</div>
+<p class="text-center mt-4 font-body-md text-body-md text-muted-text">Hãy cố gắng nhớ lại nghĩa và cách đọc của từ này nhé!</p>
+</div>
+<!-- Interactive SRS Card -->
+<div aria-label="Lật thẻ flashcard" class="w-full max-w-md aspect-square relative perspective-1000 cursor-pointer group" onclick="document.getElementById('srsCard').classList.toggle('flipped')">
+<div class="srs-card-flip w-full h-full relative rounded-xl shadow-soft group-hover:shadow-active transition-shadow duration-300" id="srsCard">
+<!-- Front (Question) -->
+<div class="srs-card-front bg-surface border border-border rounded-xl flex flex-col items-center justify-center p-xl relative overflow-hidden">
+<!-- Decorative subtle gradient -->
+<div class="absolute inset-0 bg-gradient-to-br from-surface to-surface-bright opacity-50 -z-10"></div>
+<div class="text-[80px] font-bold text-primary-dark leading-none mb-4 tracking-wider">
+<ruby>
+                                苹<rt class="text-transparent text-sm">píng</rt>
+                                果<rt class="text-transparent text-sm">guǒ</rt>
+</ruby>
+</div>
+<div class="mt-8 text-center">
+<span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-primary animate-bounce shadow-sm">
+<span class="material-symbols-outlined" data-icon="touch_app">touch_app</span>
+</span>
+<p class="font-label-sm text-label-sm text-muted-text mt-2 uppercase tracking-widest">Chạm để lật</p>
+</div>
+</div>
+<!-- Back (Answer) -->
+<div class="srs-card-back bg-surface border-2 border-primary-fixed-dim rounded-xl flex flex-col items-center justify-center p-xl">
+<div class="text-[64px] font-bold text-primary-dark leading-none mb-2">苹果</div>
+<div class="font-headline-md text-headline-md text-secondary font-medium mb-6">píng guǒ</div>
+<div class="w-full h-px bg-border my-4"></div>
+<div class="text-center mb-6">
+<span class="font-body-lg text-body-lg text-on-surface">Quả táo</span>
+</div>
+<!-- Pronunciation Audio Button -->
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container hover:bg-primary-fixed transition-colors text-primary font-medium" onclick="event.stopPropagation();">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+                            Nghe phát âm
+                        </button>
+</div>
+</div>
+</div>
+<!-- SRS Rating Action Buttons (Initially slightly faded, become prominent on flip) -->
+<div class="w-full max-w-md mt-lg grid grid-cols-3 gap-sm opacity-90 hover:opacity-100 transition-opacity">
+<button class="flex flex-col items-center justify-center py-sm px-2 bg-surface border border-danger text-danger rounded-lg shadow-sm hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span>
+<span class="font-label-md text-label-md font-semibold">Khó</span>
+<span class="text-[10px] text-muted-text mt-1">Lặp lại ngay</span>
+</button>
+<button class="flex flex-col items-center justify-center py-sm px-2 bg-surface border border-outline text-on-surface-variant rounded-lg shadow-sm hover:bg-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="sentiment_neutral">sentiment_neutral</span>
+<span class="font-label-md text-label-md font-semibold">Vừa</span>
+<span class="text-[10px] text-muted-text mt-1">1 ngày</span>
+</button>
+<button class="flex flex-col items-center justify-center py-sm px-2 bg-secondary text-on-secondary border border-transparent rounded-lg shadow-md hover:bg-secondary-fixed hover:text-on-secondary-fixed active:scale-95 transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="sentiment_very_satisfied">sentiment_very_satisfied</span>
+<span class="font-label-md text-label-md font-semibold">Dễ</span>
+<span class="text-[10px] text-on-secondary/80 mt-1">3 ngày</span>
+</button>
+</div>
+<!-- Motivational Panda (Contextual) -->
+<div class="mt-xl hidden md:flex items-center gap-4 bg-surface p-4 rounded-xl shadow-soft border border-border">
+<img alt="Cheering Panda" class="w-20 h-20 object-contain" data-alt="A friendly 3D illustration of a panda holding a flag that says 'Keep Going!', rendered in a bright, soft-tech style with gentle lighting, perfect for a motivational learning app banner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR7QkMcaxjKEK5QI8Z5IQ6romBpbSjBK6KvGs1L_qgoBknLgfIXFg6a4QjhQbF7QebMoMUUYSoUq0joG_p3s4XodsNTvTA0UItWVAapcvI4ZbI6tsK-8kQWuE2SZHVC8Xf4bXx5UZavWHUXf5oFylyHxn1aS2XTdlAcv_38x5naTIIA-b5fnDbEfu-aSdEWQc30XrwspGJPIvx1YtRjk_7SxdTM9vaFW0MsgLnlUabvV7WBpEMvaWU"/>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-semibold">Bạn đang làm rất tốt!</h3>
+<p class="font-body-md text-body-md text-muted-text">Ôn tập đúng hạn giúp nhớ lâu hơn đến 80%.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-md border-t border-border shadow-lg flex justify-around items-center h-16 px-gutter">
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary w-16 group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-1">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary w-16 group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm mt-1">Học tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary w-16 group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" data-icon="quiz">quiz</span>
+<span class="font-label-sm text-label-sm mt-1">Kiểm tra</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 active:scale-90 duration-150 shadow-sm relative" href="#">
+<span class="material-symbols-outlined" data-icon="history" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Ôn tập</span>
+<!-- Notification Dot -->
+<span class="absolute top-1 right-2 w-2 h-2 bg-danger rounded-full border border-surface"></span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary w-16 group transition-colors" href="#">
+<span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform" data-icon="bar_chart">bar_chart</span>
+<span class="font-label-sm text-label-sm mt-1">Thống kê</span>
+</a>
+</nav>
+</body></html>

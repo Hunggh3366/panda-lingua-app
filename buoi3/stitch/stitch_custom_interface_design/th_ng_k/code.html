@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gia sư từ vựng - Thống kê</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#a9c7ff",
+                        "on-secondary-container": "#007349",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#3d1d00",
+                        "on-background": "#121c26",
+                        "surface-tint": "#3f5f92",
+                        "outline": "#747780",
+                        "surface-container": "#e4effd",
+                        "inverse-surface": "#27313c",
+                        "on-primary-fixed-variant": "#254778",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#93f7bf",
+                        "danger": "#C94A4A",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#e8f2ff",
+                        "primary-container": "#173b6c",
+                        "secondary-fixed": "#93f7bf",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a6de",
+                        "on-tertiary-container": "#da965f",
+                        "on-tertiary-fixed-variant": "#6b3a0a",
+                        "surface-dim": "#d1dbe9",
+                        "outline-variant": "#c3c6d0",
+                        "on-secondary-fixed-variant": "#005232",
+                        "tertiary-container": "#5d2f00",
+                        "on-surface": "#121c26",
+                        "background": "#F7FAF8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#edf4ff",
+                        "surface-variant": "#d9e3f1",
+                        "border": "#DCE4E1",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-surface-variant": "#43474f",
+                        "muted-text": "#64717D",
+                        "primary": "#002550",
+                        "surface": "#FFFFFF",
+                        "surface-container-high": "#dfe9f7",
+                        "on-secondary": "#ffffff",
+                        "primary-dark": "#102B50",
+                        "on-secondary-fixed": "#002112",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb77e",
+                        "secondary-fixed-dim": "#77daa4",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-bright": "#f7f9ff",
+                        "inverse-primary": "#a9c7ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface-container-highest": "#d9e3f1",
+                        "secondary": "#006c44"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "container-max": "1200px",
+                        "xs": "8px",
+                        "xl": "32px",
+                        "sm": "12px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .chart-bar {
+            transition: height 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased md:hidden pb-20">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background flex justify-between items-center px-md py-xs w-full max-w-container-max mx-auto docked full-width top-0 border-b border-border dark:border-outline-variant flat no shadows">
+<div class="flex items-center gap-xs">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden">
+<img alt="Panda Mascot Logo" class="object-cover w-full h-full" data-alt="A cute, modern vector illustration of a friendly panda face. The panda looks happy and encouraging. Soft, rounded shapes, flat design style suitable for an app avatar. Bright, clean background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq-1m1A1jBCzHbk7stmlSnBkY_eoZ_ZQgt0hI8zW1C5IbnNHL61gEgOHWSXXioqhcmOtEeD6wXKQPW1mbN69QYxcwx3pb1gDyPlcq4NpDXQsV0GXpAolrmg5XW3y06IH60-oeEL2yHE5I2tqpSKgKuMaefYbVgKJBeiWrP97a62g8OnyckCxYll0VBradeviXB0ZumZdmOehVDIw8JzGZZIPh1SoQYueStm4J10yjevzxwbhJ47lj-"/>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile text-primary dark:text-primary-fixed-dim">Gia sư từ vựng</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container dark:hover:bg-primary-container text-primary dark:text-primary-fixed-dim transition-transform active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="p-gutter flex flex-col gap-lg">
+<!-- Header Section with Mascot -->
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Thống kê</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Tuyệt vời! Bạn đang làm rất tốt.</p>
+</div>
+<div class="w-16 h-16">
+<img alt="Panda Coach" class="object-contain w-full h-full" data-alt="A small, cute 3D-style illustration of a panda character wearing glasses, looking at a clipboard and smiling, indicating good progress. Soft lighting, modern tech-friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlvsDzPdxePXQE0plk91o9TmdAOUGJMjV4ScbgCwJiGwvIo1zr-e8QPSLlk671aNEF3xqzjltRAVWSGa6FR8g4vzm7vu_nK4S_yLVTipb0mjprh5BSDiXQRHOysJ74rSE6UyFNsWm54k_c9vkZIcP2Q5UvTj06_ZazKBhCaIC-huL4ue0j1vd55oeerrQiEBkthR_gg-ilqMWz21FkEQ4c7SDLM81vglTqEA2KOaJFB6-84Aci2qqq"/>
+</div>
+</div>
+<!-- Key Metrics Cards (Bento Grid Style) -->
+<div class="grid grid-cols-2 gap-sm">
+<!-- Words Learned -->
+<div class="bg-surface border border-border rounded-xl p-sm shadow-[0px_4px_12px_rgba(23,59,108,0.05)] flex flex-col items-center justify-center text-center">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">124</span>
+<span class="font-label-sm text-label-sm text-muted-text mt-1">Từ đã thuộc</span>
+</div>
+<!-- Streak -->
+<div class="bg-surface border border-border rounded-xl p-sm shadow-[0px_4px_12px_rgba(23,59,108,0.05)] flex flex-col items-center justify-center text-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/50 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">7</span>
+<span class="font-label-sm text-label-sm text-muted-text mt-1">Ngày liên tiếp</span>
+</div>
+<!-- Retention Rate (Full Width) -->
+<div class="col-span-2 bg-primary-container text-on-primary-container rounded-xl p-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full bg-surface/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-surface">85%</div>
+<div class="font-label-sm text-label-sm opacity-80 text-surface">Hiệu suất ghi nhớ</div>
+</div>
+</div>
+<!-- Mini Circular Progress -->
+<div class="relative w-12 h-12">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-on-primary-container/30" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-secondary-fixed" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Weekly Progress Chart -->
+<div class="bg-surface border border-border rounded-xl p-md shadow-[0px_4px_12px_rgba(23,59,108,0.05)] mt-xs">
+<div class="flex justify-between items-center mb-lg">
+<h3 class="font-label-md text-label-md text-primary font-semibold">Tiến độ 7 ngày qua</h3>
+<span class="font-label-sm text-label-sm text-muted-text">Số từ ôn tập</span>
+</div>
+<div class="flex items-end justify-between h-40 gap-2">
+<!-- Bar 1 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 40%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T2</span>
+</div>
+<!-- Bar 2 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 60%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T3</span>
+</div>
+<!-- Bar 3 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 30%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T4</span>
+</div>
+<!-- Bar 4 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 80%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T5</span>
+</div>
+<!-- Bar 5 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 50%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T6</span>
+</div>
+<!-- Bar 6 -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary/40 chart-bar rounded-t-sm" style="height: 70%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-muted-text">T7</span>
+</div>
+<!-- Bar 7 (Today) -->
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-full bg-surface-variant rounded-t-sm relative h-full flex items-end overflow-hidden">
+<div class="w-full bg-primary chart-bar rounded-t-sm relative" style="height: 90%">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 font-label-sm text-label-sm text-primary font-bold">45</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">CN</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-on-background fixed bottom-0 w-full z-50 border-t border-border dark:border-outline-variant bg-surface/90 backdrop-blur-md shadow-lg flex justify-around items-center h-16 px-gutter">
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-sm text-label-sm">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-label-sm text-label-sm">Học tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">quiz</span>
+<span class="font-label-sm text-label-sm">Kiểm tra</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">history</span>
+<span class="font-label-sm text-label-sm">Ôn tập</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-secondary-container text-on-primary-container dark:text-on-secondary-container rounded-xl px-4 py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="font-label-sm text-label-sm">Thống kê</span>
+</a>
+</nav>
+<script>
+        // Simple script to animate bars on load for a polished feel
+        document.addEventListener('DOMContentLoaded', () => {
+            const bars = document.querySelectorAll('.chart-bar');
+            bars.forEach(bar => {
+                const targetHeight = bar.style.height;
+                bar.style.height = '0%';
+                setTimeout(() => {
+                    bar.style.height = targetHeight;
+                }, 100);
+            });
+        });
+    </script>
+</body></html>

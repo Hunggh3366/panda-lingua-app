@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - Gia sư từ vựng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d1dbe9",
+                      "surface-container-low": "#edf4ff",
+                      "tertiary-fixed": "#ffdcc3",
+                      "primary": "#002550",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#6b3a0a",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#747780",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#da965f",
+                      "surface-container-high": "#dfe9f7",
+                      "tertiary": "#3d1d00",
+                      "on-primary-container": "#87a6de",
+                      "surface-tint": "#3f5f92",
+                      "on-secondary-fixed": "#002112",
+                      "danger": "#C94A4A",
+                      "surface-variant": "#d9e3f1",
+                      "on-background": "#121c26",
+                      "tertiary-fixed-dim": "#ffb77e",
+                      "surface": "#FFFFFF",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#77daa4",
+                      "on-primary-fixed-variant": "#254778",
+                      "secondary": "#006c44",
+                      "primary-container": "#173b6c",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary-dark": "#102B50",
+                      "on-primary-fixed": "#001b3d",
+                      "inverse-on-surface": "#e8f2ff",
+                      "primary-fixed-dim": "#a9c7ff",
+                      "secondary-fixed": "#93f7bf",
+                      "tertiary-container": "#5d2f00",
+                      "surface-bright": "#f7f9ff",
+                      "surface-container-highest": "#d9e3f1",
+                      "on-secondary-container": "#007349",
+                      "surface-container": "#e4effd",
+                      "inverse-surface": "#27313c",
+                      "on-tertiary-fixed": "#2f1500",
+                      "on-surface": "#121c26",
+                      "inverse-primary": "#a9c7ff",
+                      "secondary-container": "#93f7bf",
+                      "outline-variant": "#c3c6d0",
+                      "on-secondary-fixed-variant": "#005232",
+                      "on-surface-variant": "#43474f",
+                      "muted-text": "#64717D",
+                      "border": "#DCE4E1",
+                      "background": "#F7FAF8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "lg": "24px",
+                      "xs": "8px",
+                      "sm": "12px",
+                      "container-max": "1200px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased md:flex">
+<!-- Navigation Drawer (Desktop) -->
+<nav class="hidden md:flex flex-col py-lg bg-surface-container-low h-screen w-64 rounded-r-xl border-r border-border shadow-sm shrink-0 sticky top-0 z-40">
+<div class="px-md mb-8 flex items-center space-x-3">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary-container bg-surface flex items-center justify-center">
+<img class="object-cover w-full h-full" data-alt="A stylized 2D vector illustration of a friendly panda face serving as an avatar, drawn in a modern corporate illustration style with soft rounded edges, primarily in black, white, and navy blue tones, set against a light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqNdf07cKS-15kOol2jrltf8aOzvhUD_nUBNWcQ2k-oS5EyI8nQ_We00IJ42M_w87iXERnJ-hUmXnds7g2nJy6U3pn7p5N4CGfOpGT9RIsSTsZXzBXc7CQhbamwGEf5YGS3kdcoOLCKlhPrVDfaIA-Jw0S-wnmtkimE_DivorZSGIxNnzbJ-2ujsIiRM391vwKLug4rjbRj8K3UiXmonsQr7utK0XKz-6O2X2xcGxI_p3ZUJV_7h-U"/>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Gia sư Panda</h2>
+<p class="font-label-sm text-label-sm text-muted-text">Cố lên bạn ơi! • HSK 1-2</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col space-y-2">
+<a class="flex items-center space-x-3 bg-secondary text-on-secondary font-semibold rounded-lg mx-2 my-1 px-4 py-3 hover:bg-surface-variant transition-all translate-x-1 shadow-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Tổng quan</span>
+</a>
+<a class="flex items-center space-x-3 text-on-surface-variant mx-2 my-1 px-4 py-3 rounded-lg hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md">Bài học mới</span>
+</a>
+<a class="flex items-center space-x-3 text-on-surface-variant mx-2 my-1 px-4 py-3 rounded-lg hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-label-md text-label-md">Luyện tập</span>
+</a>
+<a class="flex items-center space-x-3 text-on-surface-variant mx-2 my-1 px-4 py-3 rounded-lg hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">refresh</span>
+<span class="font-label-md text-label-md">SRS Review</span>
+</a>
+<a class="flex items-center space-x-3 text-on-surface-variant mx-2 my-1 px-4 py-3 rounded-lg hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="font-label-md text-label-md">Tiến độ</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-h-screen relative w-full pb-20 md:pb-0">
+<!-- Top App Bar (Mobile) -->
+<header class="md:hidden bg-surface flex justify-between items-center px-md py-xs w-full max-w-container-max mx-auto docked full-width top-0 border-b border-border z-30 sticky">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-border">
+<img class="object-cover w-full h-full" data-alt="A stylized 2D vector illustration of a friendly panda face serving as an avatar, drawn in a modern corporate illustration style with soft rounded edges, primarily in black, white, and navy blue tones, set against a light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTkXhPVUEtQyTv9sjVAG2BPM8Jul0nR8Lvl-R7grqKF62ISZcPKGtH5M-bLSKcmydmA2B1nKmVulmYf2k_osXtRMtpZYmrV8KRDo5ApO_Qh6RRahYPOGB6uPmjJ5zFnXtS_HDPa7dLn3GDvc8zwcfqYG3dBoT2nlUqbilm0cRbsx_BnbPAFoKliz56-fhcZ8-WgFLigtX3ggKCuKCweaKzsX7u-HophrU5HOiWi75Lwv5X9kG6-6W5"/>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile text-primary font-bold">Gia sư từ vựng</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Canvas -->
+<div class="p-gutter md:p-lg flex-1 max-w-container-max mx-auto w-full flex flex-col space-y-lg">
+<!-- Hero / Welcome Section -->
+<section class="bg-surface rounded-xl border border-border p-md md:p-lg flex flex-col md:flex-row items-center shadow-sm relative overflow-hidden">
+<div class="flex-1 flex flex-col z-10 space-y-4 text-center md:text-left">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Chào buổi sáng, học giả!</h2>
+<p class="font-body-md text-body-md text-muted-text max-w-lg">
+                        Hôm nay bạn có <strong class="text-secondary font-semibold">20 từ mới</strong> để khám phá và <strong class="text-danger font-semibold">35 từ cần ôn</strong>. Hãy giữ vững phong độ nhé!
+                    </p>
+<div class="pt-2">
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg shadow-md hover:brightness-90 transition-all flex items-center justify-center space-x-2 w-full md:w-auto">
+<span class="material-symbols-outlined">play_arrow</span>
+<span>Bắt đầu học ngay</span>
+</button>
+</div>
+</div>
+<div class="w-48 h-48 md:w-64 md:h-64 mt-6 md:mt-0 shrink-0 relative z-10">
+<img class="object-contain w-full h-full" data-alt="A bright, cheerful 2D illustration of a cute panda character holding a book and pointing upwards enthusiastically. The style is modern corporate with rounded edges, using a vibrant color palette of white, black, navy blue, and soft green highlights. The background is transparent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29F1hZ6kN5_Lh9TKEe2OYvIRYKR4e_HzMme0U6vI9onoSXY93CKbgNclTl5ChNcjKBN6ym3f1z4EyEfSCr2DvG5SXi-JPjCEUXB8tI59nG7A__GQHdBYCevWZ_D5hpMQp3YCVJzZSIYVKym0zBNfEALviGz9RRESIcPPjpfjPmq6bC0GC3VAybzwBRR6rAzcoe6z3ajtD3vxwbdVwBIgzcf10wRP1ooIOJVg4u_vWt__109I3meTg"/>
+</div>
+<!-- Subtle decorative background blob -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-fixed opacity-50 rounded-full blur-3xl z-0"></div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+<!-- Stat Card 1 -->
+<div class="bg-surface rounded-xl border border-border p-md shadow-sm flex flex-col">
+<div class="flex items-center space-x-2 text-muted-text mb-2">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Chuỗi ngày</span>
+</div>
+<div class="flex items-end space-x-2">
+<span class="font-headline-lg text-headline-lg text-danger font-bold">12</span>
+<span class="font-label-md text-label-md text-muted-text pb-1">ngày</span>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface rounded-xl border border-border p-md shadow-sm flex flex-col">
+<div class="flex items-center space-x-2 text-muted-text mb-2">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Từ đã thuộc</span>
+</div>
+<div class="flex items-end space-x-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">145</span>
+<span class="font-label-md text-label-md text-muted-text pb-1">từ</span>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface rounded-xl border border-border p-md shadow-sm flex flex-col">
+<div class="flex items-center space-x-2 text-muted-text mb-2">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Hiệu suất</span>
+</div>
+<div class="flex items-end space-x-2">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">92</span>
+<span class="font-label-md text-label-md text-muted-text pb-1">%</span>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface rounded-xl border border-border p-md shadow-sm flex flex-col">
+<div class="flex items-center space-x-2 text-muted-text mb-2">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Mục tiêu</span>
+</div>
+<div class="flex items-end space-x-2">
+<span class="font-headline-lg text-headline-lg text-primary-container font-bold">HSK 2</span>
+</div>
+</div>
+</section>
+<!-- HSK Progress Section -->
+<section class="bg-surface rounded-xl border border-border p-md md:p-lg shadow-sm flex flex-col space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-primary font-bold">Tiến độ HSK 1</h3>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center space-x-1">
+<span>Chi tiết</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col space-y-2">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-label-md text-muted-text">Từ vựng HSK 1 (150 từ)</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">145 / 150</span>
+</div>
+<div class="w-full bg-border h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96%;"></div>
+</div>
+<p class="font-label-sm text-label-sm text-muted-text text-right">Hoàn thành 96%</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md pt-4 border-t border-border border-dashed">
+<div class="flex flex-col space-y-3">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Từ mới tuần này</h4>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1 bg-surface-container-low rounded border border-surface-variant text-center cursor-default hover:bg-surface-variant transition-colors">
+<div class="text-xl font-bold">猫</div>
+<div class="text-xs text-muted-text">māo</div>
+</div>
+<div class="px-3 py-1 bg-surface-container-low rounded border border-surface-variant text-center cursor-default hover:bg-surface-variant transition-colors">
+<div class="text-xl font-bold">狗</div>
+<div class="text-xs text-muted-text">gǒu</div>
+</div>
+<div class="px-3 py-1 bg-surface-container-low rounded border border-surface-variant text-center cursor-default hover:bg-surface-variant transition-colors">
+<div class="text-xl font-bold">大</div>
+<div class="text-xs text-muted-text">dà</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Cần chú ý</h4>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1 bg-error-container text-on-error-container rounded border border-error/20 text-center cursor-default hover:brightness-95 transition-all">
+<div class="text-xl font-bold">热</div>
+<div class="text-xs">rè</div>
+</div>
+<div class="px-3 py-1 bg-error-container text-on-error-container rounded border border-error/20 text-center cursor-default hover:brightness-95 transition-all">
+<div class="text-xl font-bold">冷</div>
+<div class="text-xs">lěng</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Nav Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-lg border-t border-border flex justify-around items-center h-16 px-gutter">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-xl px-4 py-1 scale-90 duration-150 shadow-sm" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-sm text-label-sm mt-1">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+<span class="font-label-sm text-label-sm mt-1">Học tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">quiz</span>
+<span class="font-label-sm text-label-sm mt-1">Kiểm tra</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">history</span>
+<span class="font-label-sm text-label-sm mt-1">Ôn tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">bar_chart</span>
+<span class="font-label-sm text-label-sm mt-1">Thống kê</span>
+</a>
+</nav>
+</body></html>

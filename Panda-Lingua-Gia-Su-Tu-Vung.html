@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gia sư từ vựng (Panda Lingua) — Học tiếng Trung HSK 1–2</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#002550",
+            "primary-container": "#173b6c",
+            "primary-dark": "#102b50",
+            secondary: "#006c44",
+            "secondary-container": "#93f7bf",
+            background: "#F7FAF8",
+            surface: "#FFFFFF",
+            border: "#DCE4E1",
+            danger: "#C94A4A",
+            "muted-text": "#64717D"
+          },
+          fontFamily: {
+            sans: ["Inter", "Noto Sans SC", "sans-serif"]
+          },
+          animation: {
+            fadeIn: "fadeIn 0.25s ease-in-out"
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: "0", transform: "translateY(4px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      background-color: #F7FAF8;
+      color: #17212B;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+
+    .srs-card-flip {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .srs-card-flip.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .srs-card-front, .srs-card-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .srs-card-back {
+      transform: rotateY(180deg);
+    }
+  </style>
+  <script type="module" crossorigin>(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=[{id:`hsk1_001`,hanzi:`你`,pinyin:`nǐ`,meaning:`bạn, anh, chị (ngôi thứ 2)`,level:`HSK1`,example:{hanzi:`你好！`,pinyin:`Nǐ hǎo!`,meaning:`Xin chào bạn!`}},{id:`hsk1_002`,hanzi:`我`,pinyin:`wǒ`,meaning:`tôi, mình, em (ngôi thứ 1)`,level:`HSK1`,example:{hanzi:`我是学生。`,pinyin:`Wǒ shì xuésheng.`,meaning:`Tôi là học sinh.`}},{id:`hsk1_003`,hanzi:`他`,pinyin:`tā`,meaning:`anh ấy, ông ấy, cậu ấy`,level:`HSK1`,example:{hanzi:`他是我的老师。`,pinyin:`Tā shì wǒ de lǎoshī.`,meaning:`Thầy ấy là giáo viên của tôi.`}},{id:`hsk1_004`,hanzi:`她`,pinyin:`tā`,meaning:`cô ấy, bà ấy, chị ấy`,level:`HSK1`,example:{hanzi:`她是中国人。`,pinyin:`Tā shì Zhōngguórén.`,meaning:`Cô ấy là người Trung Quốc.`}},{id:`hsk1_005`,hanzi:`好`,pinyin:`hǎo`,meaning:`tốt, đẹp, hay, khỏe`,level:`HSK1`,example:{hanzi:`今天天气很好。`,pinyin:`Jīntiān tiānqì hěn hǎo.`,meaning:`Hôm nay thời tiết rất tốt.`}},{id:`hsk1_006`,hanzi:`谢谢`,pinyin:`xièxie`,meaning:`cảm ơn`,level:`HSK1`,example:{hanzi:`谢谢你的帮助。`,pinyin:`Xièxie nǐ de bāngzhù.`,meaning:`Cảm ơn sự giúp đỡ của bạn.`}},{id:`hsk1_007`,hanzi:`不客气`,pinyin:`bú kèqi`,meaning:`đừng khách sáo, không có chi`,level:`HSK1`,example:{hanzi:`不用谢，不客气！`,pinyin:`Bú yòng xiè, bú kèqi!`,meaning:`Không cần cảm ơn, đừng khách sáo!`}},{id:`hsk1_008`,hanzi:`再见`,pinyin:`zàijiàn`,meaning:`tạm biệt, hẹn gặp lại`,level:`HSK1`,example:{hanzi:`明天再见！`,pinyin:`Míngtiān zàijiàn!`,meaning:`Ngày mai gặp lại nhé!`}},{id:`hsk1_009`,hanzi:`明天`,pinyin:`míngtiān`,meaning:`ngày mai`,level:`HSK1`,example:{hanzi:`明天你去学校吗？`,pinyin:`Míngtiān nǐ qù xuéxiào ma?`,meaning:`Ngày mai bạn có đi học không?`}},{id:`hsk1_010`,hanzi:`今天`,pinyin:`jīntiān`,meaning:`hôm nay`,level:`HSK1`,example:{hanzi:`今天是星期一。`,pinyin:`Jīntiān shì xīngqīyī.`,meaning:`Hôm nay là thứ hai.`}},{id:`hsk1_011`,hanzi:`吃`,pinyin:`chī`,meaning:`ăn`,level:`HSK1`,example:{hanzi:`你想吃什么？`,pinyin:`Nǐ xiǎng chī shénme?`,meaning:`Bạn muốn ăn gì?`}},{id:`hsk1_012`,hanzi:`喝`,pinyin:`hē`,meaning:`uống`,level:`HSK1`,example:{hanzi:`我想喝茶。`,pinyin:`Wǒ xiǎng hē chá.`,meaning:`Tôi muốn uống trà.`}},{id:`hsk1_013`,hanzi:`水`,pinyin:`shuǐ`,meaning:`nước`,level:`HSK1`,example:{hanzi:`请喝水。`,pinyin:`Qǐng hē shuǐ.`,meaning:`Xin mời uống nước.`}},{id:`hsk1_014`,hanzi:`茶`,pinyin:`chá`,meaning:`trà, chè`,level:`HSK1`,example:{hanzi:`中国茶很好喝。`,pinyin:`Zhōngguó chá hěn hǎohē.`,meaning:`Trà Trung Quốc rất ngon.`}},{id:`hsk1_015`,hanzi:`苹果`,pinyin:`píngguǒ`,meaning:`quả táo`,level:`HSK1`,example:{hanzi:`这个苹果很大。`,pinyin:`Zhè ge píngguǒ hěn dà.`,meaning:`Quả táo này rất to.`}},{id:`hsk1_016`,hanzi:`米饭`,pinyin:`mǐfàn`,meaning:`cơm`,level:`HSK1`,example:{hanzi:`我喜欢吃米饭。`,pinyin:`Wǒ xǐhuan chī mǐfàn.`,meaning:`Tôi thích ăn cơm.`}},{id:`hsk1_017`,hanzi:`喜欢`,pinyin:`xǐhuan`,meaning:`thích, yêu thích`,level:`HSK1`,example:{hanzi:`我喜欢学汉语。`,pinyin:`Wǒ xǐhuan xué Hànyǔ.`,meaning:`Tôi thích học tiếng Trung.`}},{id:`hsk1_018`,hanzi:`汉语`,pinyin:`Hànyǔ`,meaning:`tiếng Hán, tiếng Trung`,level:`HSK1`,example:{hanzi:`汉语不难。`,pinyin:`Hànyǔ bù nán.`,meaning:`Tiếng Trung không khó.`}},{id:`hsk1_019`,hanzi:`学校`,pinyin:`xuéxiào`,meaning:`trường học`,level:`HSK1`,example:{hanzi:`我们的学校很大。`,pinyin:`Wǒmen de xuéxiào hěn dà.`,meaning:`Trường học của chúng tôi rất to.`}},{id:`hsk1_020`,hanzi:`老师`,pinyin:`lǎoshī`,meaning:`thầy cô giáo`,level:`HSK1`,example:{hanzi:`王老师在学校。`,pinyin:`Wáng lǎoshī zài xuéxiào.`,meaning:`Thầy Vương đang ở trường.`}},{id:`hsk1_021`,hanzi:`朋友`,pinyin:`péngyou`,meaning:`bạn bè`,level:`HSK1`,example:{hanzi:`他是我的好朋友。`,pinyin:`Tā shì wǒ de hǎo péngyou.`,meaning:`Cậu ấy là bạn tốt của tôi.`}},{id:`hsk1_022`,hanzi:`家`,pinyin:`jiā`,meaning:`nhà, gia đình`,level:`HSK1`,example:{hanzi:`我家在北京。`,pinyin:`Wǒ jiā zài Běijīng.`,meaning:`Nhà tôi ở Bắc Kinh.`}},{id:`hsk1_023`,hanzi:`爸爸`,pinyin:`bàba`,meaning:`bố, ba, cha`,level:`HSK1`,example:{hanzi:`爸爸在看书。`,pinyin:`Bàba zài kàn shū.`,meaning:`Bố đang đọc sách.`}},{id:`hsk1_024`,hanzi:`妈妈`,pinyin:`māma`,meaning:`mẹ, má`,level:`HSK1`,example:{hanzi:`妈妈在做饭。`,pinyin:`Māma zài zuò fàn.`,meaning:`Mẹ đang nấu cơm.`}},{id:`hsk1_025`,hanzi:`看`,pinyin:`kàn`,meaning:`nhìn, xem, đọc`,level:`HSK1`,example:{hanzi:`我在看电影。`,pinyin:`Wǒ zài kàn diànyǐng.`,meaning:`Tôi đang xem phim.`}},{id:`hsk1_026`,hanzi:`听`,pinyin:`tīng`,meaning:`nghe`,level:`HSK1`,example:{hanzi:`你听，这是什么声音？`,pinyin:`Nǐ tīng, zhè shì shénme shēngyīn?`,meaning:`Bạn nghe xem, đây là âm thanh gì?`}},{id:`hsk1_027`,hanzi:`说`,pinyin:`shuō`,meaning:`nói`,level:`HSK1`,example:{hanzi:`请再说一遍。`,pinyin:`Qǐng zài shuō yí biàn.`,meaning:`Xin hãy nói lại một lần nữa.`}},{id:`hsk1_028`,hanzi:`读`,pinyin:`dú`,meaning:`đọc`,level:`HSK1`,example:{hanzi:`跟我一起读。`,pinyin:`Gēn wǒ yìqǐ dú.`,meaning:`Hãy đọc cùng với tôi.`}},{id:`hsk1_029`,hanzi:`写`,pinyin:`xiě`,meaning:`viết`,level:`HSK1`,example:{hanzi:`你会写汉字吗？`,pinyin:`Nǐ huì xiě hànzì ma?`,meaning:`Bạn biết viết chữ Hán không?`}},{id:`hsk1_030`,hanzi:`钱`,pinyin:`qián`,meaning:`tiền`,level:`HSK1`,example:{hanzi:`这个多少钱？`,pinyin:`Zhè ge duōshao qián?`,meaning:`Cái này bao nhiêu tiền?`}},{id:`hsk2_001`,hanzi:`帮助`,pinyin:`bāngzhù`,meaning:`giúp đỡ, trợ giúp`,level:`HSK2`,example:{hanzi:`谢谢你帮助我。`,pinyin:`Xièxie nǐ bāngzhù wǒ.`,meaning:`Cảm ơn bạn đã giúp đỡ tôi.`}},{id:`hsk2_002`,hanzi:`准备`,pinyin:`zhǔnbèi`,meaning:`chuẩn bị`,level:`HSK2`,example:{hanzi:`你准备好了吗？`,pinyin:`Nǐ zhǔnbèi hǎo le ma?`,meaning:`Bạn đã chuẩn bị xong chưa?`}},{id:`hsk2_003`,hanzi:`运动`,pinyin:`yùndòng`,meaning:`thể thao, vận động`,level:`HSK2`,example:{hanzi:`我每天都去运动。`,pinyin:`Wǒ měitiān dōu qù yùndòng.`,meaning:`Mỗi ngày tôi đều đi tập thể thao.`}},{id:`hsk2_004`,hanzi:`跑步`,pinyin:`pǎobù`,meaning:`chạy bộ`,level:`HSK2`,example:{hanzi:`早上跑步对身体好。`,pinyin:`Zǎoshang pǎobù duì shēntǐ hǎo.`,meaning:`Buổi sáng chạy bộ rất tốt cho sức khỏe.`}},{id:`hsk2_005`,hanzi:`身体`,pinyin:`shēntǐ`,meaning:`thân thể, sức khỏe`,level:`HSK2`,example:{hanzi:`你身体怎么样？`,pinyin:`Nǐ shēntǐ zěnmeyàng?`,meaning:`Sức khỏe của bạn thế nào rồi?`}},{id:`hsk2_006`,hanzi:`机场`,pinyin:`jīchǎng`,meaning:`sân bay`,level:`HSK2`,example:{hanzi:`我们去机场接朋友。`,pinyin:`Wǒmen qù jīchǎng jiē péngyou.`,meaning:`Chúng tôi đi sân bay đón bạn.`}},{id:`hsk2_007`,hanzi:`时间`,pinyin:`shíjiān`,meaning:`thời gian`,level:`HSK2`,example:{hanzi:`你什么时候有时间？`,pinyin:`Nǐ shénme shíhou yǒu shíjiān?`,meaning:`Khi nào bạn có thời gian rảnh?`}},{id:`hsk2_008`,hanzi:`高兴`,pinyin:`gāoxìng`,meaning:`vui vẻ, hân hạnh`,level:`HSK2`,example:{hanzi:`很高兴认识你！`,pinyin:`Hěn gāoxìng rènshi nǐ!`,meaning:`Rất vui được làm quen với bạn!`}},{id:`hsk2_009`,hanzi:`已经`,pinyin:`yǐjīng`,meaning:`đã, rồi`,level:`HSK2`,example:{hanzi:`我已经吃过了。`,pinyin:`Wǒ yǐjīng chī guò le.`,meaning:`Tôi đã ăn cơm rồi.`}},{id:`hsk2_010`,hanzi:`希望`,pinyin:`xīwàng`,meaning:`hy vọng, mong ước`,level:`HSK2`,example:{hanzi:`希望你明天能来。`,pinyin:`Xīwàng nǐ míngtiān néng lái.`,meaning:`Hy vọng ngày mai bạn có thể đến.`}}],t={PROGRESS:`panda_lingua_progress`,STATS:`panda_lingua_stats`,SESSION:`panda_lingua_session`},n={init(){if(!localStorage.getItem(t.PROGRESS)){let t={};e.forEach((e,n)=>{n<6?t[e.id]={vocabId:e.id,status:`mastered`,repetition:2,easeFactor:2.5,interval:1,lastReviewedAt:new Date(Date.now()-1728e5).toISOString(),nextReviewAt:new Date(Date.now()-36e5).toISOString()}:n<12?t[e.id]={vocabId:e.id,status:`learning`,repetition:1,easeFactor:2.5,interval:1,lastReviewedAt:new Date(Date.now()-864e5).toISOString(),nextReviewAt:new Date(Date.now()-72e5).toISOString()}:t[e.id]={vocabId:e.id,status:`new`,repetition:0,easeFactor:2.5,interval:0,lastReviewedAt:null,nextReviewAt:null}}),this.saveProgress(t)}if(!localStorage.getItem(t.STATS)){let e={streakDays:5,lastActiveDate:new Date().toISOString().split(`T`)[0],totalLearned:12,quizAccuracy:85,totalQuizAttempts:24,correctQuizAttempts:21,weeklyHistory:[{day:`T2`,count:18},{day:`T3`,count:25},{day:`T4`,count:12},{day:`T5`,count:32},{day:`T6`,count:20},{day:`T7`,count:28},{day:`CN`,count:35}]};this.saveStats(e)}},getProgress(){try{return JSON.parse(localStorage.getItem(t.PROGRESS))||{}}catch{return{}}},saveProgress(e){localStorage.setItem(t.PROGRESS,JSON.stringify(e))},updateWordProgress(e,t){let n=this.getProgress();return n[e]=t(n[e]||{vocabId:e,status:`new`,repetition:0,easeFactor:2.5,interval:0,lastReviewedAt:null,nextReviewAt:null}),this.saveProgress(n),this.recalculateStats(),n[e]},getStats(){try{return JSON.parse(localStorage.getItem(t.STATS))||{streakDays:5,totalLearned:12,quizAccuracy:85,weeklyHistory:[]}}catch{return{streakDays:5,totalLearned:12,quizAccuracy:85,weeklyHistory:[]}}},saveStats(e){localStorage.setItem(t.STATS,JSON.stringify(e))},recordQuizResult(e){let t=this.getStats();t.totalQuizAttempts=(t.totalQuizAttempts||0)+1,e&&(t.correctQuizAttempts=(t.correctQuizAttempts||0)+1),t.quizAccuracy=Math.round(t.correctQuizAttempts/t.totalQuizAttempts*100),this.saveStats(t)},recalculateStats(){let e=this.getProgress(),t=this.getStats();t.totalLearned=Object.values(e).filter(e=>e.status===`mastered`||e.status===`learning`).length,this.saveStats(t)},resetAllData(){localStorage.removeItem(t.PROGRESS),localStorage.removeItem(t.STATS),this.init()}},r={calculateNextSchedule(e,t){let n=e.repetition||0,r=e.easeFactor||2.5,i=e.interval||0,a=Date.now();t===`hard`?(n=0,i=0,r=Math.max(1.3,r-.2)):t===`good`?(n+=1,i=n===1?1:n===2?3:Math.round(i*r)):t===`easy`&&(n+=1,r+=.15,i=n===1?3:n===2?6:Math.max(3,Math.round(i*r*1.3)));let o=a+i*24*60*60*1e3;return{repetition:n,easeFactor:r,interval:i,status:n>=3?`mastered`:`learning`,lastReviewedAt:new Date(a).toISOString(),nextReviewAt:new Date(o).toISOString()}},processReview(e,t){return n.updateWordProgress(e,e=>{let n=this.calculateNextSchedule(e,t);return{...e,...n}})},getDueReviewItems(){let t=n.getProgress(),r=Date.now();return e.filter(e=>{let n=t[e.id];return!n||n.status===`new`?!1:!n.nextReviewAt||new Date(n.nextReviewAt).getTime()<=r})},getNewLearningItems(t=10){let r=n.getProgress();return e.filter(e=>{let t=r[e.id];return!t||t.status===`new`}).slice(0,t)},markAsLearned(e){return n.updateWordProgress(e,e=>({...e,status:`learning`,repetition:1,interval:1,lastReviewedAt:new Date().toISOString(),nextReviewAt:new Date(Date.now()+864e5).toISOString()}))}},i={render(e,t){let n=r.getDueReviewItems();return{renderHeader(){return`
+          \x3C!-- Mobile Top App Bar -->
+          <header class="md:hidden bg-surface flex justify-between items-center px-4 py-3 w-full sticky top-0 border-b border-border z-40 shadow-sm">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full overflow-hidden bg-[#edf4ff] border border-[#DCE4E1] flex items-center justify-center">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ixIl8fmbevk2PeOMmdbW8fF1MkqP3qBrxo9oMtM-O93xm2SaRevpFyA2BtBSOnuaK9wtweIqBZFYHehPPSaQvenJ14zbUFs1XwDMSdB6i0sybqO63yf8z7ueoaecsveB9vpFBIS9-oC0gpXC8dI5ypxT-NH8uU3UmckT75rMk77Nnhybd1NU9WzUiWK7AT3hc9R2cFYeH1xJmgd7G_DeNzsbvjyhehMZydfdISGAwHJnWlECL5lk" alt="Panda">
+              </div>
+              <h1 class="text-lg font-bold text-[#173B6C]">Gia sư từ vựng</h1>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="text-xs font-semibold px-2 py-0.5 bg-[#E8F5E9] text-[#006C44] rounded-full">HSK 1-2</span>
+            </div>
+          </header>
+        `},renderSidebar(){return`
+          \x3C!-- Desktop Side Navigation -->
+          <nav class="hidden md:flex flex-col py-6 bg-[#edf4ff]/60 h-screen w-64 border-r border-border shadow-sm flex-shrink-0 sticky top-0">
+            \x3C!-- Brand & Mascot Header -->
+            <div class="px-5 mb-8 flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-surface border-2 border-white shadow-sm flex items-center justify-center">
+                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoBBau_vaLxfksDl72C3UNwGVvWzvSmgNSECrG5t0inMc7rQJc22laiZXLtYVJWLJZPrvImUke2flcJjYywJjecCUSieCQs1lnjJsgjt0-hf-Lm8tE0p2bigw7Rx06NHeScH9wnueTOSkZMcp4uBljwaC3cs-zLBhE-PS6N4D8s3HtOTQDZMf71DqDSt5Gx8xWX4Q_KJmwhCQTI03few596eNAwnxHX4oexwcAxLWeb_dykc8MXcyc" alt="Panda Coach">
+              </div>
+              <div>
+                <h2 class="text-base font-bold text-[#173B6C]">Gia sư Panda</h2>
+                <span class="inline-block mt-0.5 px-2 py-0.5 bg-[#173B6C] text-white text-[10px] font-bold rounded-full">HSK 1-2</span>
+              </div>
+            </div>
+
+            \x3C!-- Navigation Links -->
+            <ul class="flex flex-col gap-1.5 px-3">
+              ${[{id:`overview`,label:`Tổng quan`,icon:`dashboard`},{id:`learn`,label:`Bài học mới`,icon:`auto_stories`},{id:`quiz`,label:`Luyện tập`,icon:`edit_note`},{id:`srs`,label:`SRS Review`,icon:`refresh`,badge:n.length},{id:`stats`,label:`Tiến độ`,icon:`trending_up`}].map(t=>{let n=e===t.id;return`
+                  <li>
+                    <button 
+                      data-tab="${t.id}" 
+                      class="nav-tab-btn w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-150 ${n?`bg-[#173B6C] text-white shadow-sm`:`text-[#64717D] hover:bg-[#edf4ff] hover:text-[#173B6C]`}"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-xl">${t.icon}</span>
+                        <span>${t.label}</span>
+                      </div>
+                      ${t.badge?`
+                        <span class="px-2 py-0.5 text-xs rounded-full ${n?`bg-[#4CAF7D] text-white`:`bg-[#E8F5E9] text-[#006C44]`}">
+                          ${t.badge}
+                        </span>
+                      `:``}
+                    </button>
+                  </li>
+                `}).join(``)}
+            </ul>
+
+            \x3C!-- Bottom Motivational Quote -->
+            <div class="mt-auto px-4">
+              <div class="bg-surface rounded-xl p-3.5 border border-[#DCE4E1] shadow-sm text-center">
+                <p class="text-xs font-semibold text-[#173B6C]">“Học ăn, học nói, học tiếng Trung mỗi ngày!”</p>
+                <span class="text-[10px] text-[#64717D] mt-1 block">Mục tiêu: 10 phút/ngày</span>
+              </div>
+            </div>
+          </nav>
+        `},renderBottomNav(){return`
+          \x3C!-- Mobile Bottom Navigation Bar -->
+          <nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/95 backdrop-blur-md border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.04)] flex justify-around items-center h-16 px-2">
+            ${[{id:`overview`,label:`Trang chủ`,icon:`home`},{id:`learn`,label:`Học tập`,icon:`menu_book`},{id:`quiz`,label:`Kiểm tra`,icon:`quiz`},{id:`srs`,label:`Ôn tập`,icon:`history`,badge:n.length},{id:`stats`,label:`Thống kê`,icon:`bar_chart`}].map(t=>{let n=e===t.id;return`
+                <button 
+                  data-tab="${t.id}" 
+                  class="nav-tab-btn flex flex-col items-center justify-center w-16 py-1 transition-all duration-150 relative ${n?`text-[#173B6C] font-bold scale-105`:`text-[#64717D] hover:text-[#173B6C]`}"
+                >
+                  <div class="relative">
+                    <span class="material-symbols-outlined text-2xl ${n?`text-[#173B6C]`:``}">${t.icon}</span>
+                    ${t.badge?`
+                      <span class="absolute -top-1 -right-1.5 w-4 h-4 bg-[#C94A4A] text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white">
+                        ${t.badge}
+                      </span>
+                    `:``}
+                  </div>
+                  <span class="text-[11px] mt-0.5">${t.label}</span>
+                </button>
+              `}).join(``)}
+          </nav>
+        `}}}},a={render(t,i){let a=n.getStats(),o=n.getProgress(),s=r.getDueReviewItems(),c=r.getNewLearningItems(10),l=e.filter(e=>e.level===`HSK1`),u=l.filter(e=>o[e.id]&&o[e.id].status!==`new`).length,d=Math.min(100,Math.round(u/l.length*100));t.innerHTML=`
+      <div class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeIn">
+        \x3C!-- Greeting & Hero Card -->
+        <section class="bg-surface rounded-2xl p-6 md:p-8 border border-border shadow-[0px_4px_16px_rgba(23,59,108,0.06)] mb-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          \x3C!-- Ambient decorative light -->
+          <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#173B6C]/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-[#4CAF7D]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex-1 z-10 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#E8F5E9] text-[#006C44] rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+              <span class="w-2 h-2 rounded-full bg-[#4CAF7D] animate-pulse"></span>
+              Gia sư tiếng Trung cá nhân hóa
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-[#173B6C] tracking-tight mb-2">
+              Xin chào bạn! 👋
+            </h2>
+            <p class="text-base md:text-lg text-[#64717D] mb-6">
+              Hôm nay bạn có <strong class="text-[#173B6C] font-semibold">${c.length}</strong> từ mới và <strong class="text-[#4CAF7D] font-semibold">${s.length}</strong> từ cần ôn tập.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <button id="btn-start-learning" class="w-full sm:w-auto px-8 py-3.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2">
+                <span>Bắt đầu học ngay</span>
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+              </button>
+              <button id="btn-quick-srs" class="w-full sm:w-auto px-6 py-3.5 bg-white border border-[#DCE4E1] hover:bg-[#F7FAF8] text-[#173B6C] rounded-xl font-medium transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[#4CAF7D]">refresh</span>
+                <span>Ôn tập SRS (${s.length})</span>
+              </button>
+            </div>
+          </div>
+
+          \x3C!-- Mascot Illustration -->
+          <div class="w-44 h-44 md:w-56 md:h-56 flex-shrink-0 z-10 flex items-center justify-center">
+            <div class="relative">
+              <div class="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-[#e4effd] to-[#edf4ff] flex items-center justify-center border-4 border-white shadow-sm overflow-hidden">
+                <img class="w-full h-full object-contain p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDewIrC_1C7cMhMZP6j3QmV4mbS6DSmRxQ1xqnBwhTBMhj-npM9yoTMomFDr9nuLLPfCfI_aBKeqkLmdJV5A9c4OmBtHgNL7VsJ_tbGJeB2vg1NdbNHnmbGQiutrHeyNBV75SnkfNKt3qkX73FMS73Co7EfDuO5PFYs6ESvzbBLC0bUuOFW57KdplKXbMsH62v16Rnj9CSh2fxstb6T4yCEJtdzzDMFph-c8M19LP9tLncffOzkB0PF" alt="Panda Mascot">
+              </div>
+              <div class="absolute -bottom-2 -right-2 bg-white px-2.5 py-1 rounded-full shadow border border-[#DCE4E1] text-xs font-bold text-[#173B6C] flex items-center gap-1">
+                <span>🔥</span> ${a.streakDays} ngày
+              </div>
+            </div>
+          </div>
+        </section>
+
+        \x3C!-- Stats Grid (Bento Style) -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+          \x3C!-- Streak -->
+          <div class="bg-surface rounded-xl p-4 md:p-5 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center text-center hover:border-[#4CAF7D]/40 transition-colors">
+            <div class="w-10 h-10 rounded-full bg-[#FFF3E0] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#E65100] text-2xl">local_fire_department</span>
+            </div>
+            <span class="text-xl md:text-2xl font-bold text-[#173B6C]">${a.streakDays} ngày</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Chuỗi học tập</span>
+          </div>
+
+          \x3C!-- Total Words -->
+          <div class="bg-surface rounded-xl p-4 md:p-5 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center text-center hover:border-[#173B6C]/40 transition-colors">
+            <div class="w-10 h-10 rounded-full bg-[#E3F2FD] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#173B6C] text-2xl">school</span>
+            </div>
+            <span class="text-xl md:text-2xl font-bold text-[#173B6C]">${a.totalLearned} từ</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Từ đã thuộc</span>
+          </div>
+
+          \x3C!-- To Review -->
+          <div class="bg-surface rounded-xl p-4 md:p-5 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center text-center hover:border-[#4CAF7D]/40 transition-colors">
+            <div class="w-10 h-10 rounded-full bg-[#E8F5E9] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#4CAF7D] text-2xl">history</span>
+            </div>
+            <span class="text-xl md:text-2xl font-bold text-[#173B6C]">${s.length} từ</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Cần ôn tập SRS</span>
+          </div>
+
+          \x3C!-- Accuracy -->
+          <div class="bg-surface rounded-xl p-4 md:p-5 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center text-center hover:border-[#4CAF7D]/40 transition-colors">
+            <div class="w-10 h-10 rounded-full bg-[#E0F2F1] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#006C44] text-2xl">check_circle</span>
+            </div>
+            <span class="text-xl md:text-2xl font-bold text-[#173B6C]">${a.quizAccuracy||85}%</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Độ chính xác</span>
+          </div>
+        </section>
+
+        \x3C!-- Progress Overview Card -->
+        <section class="bg-surface rounded-xl p-6 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)]">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-lg font-bold text-[#173B6C]">Tiến độ HSK 1</h3>
+              <p class="text-xs text-[#64717D]">Xây dựng nền tảng từ vựng vỡ lòng</p>
+            </div>
+            <span class="px-3 py-1 bg-[#edf4ff] text-[#173B6C] font-semibold text-xs rounded-full border border-[#DCE4E1]">
+              ${u} / ${l.length} từ (${d}%)
+            </span>
+          </div>
+
+          \x3C!-- Progress Bar -->
+          <div class="w-full bg-[#E4EFFD] rounded-full h-3.5 overflow-hidden p-0.5 border border-[#DCE4E1]">
+            <div class="bg-gradient-to-r from-[#4CAF7D] to-[#006C44] h-full rounded-full transition-all duration-500 shadow-sm" style="width: ${Math.max(5,d)}%"></div>
+          </div>
+          
+          <div class="mt-4 flex items-center justify-between text-xs text-[#64717D]">
+            <span>🌱 Khởi đầu</span>
+            <span class="font-medium text-[#173B6C]">Mục tiêu: Đạt 100% HSK 1</span>
+            <span>🏆 HSK 1 Master</span>
+          </div>
+        </section>
+      </div>
+    `,t.querySelector(`#btn-start-learning`)?.addEventListener(`click`,()=>{i(`learn`)}),t.querySelector(`#btn-quick-srs`)?.addEventListener(`click`,()=>{i(`srs`)})}},o=null,s={speak(e,t=null){if(!e)return;if(t){t.classList.add(`animate-pulse`,`text-[#4CAF7D]`,`scale-110`);let e=t.querySelector(`.material-symbols-outlined`);e&&e.classList.add(`text-[#4CAF7D]`)}let n=()=>{if(t){t.classList.remove(`animate-pulse`,`text-[#4CAF7D]`,`scale-110`);let e=t.querySelector(`.material-symbols-outlined`);e&&e.classList.remove(`text-[#4CAF7D]`)}};if(o){try{o.pause(),o.currentTime=0}catch{}o=null}window.speechSynthesis&&window.speechSynthesis.cancel();let r=encodeURIComponent(e.trim()),i=`https://dict.youdao.com/dictvoice?audio=${r}&le=zh`,a=new Audio(i);o=a,a.onended=()=>{n(),o=null},a.onerror=()=>{let t=`https://translate.google.com/translate_tts?ie=UTF-8&tl=zh-CN&client=tw-ob&q=${r}`,i=new Audio(t);o=i,i.onended=()=>{n(),o=null},i.onerror=()=>{this.speakWithWebSpeech(e,n)},i.play().catch(()=>{this.speakWithWebSpeech(e,n)})},a.play().catch(()=>{this.speakWithWebSpeech(e,n)})},speakWithWebSpeech(e,t){if(!(`speechSynthesis`in window)){t&&t();return}let n=new SpeechSynthesisUtterance(e);n.lang=`zh-CN`,n.rate=.85,n.pitch=1;let r=window.speechSynthesis.getVoices().find(e=>e.lang.startsWith(`zh`)||e.lang===`zh-CN`||e.lang===`cmn-Hans-CN`);r&&(n.voice=r),n.onend=()=>{t&&t()},n.onerror=()=>{t&&t()},window.speechSynthesis.speak(n)}},c={ctx:null,init(){if(!this.ctx&&(window.AudioContext||window.webkitAudioContext)){let e=window.AudioContext||window.webkitAudioContext;this.ctx=new e}},playTone(e,t,n,r=0){try{if(this.init(),!this.ctx)return;this.ctx.state===`suspended`&&this.ctx.resume();let i=this.ctx.createOscillator(),a=this.ctx.createGain();i.type=t,i.frequency.setValueAtTime(e,this.ctx.currentTime+r),a.gain.setValueAtTime(.15,this.ctx.currentTime+r),a.gain.exponentialRampToValueAtTime(.001,this.ctx.currentTime+r+n),i.connect(a),a.connect(this.ctx.destination),i.start(this.ctx.currentTime+r),i.stop(this.ctx.currentTime+r+n)}catch{}},correct(){this.playTone(523.25,`sine`,.15,0),this.playTone(659.25,`sine`,.15,.08),this.playTone(783.99,`sine`,.25,.16)},wrong(){this.playTone(196,`triangle`,.18,0),this.playTone(155.56,`triangle`,.25,.12)}},l={currentIndex:0,sessionItems:[],render(e,t){if(this.sessionItems=r.getNewLearningItems(8),this.sessionItems.length===0&&(this.sessionItems=r.getDueReviewItems().slice(0,8)),this.sessionItems.length===0){e.innerHTML=`
+        <div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn">
+          <div class="w-24 h-24 rounded-full bg-[#E8F5E9] flex items-center justify-center text-[#4CAF7D] mb-4">
+            <span class="material-symbols-outlined text-5xl">task_alt</span>
+          </div>
+          <h2 class="text-2xl font-bold text-[#173B6C] mb-2">Đã hoàn thành bài học!</h2>
+          <p class="text-[#64717D] mb-6">Bạn đã học hết toàn bộ từ mới hôm nay. Hãy tiếp tục với bài kiểm tra hoặc ôn tập SRS nhé.</p>
+          <button id="btn-goto-quiz" class="w-full py-3.5 bg-[#173B6C] text-white font-semibold rounded-xl shadow hover:bg-[#102B50] transition-colors">
+            Làm bài kiểm tra ngay
+          </button>
+        </div>
+      `,e.querySelector(`#btn-goto-quiz`)?.addEventListener(`click`,()=>t(`quiz`));return}this.currentIndex=0,this.renderCard(e,t)},renderCard(e,t){let n=this.sessionItems[this.currentIndex],i=this.sessionItems.length,a=this.currentIndex+1,o=Math.round(a/i*100);e.innerHTML=`
+      <div class="flex-1 flex flex-col justify-between max-w-lg mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]">
+        \x3C!-- Header / Progress Area -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <button id="btn-learn-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C] transition-colors">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <div class="text-center">
+              <span class="text-xs font-bold text-[#006C44] bg-[#E8F5E9] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${n.level}</span>
+              <h2 class="text-base font-bold text-[#173B6C] mt-0.5">Học từ mới</h2>
+            </div>
+            <button id="btn-learn-listen-all" class="p-2 -mr-2 rounded-full hover:bg-slate-100 text-[#173B6C] transition-colors" title="Phát âm từ">
+              <span class="material-symbols-outlined">volume_up</span>
+            </button>
+          </div>
+
+          \x3C!-- Progress Bar -->
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex-1 h-2.5 bg-[#DCE4E1] rounded-full overflow-hidden">
+              <div class="h-full bg-[#4CAF7D] rounded-full transition-all duration-300" style="width: ${o}%"></div>
+            </div>
+            <span class="text-xs font-semibold text-[#64717D] whitespace-nowrap">${a} / ${i} từ</span>
+          </div>
+
+          \x3C!-- Vocabulary Flashcard -->
+          <div class="bg-surface rounded-2xl shadow-[0px_4px_20px_rgba(23,59,108,0.06)] border border-border p-6 md:p-8 flex flex-col items-center gap-4 relative overflow-hidden">
+            \x3C!-- Pinyin & Hanzi Display -->
+            <div class="flex flex-col items-center gap-1 my-2">
+              <span class="text-lg md:text-xl font-medium text-[#64717D] tracking-wide">${n.pinyin}</span>
+              <h1 class="text-6xl md:text-7xl font-bold text-[#173B6C] tracking-tight py-2 font-['Inter',_'Noto_Sans_SC']">
+                ${n.hanzi}
+              </h1>
+              
+              \x3C!-- Audio button -->
+              <button id="btn-play-word-audio" class="mt-2 p-3 bg-[#edf4ff] text-[#173B6C] hover:bg-[#173B6C] hover:text-white rounded-full transition-all duration-200 shadow-sm active:scale-95 flex items-center justify-center cursor-pointer">
+                <span class="material-symbols-outlined text-2xl">volume_up</span>
+              </button>
+            </div>
+
+            <div class="w-full h-px bg-[#DCE4E1] my-2"></div>
+
+            \x3C!-- Meaning & Example -->
+            <div class="w-full flex flex-col gap-3">
+              <div class="flex items-start gap-3 bg-[#F7FAF8] p-3.5 rounded-xl border border-[#DCE4E1]">
+                <span class="material-symbols-outlined text-[#4CAF7D] mt-0.5 text-xl">translate</span>
+                <div>
+                  <span class="text-xs font-semibold text-[#64717D] uppercase tracking-wider">Ý nghĩa</span>
+                  <p class="text-base font-semibold text-[#173B6C] mt-0.5">${n.meaning}</p>
+                </div>
+              </div>
+
+              \x3C!-- Example Sentence -->
+              <div class="bg-[#F7FAF8] rounded-xl p-3.5 border border-[#DCE4E1]">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-xs font-semibold text-[#64717D] uppercase tracking-wider">Ví dụ mẫu</span>
+                  <button id="btn-play-example-audio" class="text-[#173B6C] p-1.5 rounded-full hover:bg-slate-200 transition-colors flex items-center justify-center cursor-pointer" title="Nghe phát âm ví dụ">
+                    <span class="material-symbols-outlined text-base">volume_up</span>
+                  </button>
+                </div>
+                <p class="text-base font-medium text-[#173B6C]">${n.example.hanzi} <span class="text-xs text-[#64717D]">(${n.example.pinyin})</span></p>
+                <p class="text-sm text-[#64717D] mt-1">${n.example.meaning}</p>
+              </div>
+            </div>
+
+            \x3C!-- Subtle background watermark -->
+            <div class="absolute -bottom-6 -right-6 opacity-5 pointer-events-none text-[#173B6C]">
+              <span class="material-symbols-outlined text-9xl">pets</span>
+            </div>
+          </div>
+        </div>
+
+        \x3C!-- Action Button -->
+        <div class="mt-6 pt-2 pb-4">
+          <button id="btn-learn-next" class="w-full py-4 bg-[#4CAF7D] hover:bg-[#006C44] text-white font-bold text-base rounded-xl shadow-md hover:shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+            <span>${a===i?`Hoàn thành & Kiểm tra ngay`:`Tiếp tục từ sau`}</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    `;let c=e.querySelector(`#btn-play-word-audio`),l=e.querySelector(`#btn-learn-listen-all`),u=e.querySelector(`#btn-play-example-audio`);setTimeout(()=>{s.speak(n.hanzi,c)},300),c?.addEventListener(`click`,e=>{e.stopPropagation(),s.speak(n.hanzi,c)}),l?.addEventListener(`click`,e=>{e.stopPropagation(),s.speak(n.hanzi,l)}),u?.addEventListener(`click`,e=>{e.stopPropagation(),s.speak(n.example.hanzi,u)}),e.querySelector(`#btn-learn-back`)?.addEventListener(`click`,()=>{t(`overview`)}),e.querySelector(`#btn-learn-next`)?.addEventListener(`click`,()=>{r.markAsLearned(n.id),this.currentIndex<this.sessionItems.length-1?(this.currentIndex++,this.renderCard(e,t)):t(`quiz`)})}},u={questions:[],currentIndex:0,score:0,selectedAnswer:null,isAnswered:!1,generateQuestions(t=5){return[...e].sort(()=>.5-Math.random()).slice(0,t).map(t=>{let n=[...e.filter(e=>e.id!==t.id).sort(()=>.5-Math.random()).slice(0,3).map(e=>e.meaning),t.meaning].sort(()=>.5-Math.random());return{item:t,correctMeaning:t.meaning,options:n}})},render(e,t){this.questions=this.generateQuestions(5),this.currentIndex=0,this.score=0,this.selectedAnswer=null,this.isAnswered=!1,this.renderQuestion(e,t)},renderQuestion(e,t){if(this.currentIndex>=this.questions.length){this.renderSummary(e,t);return}let r=this.questions[this.currentIndex],i=this.questions.length,a=this.currentIndex+1,o=Math.round(a/i*100);e.innerHTML=`
+      <div class="flex-1 flex flex-col justify-between max-w-md mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]">
+        \x3C!-- Progress Bar & Top Title -->
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <button id="btn-quiz-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C] transition-colors">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="text-center">
+              <span class="text-xs font-bold text-[#173B6C] bg-[#edf4ff] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${r.item.level}</span>
+              <h2 class="text-base font-bold text-[#173B6C] mt-0.5">Kiểm tra trắc nghiệm</h2>
+            </div>
+            <button id="btn-quiz-audio" class="p-2 -mr-2 rounded-full hover:bg-slate-100 text-[#173B6C] transition-colors cursor-pointer" title="Nghe phát âm">
+              <span class="material-symbols-outlined text-xl">volume_up</span>
+            </button>
+          </div>
+
+          \x3C!-- Progress Bar -->
+          <div class="flex items-center justify-between text-xs font-semibold text-[#64717D] mb-1.5">
+            <span>Câu hỏi ${a} / ${i}</span>
+            <span class="text-[#006C44]">Điểm: ${this.score}/${this.currentIndex}</span>
+          </div>
+          <div class="w-full bg-[#DCE4E1] rounded-full h-2 overflow-hidden mb-6">
+            <div class="bg-[#4CAF7D] h-2 rounded-full transition-all duration-300" style="width: ${o}%"></div>
+          </div>
+
+          \x3C!-- Question Prompt Card -->
+          <div class="bg-surface border border-border rounded-2xl p-6 shadow-sm mb-5 flex flex-col items-center text-center relative overflow-hidden">
+            <span class="text-sm font-semibold text-[#64717D] mb-1">${r.item.pinyin}</span>
+            <div class="flex items-center justify-center gap-3">
+              <h1 class="text-5xl font-bold text-[#173B6C] mb-2 font-['Inter',_'Noto_Sans_SC']">${r.item.hanzi}</h1>
+              <button id="btn-quiz-prompt-audio" class="p-2 -mt-1 bg-[#edf4ff] text-[#173B6C] hover:bg-[#173B6C] hover:text-white rounded-full transition-colors shadow-sm cursor-pointer" title="Nghe phát âm">
+                <span class="material-symbols-outlined text-lg">volume_up</span>
+              </button>
+            </div>
+            <p class="text-sm text-[#64717D] mt-1">Chọn nghĩa tiếng Việt đúng của từ này</p>
+          </div>
+
+          \x3C!-- Options Grid -->
+          <div class="flex flex-col gap-3" id="quiz-options-list">
+            ${r.options.map((e,t)=>`
+              <button 
+                data-option="${e}"
+                class="quiz-option-btn w-full bg-surface border border-[#DCE4E1] rounded-xl p-4 text-left flex justify-between items-center shadow-[0px_2px_8px_rgba(23,59,108,0.04)] hover:bg-[#edf4ff]/50 transition-all font-medium text-[#173B6C] active:scale-[0.99] text-base cursor-pointer"
+              >
+                <span>${e}</span>
+                <span class="option-icon material-symbols-outlined text-xl opacity-0">check_circle</span>
+              </button>
+            `).join(``)}
+          </div>
+        </div>
+
+        \x3C!-- Footer Action Area -->
+        <div class="mt-6 pt-2 pb-4">
+          <button 
+            id="btn-quiz-next" 
+            class="w-full py-4 bg-[#4CAF7D] hover:bg-[#006C44] text-white font-bold text-base rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2 ${this.isAnswered?``:`hidden`}"
+          >
+            <span>${a===i?`Xem kết quả`:`Câu tiếp theo`}</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    `;let l=e.querySelector(`#btn-quiz-audio`),u=e.querySelector(`#btn-quiz-prompt-audio`);e.querySelector(`#btn-quiz-back`)?.addEventListener(`click`,()=>{t(`overview`)}),l?.addEventListener(`click`,()=>{s.speak(r.item.hanzi,l)}),u?.addEventListener(`click`,()=>{s.speak(r.item.hanzi,u)});let d=e.querySelectorAll(`.quiz-option-btn`);d.forEach(t=>{t.addEventListener(`click`,()=>{if(this.isAnswered)return;this.isAnswered=!0;let i=t.getAttribute(`data-option`)===r.correctMeaning;if(i){this.score++,c.correct(),t.classList.remove(`border-[#DCE4E1]`,`bg-surface`),t.classList.add(`bg-[#E8F5E9]`,`border-[#4CAF7D]`,`border-2`,`text-[#005232]`);let e=t.querySelector(`.option-icon`);e.classList.remove(`opacity-0`),e.classList.add(`text-[#4CAF7D]`,`opacity-100`)}else{c.wrong(),t.classList.remove(`border-[#DCE4E1]`,`bg-surface`),t.classList.add(`bg-[#FFEBEE]`,`border-[#C94A4A]`,`border-2`,`text-[#C94A4A]`);let e=t.querySelector(`.option-icon`);e.innerText=`cancel`,e.classList.remove(`opacity-0`),e.classList.add(`text-[#C94A4A]`,`opacity-100`),d.forEach(e=>{if(e.getAttribute(`data-option`)===r.correctMeaning){e.classList.remove(`border-[#DCE4E1]`,`bg-surface`),e.classList.add(`bg-[#E8F5E9]`,`border-[#4CAF7D]`,`border-2`,`text-[#005232]`);let t=e.querySelector(`.option-icon`);t.classList.remove(`opacity-0`),t.classList.add(`text-[#4CAF7D]`,`opacity-100`)}})}n.recordQuizResult(i);let a=e.querySelector(`#btn-quiz-next`);a&&(a.classList.remove(`hidden`),a.scrollIntoView({behavior:`smooth`,block:`nearest`}))})}),e.querySelector(`#btn-quiz-next`)?.addEventListener(`click`,()=>{this.currentIndex++,this.isAnswered=!1,this.renderQuestion(e,t)})},renderSummary(e,t){let n=this.questions.length,r=Math.round(this.score/n*100);e.innerHTML=`
+      <div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn">
+        <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-[#e4effd] to-[#edf4ff] p-3 flex items-center justify-center mb-5 border-4 border-white shadow-md">
+          <img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR7QkMcaxjKEK5QI8Z5IQ6romBpbSjBK6KvGs1L_qgoBknLgfIXFg6a4QjhQbF7QebMoMUUYSoUq0joG_p3s4XodsNTvTA0UItWVAapcvI4ZbI6tsK-8kQWuE2SZHVC8Xf4bXx5UZavWHUXf5oFylyHxn1aS2XTdlAcv_38x5naTIIA-b5fnDbEfu-aSdEWQc30XrwspGJPIvx1YtRjk_7SxdTM9vaFW0MsgLnlUabvV7WBpEMvaWU" alt="Cheering Panda">
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-[#173B6C] mb-2">Hoàn thành bài kiểm tra! 🎉</h2>
+        <p class="text-sm text-[#64717D] mb-6">Bạn đã trả lời đúng <b>${this.score}/${n}</b> câu hỏi (đạt <b>${r}%</b>).</p>
+
+        <div class="w-full bg-surface border border-border rounded-2xl p-4 mb-6 shadow-sm flex items-center justify-around">
+          <div class="text-center">
+            <span class="text-xs text-[#64717D]">Chính xác</span>
+            <div class="text-2xl font-bold text-[#4CAF7D]">${r}%</div>
+          </div>
+          <div class="w-px h-10 bg-[#DCE4E1]"></div>
+          <div class="text-center">
+            <span class="text-xs text-[#64717D]">Số câu đúng</span>
+            <div class="text-2xl font-bold text-[#173B6C]">${this.score} / ${n}</div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col gap-3">
+          <button id="btn-goto-srs" class="w-full py-4 bg-[#173B6C] hover:bg-[#102B50] text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+            <span>Tiếp tục: Ôn tập SRS</span>
+            <span class="material-symbols-outlined">refresh</span>
+          </button>
+          <button id="btn-quiz-retry" class="w-full py-3 bg-white border border-[#DCE4E1] text-[#173B6C] font-semibold rounded-xl hover:bg-[#F7FAF8] transition-colors">
+            Làm lại bài kiểm tra
+          </button>
+        </div>
+      </div>
+    `,e.querySelector(`#btn-goto-srs`)?.addEventListener(`click`,()=>{t(`srs`)}),e.querySelector(`#btn-quiz-retry`)?.addEventListener(`click`,()=>{this.render(e,t)})}},d={reviewItems:[],currentIndex:0,isFlipped:!1,render(t,n){this.reviewItems=r.getDueReviewItems(),this.reviewItems.length===0&&(this.reviewItems=e.slice(0,6)),this.currentIndex=0,this.isFlipped=!1,this.renderCard(t,n)},renderCard(e,t){if(this.currentIndex>=this.reviewItems.length){this.renderCompleted(e,t);return}let n=this.reviewItems[this.currentIndex],i=this.reviewItems.length,a=this.currentIndex+1,o=Math.round(a/i*100);e.innerHTML=`
+      <div class="flex-1 flex flex-col justify-between max-w-md mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]">
+        <div>
+          \x3C!-- Header Area -->
+          <div class="flex items-center justify-between mb-3">
+            <button id="btn-srs-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C] transition-colors">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <div class="text-center">
+              <span class="text-xs font-bold text-[#006C44] bg-[#E8F5E9] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${n.level}</span>
+              <h2 class="text-base font-bold text-[#173B6C] mt-0.5">Ôn tập định kỳ SRS</h2>
+            </div>
+            <div class="w-8"></div>
+          </div>
+
+          \x3C!-- Progress and instruction -->
+          <div class="flex items-center justify-between text-xs font-semibold text-[#64717D] mb-1.5">
+            <span>Từ cần ôn ${a} / ${i}</span>
+            <span class="text-[#006C44]">${o}%</span>
+          </div>
+          <div class="w-full bg-[#DCE4E1] rounded-full h-2 overflow-hidden mb-4">
+            <div class="bg-[#4CAF7D] h-2 rounded-full transition-all duration-300" style="width: ${o}%"></div>
+          </div>
+
+          <p id="srs-hint-text" class="text-center text-xs md:text-sm text-[#64717D] mb-4">
+            ${this.isFlipped?`💡 Hãy đánh giá mức độ ghi nhớ của bạn:`:`👆 Nhớ lại nghĩa & cách đọc, sau đó chạm thẻ để lật:`}
+          </p>
+
+          \x3C!-- 3D Flip Card Container -->
+          <div class="perspective-1000 w-full aspect-[4/3] sm:aspect-square relative cursor-pointer select-none" id="srs-card-interactive">
+            <div id="srs-flip-inner" class="srs-card-flip w-full h-full rounded-2xl shadow-[0px_4px_16px_rgba(23,59,108,0.06)] border border-[#DCE4E1] ${this.isFlipped?`flipped`:``}">
+              
+              \x3C!-- Front Face (Hanzi Question) -->
+              <div class="srs-card-front bg-surface rounded-2xl p-6 flex flex-col items-center justify-center text-center">
+                <span class="text-xs font-bold text-[#64717D] bg-[#edf4ff] px-3 py-1 rounded-full uppercase tracking-wider mb-4">Chữ Hán</span>
+                <h1 class="text-7xl font-bold text-[#173B6C] tracking-tight font-['Inter',_'Noto_Sans_SC']">
+                  ${n.hanzi}
+                </h1>
+                <div class="mt-8 flex flex-col items-center gap-1.5 text-[#64717D]">
+                  <span class="w-10 h-10 rounded-full bg-[#F7FAF8] border border-[#DCE4E1] flex items-center justify-center text-[#173B6C] shadow-sm animate-bounce">
+                    <span class="material-symbols-outlined text-xl">touch_app</span>
+                  </span>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-[#64717D]">Chạm để lật xem đáp án</span>
+                </div>
+              </div>
+
+              \x3C!-- Back Face (Answer) -->
+              <div class="srs-card-back bg-surface border-2 border-[#173B6C] rounded-2xl p-6 flex flex-col items-center justify-between text-center">
+                <div>
+                  <h2 class="text-5xl font-bold text-[#173B6C] font-['Inter',_'Noto_Sans_SC']">${n.hanzi}</h2>
+                  <span class="text-2xl font-bold text-[#4CAF7D] mt-1.5 block">${n.pinyin}</span>
+                </div>
+
+                <div class="w-full py-2.5 border-y border-[#DCE4E1] bg-[#F7FAF8] rounded-lg">
+                  <span class="text-[11px] text-[#64717D] uppercase font-semibold">Nghĩa tiếng Việt</span>
+                  <p class="text-base font-bold text-[#173B6C] mt-0.5">${n.meaning}</p>
+                </div>
+
+                <button id="btn-srs-audio" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] text-sm font-semibold transition-colors shadow-sm cursor-pointer" onclick="event.stopPropagation();">
+                  <span class="material-symbols-outlined text-lg">volume_up</span>
+                  <span>Nghe phát âm</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        \x3C!-- Rating Buttons (Hard / Good / Easy) -->
+        <div class="mt-6">
+          <div class="grid grid-cols-3 gap-2.5">
+            \x3C!-- Hard -->
+            <button id="btn-rate-hard" class="flex flex-col items-center justify-center py-3 px-2 bg-surface border border-[#C94A4A] text-[#C94A4A] hover:bg-[#FFEBEE] active:scale-95 rounded-xl transition-all shadow-sm cursor-pointer">
+              <span class="material-symbols-outlined text-2xl mb-0.5">sentiment_dissatisfied</span>
+              <span class="text-xs font-bold">Khó</span>
+              <span class="text-[10px] text-[#64717D] mt-0.5">Lặp lại ngay</span>
+            </button>
+
+            \x3C!-- Good -->
+            <button id="btn-rate-good" class="flex flex-col items-center justify-center py-3 px-2 bg-surface border border-[#173B6C] text-[#173B6C] hover:bg-[#edf4ff] active:scale-95 rounded-xl transition-all shadow-sm cursor-pointer">
+              <span class="material-symbols-outlined text-2xl mb-0.5">sentiment_neutral</span>
+              <span class="text-xs font-bold">Vừa</span>
+              <span class="text-[10px] text-[#64717D] mt-0.5">Ôn sau 1 ngày</span>
+            </button>
+
+            \x3C!-- Easy -->
+            <button id="btn-rate-easy" class="flex flex-col items-center justify-center py-3 px-2 bg-[#4CAF7D] text-white hover:bg-[#006C44] active:scale-95 rounded-xl transition-all shadow-md cursor-pointer">
+              <span class="material-symbols-outlined text-2xl mb-0.5">sentiment_very_satisfied</span>
+              <span class="text-xs font-bold">Dễ</span>
+              <span class="text-[10px] text-white/80 mt-0.5">Ôn sau 3 ngày</span>
+            </button>
+          </div>
+
+          \x3C!-- Motivational Tip -->
+          <div class="mt-4 p-3 bg-surface border border-border rounded-xl flex items-center gap-3">
+            <span class="text-xl">🐼</span>
+            <p class="text-xs text-[#64717D]">Ôn tập đúng thời điểm giúp ghi nhớ lâu hơn đến <b>80%</b> theo đường cong lãng quên Ebbinghaus.</p>
+          </div>
+        </div>
+      </div>
+    `;let c=e.querySelector(`#srs-card-interactive`),l=e.querySelector(`#srs-flip-inner`),u=e.querySelector(`#srs-hint-text`),d=e.querySelector(`#btn-srs-audio`);c?.addEventListener(`click`,()=>{this.isFlipped=!this.isFlipped,this.isFlipped?(l?.classList.add(`flipped`),u&&(u.innerHTML=`💡 Hãy đánh giá mức độ ghi nhớ của bạn:`),s.speak(n.hanzi,d)):(l?.classList.remove(`flipped`),u&&(u.innerHTML=`👆 Nhớ lại nghĩa & cách đọc, sau đó chạm thẻ để lật:`))}),d?.addEventListener(`click`,e=>{e.stopPropagation(),s.speak(n.hanzi,d)}),e.querySelector(`#btn-srs-back`)?.addEventListener(`click`,()=>{t(`overview`)});let f=i=>{r.processReview(n.id,i),this.currentIndex++,this.isFlipped=!1,this.renderCard(e,t)};e.querySelector(`#btn-rate-hard`)?.addEventListener(`click`,()=>f(`hard`)),e.querySelector(`#btn-rate-good`)?.addEventListener(`click`,()=>f(`good`)),e.querySelector(`#btn-rate-easy`)?.addEventListener(`click`,()=>f(`easy`))},renderCompleted(e,t){e.innerHTML=`
+      <div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn">
+        <div class="w-28 h-28 rounded-full bg-gradient-to-tr from-[#e8f5e9] to-[#edf4ff] p-3 flex items-center justify-center mb-5 border-4 border-white shadow-md">
+          <img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlvsDzPdxePXQE0plk91o9TmdAOUGJMjV4ScbgCwJiGwvIo1zr-e8QPSLlk671aNEF3xqzjltRAVWSGa6FR8g4vzm7vu_nK4S_yLVTipb0mjprh5BSDiXQRHOysJ74rSE6UyFNsWm54k_c9vkZIcP2Q5UvTj06_ZazKBhCaIC-huL4ue0j1vd55oeerrQiEBkthR_gg-ilqMWz21FkEQ4c7SDLM81vglTqEA2KOaJFB6-84Aci2qqq" alt="Panda Coach">
+        </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-[#173B6C] mb-2">Tuyệt vời! Hoàn thành ôn tập 🌟</h2>
+        <p class="text-sm text-[#64717D] mb-6">Bạn đã hoàn thành phiên ôn tập SRS hôm nay. Trí nhớ của bạn đã được củng cố vững chắc!</p>
+
+        <div class="w-full flex flex-col gap-3">
+          <button id="btn-goto-stats" class="w-full py-4 bg-[#173B6C] hover:bg-[#102B50] text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+            <span>Xem bảng thống kê tiến độ</span>
+            <span class="material-symbols-outlined">trending_up</span>
+          </button>
+          <button id="btn-srs-home" class="w-full py-3 bg-white border border-[#DCE4E1] text-[#173B6C] font-semibold rounded-xl hover:bg-[#F7FAF8] transition-colors">
+            Quay về trang chủ
+          </button>
+        </div>
+      </div>
+    `,e.querySelector(`#btn-goto-stats`)?.addEventListener(`click`,()=>{t(`stats`)}),e.querySelector(`#btn-srs-home`)?.addEventListener(`click`,()=>{t(`overview`)})}},f={render(t,r){let i=n.getStats(),a=n.getProgress(),o=e.filter(e=>e.level===`HSK1`),s=o.filter(e=>a[e.id]&&a[e.id].status!==`new`).length,c=Math.min(100,Math.round(s/o.length*100)),l=e.filter(e=>e.level===`HSK2`),u=l.filter(e=>a[e.id]&&a[e.id].status!==`new`).length,d=Math.min(100,Math.round(u/l.length*100)),f=i.weeklyHistory||[{day:`T2`,count:18},{day:`T3`,count:25},{day:`T4`,count:12},{day:`T5`,count:32},{day:`T6`,count:20},{day:`T7`,count:28},{day:`CN`,count:35}],p=Math.max(...f.map(e=>e.count),40);t.innerHTML=`
+      <div class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeIn">
+        \x3C!-- Header Section -->
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h1 class="text-2xl md:text-3xl font-bold text-[#173B6C]">Thống kê học tập</h1>
+            <p class="text-sm text-[#64717D] mt-0.5">Tuyệt vời! Bạn đang duy trì tiến độ rất ổn định.</p>
+          </div>
+          <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#edf4ff] p-1 border-2 border-white shadow-sm flex items-center justify-center">
+            <img class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlvsDzPdxePXQE0plk91o9TmdAOUGJMjV4ScbgCwJiGwvIo1zr-e8QPSLlk671aNEF3xqzjltRAVWSGa6FR8g4vzm7vu_nK4S_yLVTipb0mjprh5BSDiXQRHOysJ74rSE6UyFNsWm54k_c9vkZIcP2Q5UvTj06_ZazKBhCaIC-huL4ue0j1vd55oeerrQiEBkthR_gg-ilqMWz21FkEQ4c7SDLM81vglTqEA2KOaJFB6-84Aci2qqq" alt="Panda Stats">
+          </div>
+        </div>
+
+        \x3C!-- Key Metrics Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+          \x3C!-- Words Learned -->
+          <div class="bg-surface border border-border rounded-2xl p-4 md:p-5 shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center justify-center text-center">
+            <div class="w-10 h-10 rounded-full bg-[#E8F5E9] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#006C44] text-2xl">menu_book</span>
+            </div>
+            <span class="text-2xl md:text-3xl font-bold text-[#173B6C]">${i.totalLearned}</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Từ vựng đã thuộc</span>
+          </div>
+
+          \x3C!-- Streak -->
+          <div class="bg-surface border border-border rounded-2xl p-4 md:p-5 shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center justify-center text-center">
+            <div class="w-10 h-10 rounded-full bg-[#FFF3E0] flex items-center justify-center mb-2">
+              <span class="material-symbols-outlined text-[#E65100] text-2xl">local_fire_department</span>
+            </div>
+            <span class="text-2xl md:text-3xl font-bold text-[#173B6C]">${i.streakDays}</span>
+            <span class="text-xs text-[#64717D] mt-0.5">Ngày liên tiếp</span>
+          </div>
+
+          \x3C!-- Retention Rate -->
+          <div class="col-span-2 md:col-span-1 bg-[#173B6C] text-white rounded-2xl p-4 md:p-5 shadow-md flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-white text-2xl">psychology</span>
+              </div>
+              <div>
+                <div class="text-2xl font-bold">${i.quizAccuracy||85}%</div>
+                <div class="text-xs opacity-80">Hiệu suất ghi nhớ</div>
+              </div>
+            </div>
+            \x3C!-- Mini Circular Progress -->
+            <div class="relative w-12 h-12 flex-shrink-0">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                <path class="text-white/20" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+                <path class="text-[#4CAF7D]" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="${i.quizAccuracy||85}, 100" stroke-linecap="round" stroke-width="3.5"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        \x3C!-- Weekly Progress Chart -->
+        <div class="bg-surface border border-border rounded-2xl p-5 md:p-6 shadow-[0px_4px_12px_rgba(23,59,108,0.04)] mb-6">
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <h3 class="text-base font-bold text-[#173B6C]">Tiến độ ôn tập 7 ngày qua</h3>
+              <p class="text-xs text-[#64717D]">Số từ vựng được ôn tập thành công</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 bg-[#edf4ff] text-[#173B6C] rounded-full">
+              Tổng: ${f.reduce((e,t)=>e+t.count,0)} lượt
+            </span>
+          </div>
+
+          \x3C!-- Chart Bars -->
+          <div class="flex items-end justify-between h-44 gap-2 md:gap-4 pt-6">
+            ${f.map((e,t)=>{let n=Math.round(e.count/p*100),r=t===f.length-1;return`
+                <div class="flex flex-col items-center gap-2 flex-1 h-full justify-end group cursor-pointer">
+                  <div class="w-full bg-[#edf4ff] rounded-t-lg relative h-full flex items-end overflow-hidden">
+                    <div 
+                      class="w-full ${r?`bg-[#173B6C]`:`bg-[#4CAF7D]`} rounded-t-lg transition-all duration-700 relative group-hover:brightness-110" 
+                      style="height: ${n}%"
+                    >
+                      <div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[11px] font-bold ${r?`text-[#173B6C]`:`text-[#006C44]`} whitespace-nowrap opacity-80 group-hover:opacity-100">
+                        ${e.count}
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-semibold ${r?`text-[#173B6C] font-bold`:`text-[#64717D]`}">${e.day}</span>
+                </div>
+              `}).join(``)}
+          </div>
+        </div>
+
+        \x3C!-- HSK Level Breakdown -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          \x3C!-- HSK 1 -->
+          <div class="bg-surface border border-border rounded-2xl p-5 shadow-[0px_4px_12px_rgba(23,59,108,0.04)]">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-bold text-[#173B6C]">Cấp độ HSK 1 (Cơ bản)</span>
+              <span class="text-xs font-bold text-[#006C44]">${s}/${o.length} (${c}%)</span>
+            </div>
+            <div class="w-full bg-[#E4EFFD] rounded-full h-3 overflow-hidden">
+              <div class="bg-[#4CAF7D] h-full rounded-full transition-all duration-500" style="width: ${c}%"></div>
+            </div>
+          </div>
+
+          \x3C!-- HSK 2 -->
+          <div class="bg-surface border border-border rounded-2xl p-5 shadow-[0px_4px_12px_rgba(23,59,108,0.04)]">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-bold text-[#173B6C]">Cấp độ HSK 2 (Nâng cao)</span>
+              <span class="text-xs font-bold text-[#173B6C]">${u}/${l.length} (${d}%)</span>
+            </div>
+            <div class="w-full bg-[#E4EFFD] rounded-full h-3 overflow-hidden">
+              <div class="bg-[#173B6C] h-full rounded-full transition-all duration-500" style="width: ${d}%"></div>
+            </div>
+          </div>
+        </div>
+
+        \x3C!-- Danger Zone / Data Management -->
+        <div class="flex items-center justify-between p-4 bg-white border border-[#DCE4E1] rounded-xl text-xs text-[#64717D]">
+          <span>Dữ liệu được lưu an toàn trên trình duyệt này.</span>
+          <button id="btn-reset-data" class="text-[#C94A4A] hover:underline font-medium">
+            Đặt lại dữ liệu mẫu
+          </button>
+        </div>
+      </div>
+    `,t.querySelector(`#btn-reset-data`)?.addEventListener(`click`,()=>{confirm(`Bạn có chắc chắn muốn đặt lại dữ liệu học tập về ban đầu?`)&&(n.resetAllData(),this.render(t,r))})}},p=class{constructor(){this.currentTab=`overview`,this.init()}init(){n.init(),this.renderLayout(),this.navigateTo(this.currentTab)}navigateTo(e){this.currentTab=e,this.renderLayout();let t=document.getElementById(`main-content-container`);if(t)switch(window.scrollTo({top:0,behavior:`smooth`}),e){case`overview`:a.render(t,e=>this.navigateTo(e));break;case`learn`:l.render(t,e=>this.navigateTo(e));break;case`quiz`:u.render(t,e=>this.navigateTo(e));break;case`srs`:d.render(t,e=>this.navigateTo(e));break;case`stats`:f.render(t,e=>this.navigateTo(e));break;default:a.render(t,e=>this.navigateTo(e))}}renderLayout(){let e=document.getElementById(`app`);if(!e)return;let t=i.render(this.currentTab,e=>this.navigateTo(e));document.getElementById(`layout-wrapper`)||(e.innerHTML=`
+        <div id="layout-wrapper" class="bg-[#F7FAF8] text-[#17212B] min-h-screen flex flex-col md:flex-row pb-20 md:pb-0">
+          <div id="sidebar-slot"></div>
+          <div class="flex-1 flex flex-col min-h-screen">
+            <div id="header-slot"></div>
+            <main id="main-content-container" class="flex-1 flex flex-col"></main>
+          </div>
+          <div id="bottom-nav-slot"></div>
+        </div>
+      `),document.getElementById(`sidebar-slot`).innerHTML=t.renderSidebar(),document.getElementById(`header-slot`).innerHTML=t.renderHeader(),document.getElementById(`bottom-nav-slot`).innerHTML=t.renderBottomNav(),document.querySelectorAll(`.nav-tab-btn`).forEach(e=>{e.addEventListener(`click`,t=>{let n=e.getAttribute(`data-tab`);n&&this.navigateTo(n)})})}};document.addEventListener(`DOMContentLoaded`,()=>{window.appInstance=new p});</script>
+</head>
+<body class="bg-[#F7FAF8] antialiased">
+  <div id="app"></div>
+
+  <!-- Main Application Script -->
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kiểm tra - HSK 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d1dbe9",
+                        "surface-container-low": "#edf4ff",
+                        "tertiary-fixed": "#ffdcc3",
+                        "primary": "#002550",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#6b3a0a",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#747780",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#da965f",
+                        "surface-container-high": "#dfe9f7",
+                        "tertiary": "#3d1d00",
+                        "on-primary-container": "#87a6de",
+                        "surface-tint": "#3f5f92",
+                        "on-secondary-fixed": "#002112",
+                        "danger": "#C94A4A",
+                        "surface-variant": "#d9e3f1",
+                        "on-background": "#121c26",
+                        "tertiary-fixed-dim": "#ffb77e",
+                        "surface": "#FFFFFF",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#77daa4",
+                        "on-primary-fixed-variant": "#254778",
+                        "secondary": "#006c44",
+                        "primary-container": "#173b6c",
+                        "primary-fixed": "#d6e3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-dark": "#102B50",
+                        "on-primary-fixed": "#001b3d",
+                        "inverse-on-surface": "#e8f2ff",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "secondary-fixed": "#93f7bf",
+                        "tertiary-container": "#5d2f00",
+                        "surface-bright": "#f7f9ff",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-secondary-container": "#007349",
+                        "surface-container": "#e4effd",
+                        "inverse-surface": "#27313c",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-surface": "#121c26",
+                        "inverse-primary": "#a9c7ff",
+                        "secondary-container": "#93f7bf",
+                        "outline-variant": "#c3c6d0",
+                        "on-secondary-fixed-variant": "#005232",
+                        "on-surface-variant": "#43474f",
+                        "muted-text": "#64717D",
+                        "border": "#DCE4E1",
+                        "background": "#F7FAF8",
+                        
+                        // Custom quiz colors not in config but needed for states
+                        "quiz-correct-bg": "#E8F5E9",
+                        "quiz-correct-border": "#4CAF7D",
+                        "quiz-incorrect-bg": "#FFEBEE",
+                        "quiz-incorrect-border": "#EF5350",
+                        "quiz-selected-bg": "#E3F2FD",
+                        "quiz-selected-border": "#173B6C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "lg": "24px",
+                        "xs": "8px",
+                        "sm": "12px",
+                        "container-max": "1200px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom font classes since Tailwind config just sets family */
+        .font-headline-lg { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; font-weight: 700; }
+        .text-headline-lg { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; font-weight: 700; }
+        
+        .font-headline-md { font-size: 20px; line-height: 28px; font-weight: 600; }
+        .text-headline-md { font-size: 20px; line-height: 28px; font-weight: 600; }
+        
+        .font-headline-lg-mobile { font-size: 24px; line-height: 32px; letter-spacing: -0.01em; font-weight: 700; }
+        .text-headline-lg-mobile { font-size: 24px; line-height: 32px; letter-spacing: -0.01em; font-weight: 700; }
+        
+        .font-body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+        .text-body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+        
+        .font-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+        .text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+        
+        .font-label-md { font-size: 14px; line-height: 20px; letter-spacing: 0.01em; font-weight: 500; }
+        .text-label-md { font-size: 14px; line-height: 20px; letter-spacing: 0.01em; font-weight: 500; }
+        
+        .font-label-sm { font-size: 12px; line-height: 16px; letter-spacing: 0.05em; font-weight: 600; }
+        .text-label-sm { font-size: 12px; line-height: 16px; letter-spacing: 0.05em; font-weight: 600; }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .card-shadow {
+            box-shadow: 0px 4px 12px rgba(23, 59, 108, 0.05);
+        }
+        
+        .interactive-shadow {
+            box-shadow: 0px 8px 16px rgba(23, 59, 108, 0.1);
+        }
+
+        /* Quiz specific states */
+        .quiz-option {
+            transition: all 0.2s ease;
+        }
+        
+        .quiz-option:hover:not(.answered) {
+            background-color: theme('colors.surface-container-low');
+            border-color: theme('colors.outline-variant');
+        }
+        
+        .quiz-option.selected {
+            border: 2px solid theme('colors.primary-container');
+            background-color: theme('colors.quiz-selected-bg');
+        }
+        
+        .quiz-option.correct {
+            border: 2px solid theme('colors.quiz-correct-border');
+            background-color: theme('colors.quiz-correct-bg');
+        }
+        
+        .quiz-option.incorrect {
+            border: 2px solid theme('colors.quiz-incorrect-border');
+            background-color: theme('colors.quiz-incorrect-bg');
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen font-body-md text-on-surface flex flex-col md:flex-row">
+<!-- Web Navigation Drawer -->
+<nav class="hidden md:flex flex-col py-lg bg-surface-container-low dark:bg-inverse-surface h-screen w-64 rounded-r-xl border-r border-border dark:border-outline shadow-sm shrink-0 sticky top-0">
+<!-- Header -->
+<div class="px-lg pb-md mb-md border-b border-border">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="A cheerful, minimalist 2D illustration of a panda mascot wearing a small graduation cap. The style is modern corporate with a playful twist, utilizing clean lines and bright colors suitable for a language learning app. White background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYZ8UgsLqDaAuWvk0cVQvT2XDehO26wqddTqoB4SqGv8cPnZg0IBps_-OGmkyzRGxRfPNMYVAJOCtrIstLS5nNqs1OgTtjM6I-gtrcBh--SjSMU7WgYbdluXWZ30gmjPxsnk_M8MyRStYxVCAN18j8qsmeX2Jc5V4WdAKL02mNBK4HD5uUW_l3QeCNikBjzOFtqT8ezSVcDks34-JgkSvvG_cTKGB10lJvqLusUTduCZCBTBb3SzUj"/>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Gia sư Panda</h2>
+<p class="font-label-sm text-label-sm text-muted-text">HSK 1-2</p>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-sm">Cố lên bạn ơi!</p>
+</div>
+<!-- Nav Items -->
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant dark:text-outline-variant mx-2 my-1 hover:bg-surface-variant dark:hover:bg-surface-container-highest rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">dashboard</span>
+<span class="font-label-md text-label-md">Tổng quan</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant dark:text-outline-variant mx-2 my-1 hover:bg-surface-variant dark:hover:bg-surface-container-highest rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+<span class="font-label-md text-label-md">Bài học mới</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container font-semibold rounded-lg mx-2 my-1 translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-label-md text-label-md">Luyện tập</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant dark:text-outline-variant mx-2 my-1 hover:bg-surface-variant dark:hover:bg-surface-container-highest rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">refresh</span>
+<span class="font-label-md text-label-md">SRS Review</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant dark:text-outline-variant mx-2 my-1 hover:bg-surface-variant dark:hover:bg-surface-container-highest rounded-lg transition-colors group" href="#">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+<span class="font-label-md text-label-md">Tiến độ</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col min-h-screen max-w-container-max mx-auto w-full relative pb-20 md:pb-0">
+<!-- TopAppBar (Mobile) -->
+<header class="md:hidden flex justify-between items-center px-md py-xs w-full max-w-container-max mx-auto bg-surface dark:bg-on-background border-b border-border dark:border-outline-variant docked full-width top-0 z-40 sticky">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A cheerful, minimalist 2D illustration of a panda mascot face. The style is modern corporate with a playful twist, utilizing clean lines and bright colors suitable for a language learning app. White background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxbmbRKwJoP3I3-WZq9AJU3w3cQi_2y3PnyQyHh0kI9fH2-S8XdsOAos3Yx-Y7AtuP-ZbFD_hlkFE5bRqXcfXjdOOl2ISnYnd05VHr5qVDEiJ7hqR4ILdYnADu57cQItjHxLzbz-FV29yEjNU7e5FDaLBvVUGaJu2aNcOAVkKfjMjFy_H-QXSByAwIEk64WRY2v1OwD738Yh0HAasRMUONtbTLxLTeTgTbeKEOn3Y3_d6uX3STDIdC"/>
+</div>
+<h1 class="font-headline-md text-headline-md-mobile text-primary dark:text-primary-fixed-dim">Gia sư từ vựng</h1>
+</div>
+<button class="text-on-surface-variant p-2 rounded-full hover:bg-surface-container dark:hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Quiz Container -->
+<div class="flex-1 p-md md:p-lg flex flex-col max-w-3xl mx-auto w-full pt-lg">
+<!-- Header / Progress Area -->
+<div class="mb-xl">
+<div class="flex justify-between items-center mb-sm">
+<span class="font-label-md text-label-md text-muted-text flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">close</span> Thoát
+                    </span>
+<span class="font-label-md text-label-md font-semibold text-primary">HSK 1</span>
+<span class="font-label-md text-label-md text-muted-text">Câu 4/10</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-3 bg-border rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[40%] transition-all duration-500 ease-out"></div>
+</div>
+</div>
+<!-- Question Card -->
+<div class="bg-surface rounded-2xl p-xl flex flex-col items-center justify-center mb-xl card-shadow border border-border min-h-[200px] text-center">
+<p class="font-label-md text-label-md text-on-surface-variant mb-xs">Chọn nghĩa đúng của từ sau:</p>
+<h2 class="font-headline-lg text-headline-lg md:text-[64px] md:leading-[80px] text-primary mb-sm">苹果</h2>
+<p class="font-headline-md text-headline-md text-surface-tint">píngguǒ</p>
+</div>
+<!-- Options Grid (2x2) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm md:gap-md mb-xl" id="quiz-options">
+<!-- Option 1 -->
+<button class="quiz-option bg-surface border border-border rounded-xl p-md flex items-center justify-between text-left card-shadow hover:interactive-shadow" onclick="selectOption(this)">
+<span class="font-body-lg text-body-lg text-on-surface">Quả chuối</span>
+<span class="material-symbols-outlined opacity-0 check-icon">check_circle</span>
+</button>
+<!-- Option 2 -->
+<button class="quiz-option bg-surface border border-border rounded-xl p-md flex items-center justify-between text-left card-shadow hover:interactive-shadow" onclick="selectOption(this, true)">
+<span class="font-body-lg text-body-lg text-on-surface">Quả táo</span>
+<span class="material-symbols-outlined opacity-0 check-icon text-[#4CAF7D]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Option 3 -->
+<button class="quiz-option bg-surface border border-border rounded-xl p-md flex items-center justify-between text-left card-shadow hover:interactive-shadow" onclick="selectOption(this)">
+<span class="font-body-lg text-body-lg text-on-surface">Quả cam</span>
+<span class="material-symbols-outlined opacity-0 check-icon">check_circle</span>
+</button>
+<!-- Option 4 -->
+<button class="quiz-option bg-surface border border-border rounded-xl p-md flex items-center justify-between text-left card-shadow hover:interactive-shadow" onclick="selectOption(this)">
+<span class="font-body-lg text-body-lg text-on-surface">Cái cốc</span>
+<span class="material-symbols-outlined opacity-0 check-icon">check_circle</span>
+</button>
+</div>
+<!-- Feedback & Continue Area (Hidden initially) -->
+<div class="mt-auto hidden flex-col gap-md slide-up" id="feedback-area">
+<div class="flex items-center gap-sm p-md rounded-xl font-label-md text-label-md" id="feedback-message">
+<!-- Populated by JS -->
+</div>
+<button class="w-full bg-[#4CAF7D] text-white py-sm rounded-lg font-label-md text-label-md font-semibold interactive-shadow hover:brightness-95 transition-all">
+                    Tiếp tục
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-16 px-gutter border-t border-border dark:border-outline-variant bg-surface/90 backdrop-blur-md shadow-lg pb-safe">
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed w-16" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm mt-1">Trang chủ</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed w-16" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm mt-1">Học tập</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-secondary-container text-on-primary-container dark:text-on-secondary-container rounded-xl px-4 py-1 scale-90 duration-150 w-16" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">quiz</span>
+<span class="font-label-sm text-label-sm mt-1">Kiểm tra</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed w-16" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm mt-1">Ôn tập</span>
+</a>
+<a class="flex flex-col items-center justify-center text-muted-text dark:text-outline-variant hover:text-primary dark:hover:text-secondary-fixed w-16" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-label-sm text-label-sm mt-1">Thống kê</span>
+</a>
+</nav>
+<script>
+        let hasAnswered = false;
+
+        function selectOption(element, isCorrect = false) {
+            if (hasAnswered) return;
+            hasAnswered = true;
+
+            const options = document.querySelectorAll('.quiz-option');
+            const feedbackArea = document.getElementById('feedback-area');
+            const feedbackMessage = document.getElementById('feedback-message');
+            
+            // Mark all as answered to disable hover
+            options.forEach(opt => {
+                opt.classList.add('answered');
+                opt.classList.remove('interactive-shadow', 'card-shadow');
+                opt.style.opacity = '0.7';
+            });
+
+            // Handle selected element
+            element.style.opacity = '1';
+            
+            if (isCorrect) {
+                element.classList.add('correct');
+                element.querySelector('.check-icon').style.opacity = '1';
+                
+                feedbackMessage.className = 'flex items-center gap-sm p-md rounded-xl font-label-md text-label-md bg-[#E8F5E9] text-[#2E7D32] border border-[#4CAF7D]';
+                feedbackMessage.innerHTML = '<span class="material-symbols-outlined" style="font-variation-settings: \'FILL\' 1;">check_circle</span> <span class="font-bold">Tuyệt vời!</span> Chính xác.';
+            } else {
+                element.classList.add('incorrect');
+                const xIcon = element.querySelector('.check-icon');
+                xIcon.textContent = 'cancel';
+                xIcon.style.opacity = '1';
+                xIcon.style.color = '#EF5350';
+                
+                // Highlight correct answer
+                const correctOption = Array.from(options).find(opt => opt.getAttribute('onclick').includes('true'));
+                if (correctOption) {
+                    correctOption.classList.add('correct');
+                    correctOption.style.opacity = '1';
+                    correctOption.querySelector('.check-icon').style.opacity = '1';
+                }
+
+                feedbackMessage.className = 'flex items-center gap-sm p-md rounded-xl font-label-md text-label-md bg-[#FFEBEE] text-[#C62828] border border-[#EF5350]';
+                feedbackMessage.innerHTML = '<span class="material-symbols-outlined" style="font-variation-settings: \'FILL\' 1;">cancel</span> <span class="font-bold">Chưa đúng.</span> Nghĩa của từ là "Quả táo".';
+            }
+
+            feedbackArea.classList.remove('hidden');
+            feedbackArea.classList.add('flex');
+            
+            // Simple animation
+            feedbackArea.style.opacity = '0';
+            feedbackArea.style.transform = 'translateY(10px)';
+            setTimeout(() => {
+                feedbackArea.style.transition = 'all 0.3s ease';
+                feedbackArea.style.opacity = '1';
+                feedbackArea.style.transform = 'translateY(0)';
+            }, 10);
+        }
+    </script>
+</body></html>

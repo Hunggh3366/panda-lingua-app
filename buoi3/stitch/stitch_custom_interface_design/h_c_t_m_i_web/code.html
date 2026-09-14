@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Học từ mới - Gia sư Panda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d1dbe9",
+                      "surface-container-low": "#edf4ff",
+                      "tertiary-fixed": "#ffdcc3",
+                      "primary": "#002550",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#6b3a0a",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#747780",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#da965f",
+                      "surface-container-high": "#dfe9f7",
+                      "tertiary": "#3d1d00",
+                      "on-primary-container": "#87a6de",
+                      "surface-tint": "#3f5f92",
+                      "on-secondary-fixed": "#002112",
+                      "danger": "#C94A4A",
+                      "surface-variant": "#d9e3f1",
+                      "on-background": "#121c26",
+                      "tertiary-fixed-dim": "#ffb77e",
+                      "surface": "#FFFFFF",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#77daa4",
+                      "on-primary-fixed-variant": "#254778",
+                      "secondary": "#006c44",
+                      "primary-container": "#173b6c",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary-dark": "#102B50",
+                      "on-primary-fixed": "#001b3d",
+                      "inverse-on-surface": "#e8f2ff",
+                      "primary-fixed-dim": "#a9c7ff",
+                      "secondary-fixed": "#93f7bf",
+                      "tertiary-container": "#5d2f00",
+                      "surface-bright": "#f7f9ff",
+                      "surface-container-highest": "#d9e3f1",
+                      "on-secondary-container": "#007349",
+                      "surface-container": "#e4effd",
+                      "inverse-surface": "#27313c",
+                      "on-tertiary-fixed": "#2f1500",
+                      "on-surface": "#121c26",
+                      "inverse-primary": "#a9c7ff",
+                      "secondary-container": "#93f7bf",
+                      "outline-variant": "#c3c6d0",
+                      "on-secondary-fixed-variant": "#005232",
+                      "on-surface-variant": "#43474f",
+                      "muted-text": "#64717D",
+                      "border": "#DCE4E1",
+                      "background": "#F7FAF8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "lg": "24px",
+                      "xs": "8px",
+                      "sm": "12px",
+                      "container-max": "1200px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F7FAF8;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 12px rgba(23, 59, 108, 0.05);
+        }
+        .btn-hover:hover {
+            filter: brightness(0.9);
+            transform: translateY(-1px);
+        }
+        .btn-hover:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col font-sans text-on-surface">
+<!-- Top Navigation (Task-focused, suppressed main nav) -->
+<header class="w-full max-w-container-max mx-auto px-md py-sm flex items-center justify-between sticky top-0 z-10 bg-background/90 backdrop-blur-sm">
+<button aria-label="Đóng bài học" class="p-2 text-on-surface-variant rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<!-- Progress Bar -->
+<div class="flex-1 mx-4 flex items-center gap-3">
+<div class="h-2 w-full bg-border rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 35%;"></div>
+</div>
+<span class="font-label-md text-label-md text-muted-text whitespace-nowrap">7/20 từ</span>
+</div>
+<button aria-label="Cài đặt" class="p-2 text-on-surface-variant rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</header>
+<!-- Main Content Area - Focused Layout -->
+<main class="flex-1 w-full max-w-3xl mx-auto px-md py-lg flex flex-col items-center justify-center relative pb-32">
+<!-- Vocabulary Card -->
+<div class="w-full bg-surface rounded-2xl border border-border card-shadow p-6 sm:p-8 flex flex-col items-center mb-lg relative">
+<!-- Character & Pinyin Section -->
+<div class="flex flex-col items-center mb-6">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-[64px] leading-tight font-bold text-primary mb-2">学</h1>
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-on-surface-variant">xué</span>
+<button aria-label="Phát âm" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined">volume_up</span>
+</button>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-border my-4"></div>
+<!-- Meaning Section -->
+<div class="w-full text-center mb-6">
+<p class="font-body-lg text-body-lg text-on-surface font-medium">học, học tập</p>
+<p class="font-body-md text-body-md text-muted-text mt-1">Động từ</p>
+</div>
+<!-- Example Section -->
+<div class="w-full bg-surface-bright rounded-xl p-4 border border-border/50 text-left">
+<div class="flex items-start gap-3">
+<button aria-label="Phát âm ví dụ" class="w-8 h-8 shrink-0 rounded-full bg-surface flex items-center justify-center text-primary-fixed-dim border border-border hover:bg-surface-variant transition-colors mt-1">
+<span class="material-symbols-outlined text-[20px]">volume_up</span>
+</button>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface mb-1">我<strong>学</strong>汉语。</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">Wǒ <strong>xué</strong> Hànyǔ.</p>
+<p class="font-body-md text-body-md text-muted-text">Tôi học tiếng Hán.</p>
+</div>
+</div>
+</div>
+<!-- Panda Illustration (Encouragement) -->
+<div class="absolute -top-12 -right-4 w-24 h-24 hidden sm:block">
+<img class="w-full h-full object-contain drop-shadow-md" data-alt="A cute, simple vector illustration of a friendly panda bear character wearing small reading glasses and holding a book, designed in a modern, flat corporate style with soft lighting, set against a transparent or solid light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTbxf5xvb0CU2eqG9lgXhOWJ-X9M_oUP1feZkjtq5h7RtTDFn8Kr1WcXweq-ZLsUgyfXKHs87j5jgidsHjZbhC2YktasINu9z-gRhcEBFNy13OaCueyko3QHk3i6uGVxuf97eWEev_0qAZrENS2Nf-yeXbbC3kviBkgENE6RZGpDzSlqFj8Eud0auHVg9cQ9t6T12_QLrvL6x4UxuXFKBfmxz0CqJXq1jcqnWCE_hZS560AUABkNTw"/>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-border p-md flex justify-center pb-8 pt-4">
+<button class="w-full max-w-sm bg-secondary text-on-secondary font-headline-md text-headline-md py-3 px-6 rounded-xl shadow-md btn-hover transition-all flex items-center justify-center gap-2">
+            Tiếp tục
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</body></html>

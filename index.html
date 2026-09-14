@@ -1,0 +1,4108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gia sư từ vựng (Panda Lingua) — Học tiếng Trung HSK 1–2</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#002550",
+            "primary-container": "#173b6c",
+            "primary-dark": "#102b50",
+            secondary: "#006c44",
+            "secondary-container": "#93f7bf",
+            background: "#F7FAF8",
+            surface: "#FFFFFF",
+            border: "#DCE4E1",
+            danger: "#C94A4A",
+            "muted-text": "#64717D"
+          },
+          fontFamily: { sans: ["Inter", "Noto Sans SC", "sans-serif"] },
+          animation: { fadeIn: "fadeIn 0.25s ease-in-out" },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: "0", transform: "translateY(4px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body{font-family:'Inter','Noto Sans SC',sans-serif;background:#F7FAF8;color:#17212B;-webkit-tap-highlight-color:transparent;}
+    .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24;}
+    .perspective-1000{perspective:1000px;}
+    .srs-card-flip{transition:transform .5s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;position:relative;}
+    .srs-card-flip.flipped{transform:rotateY(180deg);}
+    .srs-card-front,.srs-card-back{backface-visibility:hidden;-webkit-backface-visibility:hidden;position:absolute;inset:0;width:100%;height:100%;}
+    .srs-card-back{transform:rotateY(180deg);}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    .animate-fadeIn{animation:fadeIn .25s ease-in-out}
+    .mode-pill.active{background:#173B6C;color:#fff;border-color:#173B6C;box-shadow:0 2px 8px rgba(23,59,108,.12)}
+    .filter-pill.active{background:#173B6C;color:#fff;border-color:#173B6C;}
+    .safe-bottom{padding-bottom:max(1rem,env(safe-area-inset-bottom));}
+    .streak-celebration{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:rgba(6,16,27,.42);backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .2s ease;}
+    .streak-celebration.show{opacity:1;pointer-events:auto;}
+    .streak-celebration-card{position:relative;width:min(88vw,360px);padding:34px 24px 28px;text-align:center;border-radius:28px;background:linear-gradient(180deg,#fff 0%,#fff8ec 100%);box-shadow:0 28px 80px rgba(16,43,80,.28);transform:translateY(28px) scale(.82);opacity:0;}
+    .streak-celebration.show .streak-celebration-card{animation:streak-pop .62s cubic-bezier(.16,1.35,.32,1) forwards;}
+    .streak-flame-wrap{position:relative;width:126px;height:142px;margin:0 auto 8px;display:grid;place-items:end center;}
+    .streak-glow{position:absolute;inset:25px 2px 0;border-radius:50%;background:radial-gradient(circle,rgba(255,158,33,.38),rgba(255,158,33,0) 68%);animation:streak-glow 1.15s ease-in-out infinite alternate;}
+    .streak-flame{position:relative;font-size:92px;line-height:1;filter:drop-shadow(0 14px 14px rgba(226,81,19,.24));transform-origin:50% 90%;animation:streak-flicker .7s ease-in-out infinite alternate;}
+    .streak-days{font-size:52px;line-height:1;font-weight:800;letter-spacing:-.055em;color:#173B6C;}
+    .streak-label{margin-top:5px;font-size:15px;font-weight:700;color:#E65100;}
+    .streak-message{margin:10px auto 0;max-width:245px;font-size:13px;line-height:1.5;color:#64717D;}
+    .streak-close{position:absolute;right:14px;top:14px;width:34px;height:34px;border-radius:999px;color:#64717D;background:#fff;border:1px solid #DCE4E1;display:grid;place-items:center;cursor:pointer;}
+    .streak-close:hover{background:#F7FAF8;color:#173B6C;}
+    @keyframes streak-pop{0%{transform:translateY(28px) scale(.82);opacity:0}65%{transform:translateY(-5px) scale(1.035);opacity:1}100%{transform:translateY(0) scale(1);opacity:1}}
+    @keyframes streak-flicker{from{transform:rotate(-3deg) scale(.96)}to{transform:rotate(3deg) scale(1.04)}}
+    @keyframes streak-glow{from{transform:scale(.9);opacity:.65}to{transform:scale(1.12);opacity:1}}
+    @media(prefers-reduced-motion:reduce){.streak-celebration,.streak-celebration-card,.streak-flame,.streak-glow{animation:none!important;transition:none!important}.streak-celebration.show .streak-celebration-card{transform:none;opacity:1}}
+    /* Panda AI Drawer & Modal Styles */
+    .panda-ai-backdrop{transition:opacity .22s cubic-bezier(.4,0,.2,1);}
+    .panda-ai-backdrop.show{opacity:1;pointer-events:auto;}
+    .panda-ai-backdrop.show .panda-ai-panel{transform:translateY(0) scale(1);}
+    #panda-ai-settings-modal{transition:opacity .2s ease;}
+    #panda-ai-settings-modal.show{opacity:1;pointer-events:auto;}
+    #panda-ai-settings-modal.show > div{transform:scale(1);}
+    #panda-auth-modal{transition:opacity .2s ease;}
+    #panda-auth-modal.show{opacity:1;pointer-events:auto;}
+    #panda-auth-modal.show > div{transform:scale(1);}
+    .shake-error{animation:shake .4s cubic-bezier(.36,.07,.19,.97) both;}
+    @keyframes shake{10%,90%{transform:translate3d(-1px,0,0)}20%,80%{transform:translate3d(2px,0,0)}30%,50%,70%{transform:translate3d(-4px,0,0)}40%,60%{transform:translate3d(4px,0,0)}}
+    .ai-chip.active{background:#173B6C!important;color:#fff!important;border-color:#173B6C!important;box-shadow:0 2px 6px rgba(23,59,108,.16);}
+    .ai-prose{font-size:13.5px;line-height:1.68;color:#17212B;}
+    .ai-prose p{margin-bottom:8px;}
+    .ai-prose strong{color:#173B6C;font-weight:700;}
+    .ai-prose em{color:#006C44;font-style:normal;font-weight:600;}
+    .ai-card-callout{background:#F7FAF8;border:1px solid #DCE4E1;border-left:4px solid #4CAF7D;border-radius:12px;padding:12px 14px;margin:10px 0;}
+    .ai-example-item{background:#FFFFFF;border:1px solid #EAEFF0;border-radius:10px;padding:10px 12px;margin:6px 0;box-shadow:0 1px 3px rgba(23,59,108,0.03);}
+    .no-scrollbar::-webkit-scrollbar{display:none;}
+    .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+  </style>
+</head>
+<body class="bg-[#F7FAF8] antialiased">
+  <div id="app"></div>
+  <div id="streak-celebration" class="streak-celebration" role="dialog" aria-modal="true" aria-labelledby="streak-title" aria-hidden="true">
+    <div class="streak-celebration-card">
+      <button id="streak-close" class="streak-close" aria-label="Đóng thông báo streak">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+      <div class="streak-flame-wrap" aria-hidden="true">
+        <div class="streak-glow"></div>
+        <div class="streak-flame">🔥</div>
+      </div>
+      <div id="streak-title" class="streak-days"><span id="streak-day-count">1</span></div>
+      <div class="streak-label">ngày liên tiếp</div>
+      <p id="streak-message" class="streak-message">Bạn đã giữ nhịp học hôm nay. Hẹn gặp lại vào ngày mai!</p>
+    </div>
+  </div>
+
+  <!-- PANDA AI ASSISTANT DRAWER -->
+  <div id="panda-ai-drawer" class="panda-ai-backdrop fixed inset-0 z-50 flex items-end md:items-center justify-center bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="ai-drawer-title" aria-hidden="true">
+    <div class="panda-ai-panel relative w-full md:max-w-xl max-h-[88vh] md:max-h-[82vh] bg-white rounded-t-3xl md:rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-[#DCE4E1] transform translate-y-full md:translate-y-4 md:scale-95 transition-transform duration-300">
+      <!-- Header -->
+      <div class="px-5 py-3.5 bg-gradient-to-r from-[#edf4ff] via-white to-[#e8f5e9] border-b border-[#DCE4E1] flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full bg-white border border-[#DCE4E1] shadow-sm flex items-center justify-center overflow-hidden">
+            <span class="text-xl">🐼</span>
+          </div>
+          <div>
+            <h3 id="ai-drawer-title" class="text-base font-bold text-[#173B6C]">Gia sư Panda AI</h3>
+            <p class="text-[11px] text-[#64717D]">Mẹo chiết tự • Ngữ cảnh thực tế • Sư phạm HSK</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1">
+          <button id="ai-btn-settings" class="hidden" aria-hidden="true"></button>
+          <button id="ai-btn-close" class="w-8 h-8 rounded-full hover:bg-slate-100 text-[#64717D] hover:text-[#173B6C] flex items-center justify-center transition-colors" title="Đóng">
+            <span class="material-symbols-outlined text-xl">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Current Word Banner -->
+      <div id="ai-word-banner" class="px-5 py-2.5 bg-[#F7FAF8] border-b border-[#DCE4E1] flex items-center justify-between shrink-0">
+        <div class="flex items-baseline gap-2">
+          <span id="ai-word-hanzi" class="text-2xl font-bold text-[#173B6C]" style="font-family:'Noto Sans SC'">你</span>
+          <span id="ai-word-pinyin" class="text-sm font-semibold text-[#006C44]">nǐ</span>
+          <span class="text-xs text-[#DCE4E1]">|</span>
+          <span id="ai-word-meaning" class="text-xs text-[#64717D]">bạn, anh, chị</span>
+        </div>
+        <button id="ai-word-audio" class="p-1.5 rounded-full bg-white border border-[#DCE4E1] text-[#173B6C] hover:bg-[#edf4ff]" title="Nghe phát âm">
+          <span class="material-symbols-outlined text-base">volume_up</span>
+        </button>
+      </div>
+
+      <!-- Quick Action Chips -->
+      <div class="px-5 py-2.5 bg-white border-b border-[#EAEFF0] flex items-center gap-2 overflow-x-auto shrink-0 no-scrollbar">
+        <button class="ai-chip active shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold border border-[#173B6C] bg-[#173B6C] text-white flex items-center gap-1.5 transition-all shadow-sm" data-ai-type="mnemonic">
+          <span>💡</span><span>Chiết tự & Mẹo nhớ</span>
+        </button>
+        <button class="ai-chip shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold border border-[#DCE4E1] bg-white text-[#64717D] hover:border-[#173B6C] hover:text-[#173B6C] flex items-center gap-1.5 transition-all" data-ai-type="examples">
+          <span>🗣️</span><span>3 câu ví dụ</span>
+        </button>
+        <button class="ai-chip shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold border border-[#DCE4E1] bg-white text-[#64717D] hover:border-[#173B6C] hover:text-[#173B6C] flex items-center gap-1.5 transition-all" data-ai-type="nuance">
+          <span>🔍</span><span>Phân biệt & Lưu ý</span>
+        </button>
+        <button class="ai-chip shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold border border-[#DCE4E1] bg-white text-[#64717D] hover:border-[#173B6C] hover:text-[#173B6C] flex items-center gap-1.5 transition-all" data-ai-type="pronunciation">
+          <span>🎯</span><span>Mẹo phát âm</span>
+        </button>
+      </div>
+
+      <!-- Response Area -->
+      <div id="ai-response-area" class="flex-1 overflow-y-auto px-5 py-4 space-y-3 bg-[#FBFDFB]">
+        <div id="ai-loading" class="hidden flex flex-col items-center justify-center py-10 text-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-[#edf4ff] flex items-center justify-center animate-bounce text-2xl">
+            🐼
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-[#173B6C]">Panda AI đang tra từ điển & phân tích...</p>
+            <p class="text-xs text-[#64717D] mt-0.5">Mô hình sư phạm HSK 1–2</p>
+          </div>
+        </div>
+        <div id="ai-content" class="ai-prose text-sm text-[#17212B] leading-relaxed">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Footer Custom Question Bar -->
+      <div class="p-3.5 bg-white border-t border-[#DCE4E1] shrink-0">
+        <form id="ai-query-form" class="flex items-center gap-2">
+          <div class="relative flex-1">
+            <input id="ai-query-input" type="text" placeholder="Hỏi thêm Panda về từ này (vd: đặt câu đi chợ, phân biệt)..." class="w-full pl-4 pr-10 py-2.5 rounded-xl border border-[#DCE4E1] text-xs md:text-sm focus:border-[#173B6C] focus:ring-1 focus:ring-[#173B6C] bg-[#F7FAF8] outline-none" autocomplete="off"/>
+            <button type="button" id="ai-clear-input" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+              <span class="material-symbols-outlined text-base">close</span>
+            </button>
+          </div>
+          <button type="submit" id="ai-send-btn" class="px-4 py-2.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl text-xs md:text-sm font-semibold flex items-center gap-1.5 shadow-sm transition-all active:scale-95 shrink-0">
+            <span>Hỏi</span>
+            <span class="material-symbols-outlined text-base">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANDA AI SETTINGS MODAL -->
+  <div id="panda-ai-settings-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="ai-settings-title" aria-hidden="true">
+    <div class="relative w-[92vw] max-w-md bg-white rounded-2xl shadow-xl p-6 border border-[#DCE4E1] transform scale-95 transition-transform duration-200">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2.5">
+          <span class="text-2xl">⚙️</span>
+          <div>
+            <h3 id="ai-settings-title" class="text-base font-bold text-[#173B6C]">Cấu hình Gia sư Panda AI</h3>
+            <p class="text-xs text-[#64717D]">Đa tầng thông minh: Google Gemini & OpenRouter</p>
+          </div>
+        </div>
+        <button id="ai-settings-close" class="w-8 h-8 rounded-full hover:bg-slate-100 text-[#64717D] flex items-center justify-center">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+          <div class="rounded-xl border border-[#C8E6C9] bg-[#E8F5E9] p-3">
+            <p class="font-semibold text-[#006C44] flex items-center gap-1.5"><span class="material-symbols-outlined text-base">verified</span> Động cơ kép (Dual-Engine Resilient AI)</p>
+            <p class="text-[11px] text-[#2E7D32] mt-1">Hệ thống ưu tiên <strong>Google Gemini Flash</strong> tốc độ cao và hạn mức lớn, tự động chuyển sang <strong>OpenRouter</strong> hoặc bộ tri thức ngoại tuyến nếu mất mạng.</p>
+          </div>
+
+        <div>
+          <label class="block font-semibold text-[#173B6C] mb-1">Mô hình hoạt động chính:</label>
+          <div class="w-full px-3 py-2.5 rounded-xl border border-[#DCE4E1] bg-[#F7FAF8] text-xs font-semibold text-[#173B6C] flex items-center justify-between">
+            <span>✨ Google Gemini Flash-Lite (Nhanh & tiết kiệm)</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#E8F5E9] text-[#006C44] font-bold">Hoạt động</span>
+          </div>
+        </div>
+
+        <div class="p-3 bg-[#FFF8E1] rounded-xl border border-[#FFE082] text-[#7A4F00]">
+          <p class="font-bold flex items-center gap-1"><span class="material-symbols-outlined text-sm">shield</span> Bảo vệ phiên học liên tục:</p>
+          <p class="mt-0.5 text-[11px] leading-relaxed">Khi không có kết nối internet hoặc API ngoài chạm trần, app kích hoạt ngay kho chiết tự sư phạm tích hợp sẵn (Offline-first) để buổi học không bao giờ bị ngắt quãng.</p>
+        </div>
+
+        <div class="p-3 bg-[#E3F2FD]/50 rounded-xl border border-[#BBDEFB]">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-[#173B6C] flex items-center gap-1 text-xs">
+              <span>✈️</span><span>Thông báo Telegram Bot</span>
+            </span>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#173B6C] border border-[#BBDEFB]">Edge Function</span>
+          </div>
+          <p class="text-[11px] text-[#64717D] leading-relaxed mb-2">Nhận thông báo hoàn thành bài học, chúc mừng streak và lịch ôn tập SRS về điện thoại.</p>
+          <div class="flex gap-2">
+            <input id="setting-telegram-chatid" type="text" placeholder="Chat ID (vd: 123456789)" class="flex-1 px-3 py-1.5 rounded-lg border border-[#DCE4E1] text-xs font-mono bg-white outline-none focus:border-[#173B6C]"/>
+            <button type="button" id="btn-test-telegram" class="px-3 py-1.5 bg-[#173B6C] hover:bg-[#102B50] text-white text-xs font-bold rounded-lg transition-colors whitespace-nowrap shadow-sm">Gửi test</button>
+          </div>
+          <p id="telegram-test-feedback" class="text-[11px] mt-1.5 hidden"></p>
+        </div>
+
+        <div class="flex gap-2 pt-2">
+          <button id="ai-settings-save" class="flex-1 py-2.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl font-bold shadow-sm">Lưu cấu hình</button>
+          <button id="ai-settings-clear-cache" class="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 text-[#64717D] rounded-xl font-medium" title="Xóa cache để tải lại mới">Xóa cache AI</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTH & GUEST UPGRADE MODAL (F02 / P-06 / P-07) -->
+  <div id="panda-auth-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-slate-900/45 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title" aria-hidden="true">
+    <div id="auth-modal-card" class="relative w-[92vw] max-w-md bg-white rounded-3xl shadow-2xl p-6 md:p-7 border border-[#DCE4E1] transform scale-95 transition-transform duration-200 overflow-hidden">
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#edf4ff] border border-[#DCE4E1] flex items-center justify-center text-xl shadow-sm">
+            🐼
+          </div>
+          <div>
+            <h3 id="auth-modal-title" class="text-base md:text-lg font-bold text-[#173B6C]">Tài khoản học viên</h3>
+            <p id="auth-modal-subtitle" class="text-xs text-[#64717D]">Đồng bộ tiến độ học tập trên mọi thiết bị</p>
+          </div>
+        </div>
+        <button id="auth-modal-close" class="w-8 h-8 rounded-full hover:bg-slate-100 text-[#64717D] flex items-center justify-center transition-colors" title="Đóng">
+          <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+      </div>
+
+      <!-- Logged-in view (if user is authenticated) -->
+      <div id="auth-logged-in-view" class="hidden space-y-4">
+        <div class="p-4 bg-[#E8F5E9] border border-[#C8E6C9] rounded-2xl flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-2xl shadow-sm border border-[#C8E6C9]">
+            🎒
+          </div>
+          <div class="flex-1 min-w-0">
+            <h4 id="auth-profile-name" class="text-sm font-bold text-[#173B6C] truncate">Học viên Panda</h4>
+            <p id="auth-profile-email" class="text-xs text-[#006C44] truncate">learner@gmail.com</p>
+            <span id="auth-sync-badge" class="inline-block mt-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#006C44] border border-[#C8E6C9]">✓ Đã xác thực tài khoản</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-center">
+          <div class="p-3 bg-[#F7FAF8] rounded-xl border border-[#DCE4E1]"><span class="text-xs text-[#64717D]">Chuỗi học tập</span><div id="auth-profile-streak" class="text-lg font-bold text-[#E65100]">0 ngày</div></div>
+          <div class="p-3 bg-[#F7FAF8] rounded-xl border border-[#DCE4E1]"><span class="text-xs text-[#64717D]">Từ đã học</span><div id="auth-profile-learned" class="text-lg font-bold text-[#173B6C]">0 từ</div></div>
+        </div>
+        <div id="admin-users-panel" class="hidden rounded-2xl border border-[#DCE4E1] bg-[#F7FAF8] p-3.5">
+          <div class="flex items-center justify-between gap-3 mb-3"><div><p class="text-xs font-bold text-[#173B6C] flex items-center gap-1"><span class="material-symbols-outlined text-base">admin_panel_settings</span> Quản lý người dùng</p><p class="text-[10px] text-[#64717D]">Ban, hạn chế AI hoặc xóa tài khoản</p></div><button id="admin-refresh-users" class="p-2 rounded-lg bg-white border border-[#DCE4E1] text-[#173B6C]" title="Làm mới"><span class="material-symbols-outlined text-base">refresh</span></button></div>
+          <input id="admin-user-search" type="search" placeholder="Tìm email hoặc tên..." class="w-full px-3 py-2 rounded-xl border border-[#DCE4E1] bg-white text-xs outline-none focus:border-[#173B6C] mb-3">
+          <div id="admin-users-list" class="space-y-2 max-h-56 overflow-y-auto"><p class="text-[11px] text-[#64717D] text-center py-4">Đang tải danh sách...</p></div>
+          <p id="admin-users-feedback" class="hidden text-[11px] mt-2 rounded-lg p-2"></p>
+        </div>
+        <button id="auth-logout-btn" class="w-full py-3 bg-[#FFEBEE] hover:bg-[#FFCDD2] text-[#C94A4A] font-bold text-xs rounded-xl transition-colors flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-base">logout</span><span>Đăng xuất tài khoản</span></button>
+      </div>
+
+      <!-- Auth Form (Sign In / Sign Up) -->
+      <div id="auth-form-view" class="space-y-4">
+        <!-- Tab Selector -->
+        <div class="flex p-1 bg-[#F7FAF8] rounded-xl border border-[#DCE4E1]">
+          <button type="button" id="auth-tab-login" class="flex-1 py-2 rounded-lg text-xs font-bold transition-all bg-[#173B6C] text-white shadow-sm">
+            Đăng nhập
+          </button>
+          <button type="button" id="auth-tab-signup" class="flex-1 py-2 rounded-lg text-xs font-semibold text-[#64717D] hover:text-[#173B6C] transition-all">
+            Đăng ký mới
+          </button>
+        </div>
+
+        <form id="auth-form" novalidate class="space-y-3.5">
+          <!-- Name field (Sign up only) -->
+          <div id="auth-name-group" class="hidden">
+            <label class="block text-xs font-semibold text-[#173B6C] mb-1">Tên học viên của bạn:</label>
+            <input id="auth-name" name="name" type="text" autocomplete="name" placeholder="Ví dụ: Hà Mạnh Hùng" class="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4E1] text-xs font-medium outline-none focus:border-[#173B6C] transition-colors"/>
+            <p id="auth-name-error" class="text-[11px] text-[#C94A4A] font-medium mt-1 hidden"></p>
+          </div>
+
+          <!-- Email field -->
+          <div>
+            <label class="block text-xs font-semibold text-[#173B6C] mb-1">Địa chỉ Email:</label>
+            <input id="auth-email" name="email" type="email" autocomplete="email" placeholder="learner@example.com" class="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4E1] text-xs font-medium outline-none focus:border-[#173B6C] transition-colors"/>
+            <p id="auth-email-error" class="text-[11px] text-[#C94A4A] font-medium mt-1 hidden"></p>
+          </div>
+
+          <!-- Password field -->
+          <div>
+            <label class="block text-xs font-semibold text-[#173B6C] mb-1">Mật khẩu (tối thiểu 8 ký tự):</label>
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-[#DCE4E1] text-xs font-medium outline-none focus:border-[#173B6C] transition-colors"/>
+            <p id="auth-password-error" class="text-[11px] text-[#C94A4A] font-medium mt-1 hidden"></p>
+          </div>
+
+          <!-- Global alert message -->
+          <div id="auth-feedback" class="text-xs rounded-xl p-2.5 hidden"></div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="auth-submit-btn" class="w-full py-3 bg-[#173B6C] hover:bg-[#102B50] text-white font-bold text-xs md:text-sm rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+            <span id="auth-submit-text">Đăng nhập tài khoản</span>
+            <span class="material-symbols-outlined text-base">login</span>
+          </button>
+        </form>
+
+        <div class="p-3 rounded-xl bg-[#EDF4FF] border border-[#DCE4E1] text-center">
+          <p class="text-[11px] text-[#173B6C] font-semibold">🔐 Bạn cần đăng nhập để sử dụng bài học, lộ trình, SRS và Panda AI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="module">
+import { createClient } from '@supabase/supabase-js';
+const VOCAB = [
+  {
+    "id": "hsk1_001",
+    "hanzi": "你",
+    "pinyin": "nǐ",
+    "meaning": "bạn, anh, chị (ngôi thứ 2)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你好！",
+      "pinyin": "Nǐ hǎo!",
+      "meaning": "Xin chào bạn!"
+    }
+  },
+  {
+    "id": "hsk1_002",
+    "hanzi": "我",
+    "pinyin": "wǒ",
+    "meaning": "tôi, mình, em (ngôi thứ 1)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我是学生。",
+      "pinyin": "Wǒ shì xuésheng.",
+      "meaning": "Tôi là học sinh."
+    }
+  },
+  {
+    "id": "hsk1_003",
+    "hanzi": "他",
+    "pinyin": "tā",
+    "meaning": "anh ấy, ông ấy",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他是我的老师。",
+      "pinyin": "Tā shì wǒ de lǎoshī.",
+      "meaning": "Thầy ấy là giáo viên của tôi."
+    }
+  },
+  {
+    "id": "hsk1_004",
+    "hanzi": "她",
+    "pinyin": "tā",
+    "meaning": "cô ấy, bà ấy",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "她是中国人。",
+      "pinyin": "Tā shì Zhōngguórén.",
+      "meaning": "Cô ấy là người Trung Quốc."
+    }
+  },
+  {
+    "id": "hsk1_005",
+    "hanzi": "好",
+    "pinyin": "hǎo",
+    "meaning": "tốt, đẹp, khỏe",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "今天天气很好。",
+      "pinyin": "Jīntiān tiānqì hěn hǎo.",
+      "meaning": "Hôm nay thời tiết rất tốt."
+    }
+  },
+  {
+    "id": "hsk1_006",
+    "hanzi": "谢谢",
+    "pinyin": "xièxie",
+    "meaning": "cảm ơn",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "谢谢你的帮助。",
+      "pinyin": "Xièxie nǐ de bāngzhù.",
+      "meaning": "Cảm ơn sự giúp đỡ của bạn."
+    }
+  },
+  {
+    "id": "hsk1_007",
+    "hanzi": "不客气",
+    "pinyin": "bú kèqi",
+    "meaning": "đừng khách sáo, không có chi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "不用谢，不客气！",
+      "pinyin": "Bú yòng xiè, bú kèqi!",
+      "meaning": "Không cần cảm ơn, đừng khách sáo!"
+    }
+  },
+  {
+    "id": "hsk1_008",
+    "hanzi": "再见",
+    "pinyin": "zàijiàn",
+    "meaning": "tạm biệt, hẹn gặp lại",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "明天再见！",
+      "pinyin": "Míngtiān zàijiàn!",
+      "meaning": "Ngày mai gặp lại nhé!"
+    }
+  },
+  {
+    "id": "hsk1_009",
+    "hanzi": "明天",
+    "pinyin": "míngtiān",
+    "meaning": "ngày mai",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "明天你去学校吗？",
+      "pinyin": "Míngtiān nǐ qù xuéxiào ma?",
+      "meaning": "Ngày mai bạn có đi học không?"
+    }
+  },
+  {
+    "id": "hsk1_010",
+    "hanzi": "今天",
+    "pinyin": "jīntiān",
+    "meaning": "hôm nay",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "今天是星期一。",
+      "pinyin": "Jīntiān shì xīngqīyī.",
+      "meaning": "Hôm nay là thứ hai."
+    }
+  },
+  {
+    "id": "hsk1_011",
+    "hanzi": "吃",
+    "pinyin": "chī",
+    "meaning": "ăn",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你想吃什么？",
+      "pinyin": "Nǐ xiǎng chī shénme?",
+      "meaning": "Bạn muốn ăn gì?"
+    }
+  },
+  {
+    "id": "hsk1_012",
+    "hanzi": "喝",
+    "pinyin": "hē",
+    "meaning": "uống",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我想喝茶。",
+      "pinyin": "Wǒ xiǎng hē chá.",
+      "meaning": "Tôi muốn uống trà."
+    }
+  },
+  {
+    "id": "hsk1_013",
+    "hanzi": "水",
+    "pinyin": "shuǐ",
+    "meaning": "nước",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "请喝水。",
+      "pinyin": "Qǐng hē shuǐ.",
+      "meaning": "Xin mời uống nước."
+    }
+  },
+  {
+    "id": "hsk1_014",
+    "hanzi": "茶",
+    "pinyin": "chá",
+    "meaning": "trà, chè",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "中国茶很好喝。",
+      "pinyin": "Zhōngguó chá hěn hǎohē.",
+      "meaning": "Trà Trung Quốc rất ngon."
+    }
+  },
+  {
+    "id": "hsk1_015",
+    "hanzi": "苹果",
+    "pinyin": "píngguǒ",
+    "meaning": "quả táo",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这个苹果很大。",
+      "pinyin": "Zhè ge píngguǒ hěn dà.",
+      "meaning": "Quả táo này rất to."
+    }
+  },
+  {
+    "id": "hsk1_016",
+    "hanzi": "米饭",
+    "pinyin": "mǐfàn",
+    "meaning": "cơm",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我喜欢吃米饭。",
+      "pinyin": "Wǒ xǐhuan chī mǐfàn.",
+      "meaning": "Tôi thích ăn cơm."
+    }
+  },
+  {
+    "id": "hsk1_017",
+    "hanzi": "喜欢",
+    "pinyin": "xǐhuan",
+    "meaning": "thích",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我喜欢学汉语。",
+      "pinyin": "Wǒ xǐhuan xué Hànyǔ.",
+      "meaning": "Tôi thích học tiếng Trung."
+    }
+  },
+  {
+    "id": "hsk1_018",
+    "hanzi": "汉语",
+    "pinyin": "Hànyǔ",
+    "meaning": "tiếng Hán, tiếng Trung",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "汉语不难。",
+      "pinyin": "Hànyǔ bù nán.",
+      "meaning": "Tiếng Trung không khó."
+    }
+  },
+  {
+    "id": "hsk1_019",
+    "hanzi": "学校",
+    "pinyin": "xuéxiào",
+    "meaning": "trường học",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们的学校很大。",
+      "pinyin": "Wǒmen de xuéxiào hěn dà.",
+      "meaning": "Trường của chúng tôi rất to."
+    }
+  },
+  {
+    "id": "hsk1_020",
+    "hanzi": "老师",
+    "pinyin": "lǎoshī",
+    "meaning": "giáo viên",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "王老师在学校。",
+      "pinyin": "Wáng lǎoshī zài xuéxiào.",
+      "meaning": "Thầy Vương đang ở trường."
+    }
+  },
+  {
+    "id": "hsk1_021",
+    "hanzi": "朋友",
+    "pinyin": "péngyou",
+    "meaning": "bạn bè",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他是我的好朋友。",
+      "pinyin": "Tā shì wǒ de hǎo péngyou.",
+      "meaning": "Cậu ấy là bạn tốt của tôi."
+    }
+  },
+  {
+    "id": "hsk1_022",
+    "hanzi": "家",
+    "pinyin": "jiā",
+    "meaning": "nhà, gia đình",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我家在北京。",
+      "pinyin": "Wǒ jiā zài Běijīng.",
+      "meaning": "Nhà tôi ở Bắc Kinh."
+    }
+  },
+  {
+    "id": "hsk1_023",
+    "hanzi": "爸爸",
+    "pinyin": "bàba",
+    "meaning": "bố, ba",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "爸爸在看书。",
+      "pinyin": "Bàba zài kàn shū.",
+      "meaning": "Bố đang đọc sách."
+    }
+  },
+  {
+    "id": "hsk1_024",
+    "hanzi": "妈妈",
+    "pinyin": "māma",
+    "meaning": "mẹ, má",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "妈妈在做饭。",
+      "pinyin": "Māma zài zuò fàn.",
+      "meaning": "Mẹ đang nấu cơm."
+    }
+  },
+  {
+    "id": "hsk1_025",
+    "hanzi": "看",
+    "pinyin": "kàn",
+    "meaning": "nhìn, xem, đọc",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我在看电影。",
+      "pinyin": "Wǒ zài kàn diànyǐng.",
+      "meaning": "Tôi đang xem phim."
+    }
+  },
+  {
+    "id": "hsk1_026",
+    "hanzi": "听",
+    "pinyin": "tīng",
+    "meaning": "nghe",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你听，这是什么声音？",
+      "pinyin": "Nǐ tīng, zhè shì shénme shēngyīn?",
+      "meaning": "Bạn nghe xem, đây là âm thanh gì?"
+    }
+  },
+  {
+    "id": "hsk1_027",
+    "hanzi": "说",
+    "pinyin": "shuō",
+    "meaning": "nói",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "请再说一遍。",
+      "pinyin": "Qǐng zài shuō yí biàn.",
+      "meaning": "Xin hãy nói lại một lần nữa."
+    }
+  },
+  {
+    "id": "hsk1_028",
+    "hanzi": "读",
+    "pinyin": "dú",
+    "meaning": "đọc",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "跟我一起读。",
+      "pinyin": "Gēn wǒ yìqǐ dú.",
+      "meaning": "Hãy đọc cùng với tôi."
+    }
+  },
+  {
+    "id": "hsk1_029",
+    "hanzi": "写",
+    "pinyin": "xiě",
+    "meaning": "viết",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你会写汉字吗？",
+      "pinyin": "Nǐ huì xiě hànzì ma?",
+      "meaning": "Bạn biết viết chữ Hán không?"
+    }
+  },
+  {
+    "id": "hsk1_030",
+    "hanzi": "钱",
+    "pinyin": "qián",
+    "meaning": "tiền",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这个多少钱？",
+      "pinyin": "Zhè ge duōshao qián?",
+      "meaning": "Cái này bao nhiêu tiền?"
+    }
+  },
+  {
+    "id": "hsk1_031",
+    "hanzi": "是",
+    "pinyin": "shì",
+    "meaning": "là",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我是越南人。",
+      "pinyin": "Wǒ shì Yuènánrén.",
+      "meaning": "Tôi là người Việt Nam."
+    }
+  },
+  {
+    "id": "hsk1_032",
+    "hanzi": "有",
+    "pinyin": "yǒu",
+    "meaning": "có",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我有一个哥哥。",
+      "pinyin": "Wǒ yǒu yí ge gēge.",
+      "meaning": "Tôi có một người anh trai."
+    }
+  },
+  {
+    "id": "hsk1_033",
+    "hanzi": "大",
+    "pinyin": "dà",
+    "meaning": "to, lớn",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这个房子很大。",
+      "pinyin": "Zhè ge fángzi hěn dà.",
+      "meaning": "Căn nhà này rất to."
+    }
+  },
+  {
+    "id": "hsk1_034",
+    "hanzi": "小",
+    "pinyin": "xiǎo",
+    "meaning": "nhỏ, bé",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我的猫很小。",
+      "pinyin": "Wǒ de māo hěn xiǎo.",
+      "meaning": "Con mèo của tôi rất nhỏ."
+    }
+  },
+  {
+    "id": "hsk1_035",
+    "hanzi": "多",
+    "pinyin": "duō",
+    "meaning": "nhiều",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "中国人口很多。",
+      "pinyin": "Zhōngguó rénkǒu hěn duō.",
+      "meaning": "Dân số Trung Quốc rất đông."
+    }
+  },
+  {
+    "id": "hsk1_036",
+    "hanzi": "少",
+    "pinyin": "shǎo",
+    "meaning": "ít",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "今天人很少。",
+      "pinyin": "Jīntiān rén hěn shǎo.",
+      "meaning": "Hôm nay ít người quá."
+    }
+  },
+  {
+    "id": "hsk1_037",
+    "hanzi": "上",
+    "pinyin": "shàng",
+    "meaning": "ở trên, lên",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "书在桌子上。",
+      "pinyin": "Shū zài zhuōzi shàng.",
+      "meaning": "Sách ở trên bàn."
+    }
+  },
+  {
+    "id": "hsk1_038",
+    "hanzi": "下",
+    "pinyin": "xià",
+    "meaning": "ở dưới, xuống",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "椅子在桌子下面。",
+      "pinyin": "Yǐzi zài zhuōzi xiàmiàn.",
+      "meaning": "Ghế ở dưới bàn."
+    }
+  },
+  {
+    "id": "hsk1_039",
+    "hanzi": "中",
+    "pinyin": "zhōng",
+    "meaning": "giữa, trung",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "中间的那个人是我爸爸。",
+      "pinyin": "Zhōngjiān de nàge rén shì wǒ bàba.",
+      "meaning": "Người ở giữa là bố tôi."
+    }
+  },
+  {
+    "id": "hsk1_040",
+    "hanzi": "人",
+    "pinyin": "rén",
+    "meaning": "người",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这里的人很多。",
+      "pinyin": "Zhèlǐ de rén hěn duō.",
+      "meaning": "Ở đây có rất nhiều người."
+    }
+  },
+  {
+    "id": "hsk1_041",
+    "hanzi": "书",
+    "pinyin": "shū",
+    "meaning": "sách",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这本书很有意思。",
+      "pinyin": "Zhè běn shū hěn yǒu yìsi.",
+      "meaning": "Quyển sách này rất thú vị."
+    }
+  },
+  {
+    "id": "hsk1_042",
+    "hanzi": "猫",
+    "pinyin": "māo",
+    "meaning": "con mèo",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我的猫很可爱。",
+      "pinyin": "Wǒ de māo hěn kě'ài.",
+      "meaning": "Con mèo của tôi rất dễ thương."
+    }
+  },
+  {
+    "id": "hsk1_043",
+    "hanzi": "狗",
+    "pinyin": "gǒu",
+    "meaning": "con chó",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他家的狗很大。",
+      "pinyin": "Tā jiā de gǒu hěn dà.",
+      "meaning": "Con chó nhà cậu ấy rất to."
+    }
+  },
+  {
+    "id": "hsk1_044",
+    "hanzi": "电影",
+    "pinyin": "diànyǐng",
+    "meaning": "phim điện ảnh",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们去看电影吧。",
+      "pinyin": "Wǒmen qù kàn diànyǐng ba.",
+      "meaning": "Chúng ta đi xem phim đi."
+    }
+  },
+  {
+    "id": "hsk1_045",
+    "hanzi": "电视",
+    "pinyin": "diànshì",
+    "meaning": "tivi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "爸爸在看电视。",
+      "pinyin": "Bàba zài kàn diànshì.",
+      "meaning": "Bố đang xem tivi."
+    }
+  },
+  {
+    "id": "hsk1_046",
+    "hanzi": "电脑",
+    "pinyin": "diànnǎo",
+    "meaning": "máy tính",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我用电脑学习汉语。",
+      "pinyin": "Wǒ yòng diànnǎo xuéxí Hànyǔ.",
+      "meaning": "Tôi dùng máy tính học tiếng Trung."
+    }
+  },
+  {
+    "id": "hsk1_047",
+    "hanzi": "手机",
+    "pinyin": "shǒujī",
+    "meaning": "điện thoại di động",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你的手机号码是多少？",
+      "pinyin": "Nǐ de shǒujī hàomǎ shì duōshao?",
+      "meaning": "Số điện thoại của bạn là bao nhiêu?"
+    }
+  },
+  {
+    "id": "hsk1_048",
+    "hanzi": "学生",
+    "pinyin": "xuésheng",
+    "meaning": "học sinh, sinh viên",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他是一个大学生。",
+      "pinyin": "Tā shì yí ge dàxuésheng.",
+      "meaning": "Cậu ấy là sinh viên đại học."
+    }
+  },
+  {
+    "id": "hsk1_049",
+    "hanzi": "医生",
+    "pinyin": "yīsheng",
+    "meaning": "bác sĩ",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我妈妈是医生。",
+      "pinyin": "Wǒ māma shì yīsheng.",
+      "meaning": "Mẹ tôi là bác sĩ."
+    }
+  },
+  {
+    "id": "hsk1_050",
+    "hanzi": "工作",
+    "pinyin": "gōngzuò",
+    "meaning": "công việc, làm việc",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我在北京工作。",
+      "pinyin": "Wǒ zài Běijīng gōngzuò.",
+      "meaning": "Tôi làm việc ở Bắc Kinh."
+    }
+  },
+  {
+    "id": "hsk1_051",
+    "hanzi": "去",
+    "pinyin": "qù",
+    "meaning": "đi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "星期天你去哪儿？",
+      "pinyin": "Xīngqītiān nǐ qù nǎr?",
+      "meaning": "Chủ nhật bạn đi đâu?"
+    }
+  },
+  {
+    "id": "hsk1_052",
+    "hanzi": "来",
+    "pinyin": "lái",
+    "meaning": "đến, tới",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "请来我家玩。",
+      "pinyin": "Qǐng lái wǒ jiā wán.",
+      "meaning": "Hãy đến nhà tôi chơi."
+    }
+  },
+  {
+    "id": "hsk1_053",
+    "hanzi": "坐",
+    "pinyin": "zuò",
+    "meaning": "ngồi, ngồi xe",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们坐出租车去吧。",
+      "pinyin": "Wǒmen zuò chūzūchē qù ba.",
+      "meaning": "Đi bằng taxi nhé."
+    }
+  },
+  {
+    "id": "hsk1_054",
+    "hanzi": "买",
+    "pinyin": "mǎi",
+    "meaning": "mua",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我想买一本书。",
+      "pinyin": "Wǒ xiǎng mǎi yì běn shū.",
+      "meaning": "Tôi muốn mua một quyển sách."
+    }
+  },
+  {
+    "id": "hsk1_055",
+    "hanzi": "做",
+    "pinyin": "zuò",
+    "meaning": "làm, làm món",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你做什么工作？",
+      "pinyin": "Nǐ zuò shénme gōngzuò?",
+      "meaning": "Bạn làm công việc gì?"
+    }
+  },
+  {
+    "id": "hsk1_056",
+    "hanzi": "会",
+    "pinyin": "huì",
+    "meaning": "biết, có thể",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他会说汉语。",
+      "pinyin": "Tā huì shuō Hànyǔ.",
+      "meaning": "Anh ấy biết nói tiếng Trung."
+    }
+  },
+  {
+    "id": "hsk1_057",
+    "hanzi": "能",
+    "pinyin": "néng",
+    "meaning": "có thể (khả năng)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "明天你能来吗？",
+      "pinyin": "Míngtiān nǐ néng lái ma?",
+      "meaning": "Ngày mai bạn đến được không?"
+    }
+  },
+  {
+    "id": "hsk1_058",
+    "hanzi": "想",
+    "pinyin": "xiǎng",
+    "meaning": "muốn, nghĩ",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我很想去中国。",
+      "pinyin": "Wǒ hěn xiǎng qù Zhōngguó.",
+      "meaning": "Tôi rất muốn đi Trung Quốc."
+    }
+  },
+  {
+    "id": "hsk1_059",
+    "hanzi": "认识",
+    "pinyin": "rènshi",
+    "meaning": "quen biết, nhận ra",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "很高兴认识你。",
+      "pinyin": "Hěn gāoxìng rènshi nǐ.",
+      "meaning": "Rất vui được làm quen với bạn."
+    }
+  },
+  {
+    "id": "hsk1_060",
+    "hanzi": "名字",
+    "pinyin": "míngzi",
+    "meaning": "tên",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你叫什么名字？",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "meaning": "Bạn tên là gì?"
+    }
+  },
+  {
+    "id": "hsk1_061",
+    "hanzi": "岁",
+    "pinyin": "suì",
+    "meaning": "tuổi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你今年多大了？",
+      "pinyin": "Nǐ jīnnián duō dà le?",
+      "meaning": "Năm nay bạn bao nhiêu tuổi?"
+    }
+  },
+  {
+    "id": "hsk1_062",
+    "hanzi": "年",
+    "pinyin": "nián",
+    "meaning": "năm",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "明年我打算去留学。",
+      "pinyin": "Míngnián wǒ dǎsuàn qù liúxué.",
+      "meaning": "Năm sau tôi định đi du học."
+    }
+  },
+  {
+    "id": "hsk1_063",
+    "hanzi": "月",
+    "pinyin": "yuè",
+    "meaning": "tháng",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "现在是十二月。",
+      "pinyin": "Xiànzài shì shí'èryuè.",
+      "meaning": "Bây giờ là tháng mười hai."
+    }
+  },
+  {
+    "id": "hsk1_064",
+    "hanzi": "日",
+    "pinyin": "rì",
+    "meaning": "ngày",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "今天是十月一日。",
+      "pinyin": "Jīntiān shì shíyuè yī rì.",
+      "meaning": "Hôm nay là ngày 1/10."
+    }
+  },
+  {
+    "id": "hsk1_065",
+    "hanzi": "星期",
+    "pinyin": "xīngqī",
+    "meaning": "tuần, thứ trong tuần",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "星期六我们去爬山吧。",
+      "pinyin": "Xīngqīliù wǒmen qù páshān ba.",
+      "meaning": "Thứ bảy chúng ta đi leo núi nhé."
+    }
+  },
+  {
+    "id": "hsk1_066",
+    "hanzi": "点",
+    "pinyin": "diǎn",
+    "meaning": "giờ, điểm",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "现在几点了？",
+      "pinyin": "Xiànzài jǐ diǎn le?",
+      "meaning": "Bây giờ mấy giờ rồi?"
+    }
+  },
+  {
+    "id": "hsk1_067",
+    "hanzi": "分钟",
+    "pinyin": "fēnzhōng",
+    "meaning": "phút",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "等十分钟，好吗？",
+      "pinyin": "Děng shí fēnzhōng, hǎo ma?",
+      "meaning": "Chờ 10 phút được không?"
+    }
+  },
+  {
+    "id": "hsk1_068",
+    "hanzi": "早上",
+    "pinyin": "zǎoshang",
+    "meaning": "buổi sáng",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我早上七点起床。",
+      "pinyin": "Wǒ zǎoshang qī diǎn qǐchuáng.",
+      "meaning": "Sáng tôi dậy lúc 7 giờ."
+    }
+  },
+  {
+    "id": "hsk1_069",
+    "hanzi": "晚上",
+    "pinyin": "wǎnshang",
+    "meaning": "buổi tối",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "晚上我学习汉语。",
+      "pinyin": "Wǎnshang wǒ xuéxí Hànyǔ.",
+      "meaning": "Buổi tối tôi học tiếng Trung."
+    }
+  },
+  {
+    "id": "hsk1_070",
+    "hanzi": "饭馆",
+    "pinyin": "fànguǎn",
+    "meaning": "nhà hàng",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这家饭馆的菜很好吃。",
+      "pinyin": "Zhè jiā fànguǎn de cài hěn hǎochī.",
+      "meaning": "Món ăn nhà hàng này rất ngon."
+    }
+  },
+  {
+    "id": "hsk1_071",
+    "hanzi": "商店",
+    "pinyin": "shāngdiàn",
+    "meaning": "cửa hàng",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "商店九点开门。",
+      "pinyin": "Shāngdiàn jiǔ diǎn kāimén.",
+      "meaning": "Cửa hàng mở cửa lúc 9 giờ."
+    }
+  },
+  {
+    "id": "hsk1_072",
+    "hanzi": "医院",
+    "pinyin": "yīyuàn",
+    "meaning": "bệnh viện",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他在医院工作。",
+      "pinyin": "Tā zài yīyuàn gōngzuò.",
+      "meaning": "Anh ấy làm việc ở bệnh viện."
+    }
+  },
+  {
+    "id": "hsk1_073",
+    "hanzi": "火车",
+    "pinyin": "huǒchē",
+    "meaning": "tàu lửa",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们坐火车去上海。",
+      "pinyin": "Wǒmen zuò huǒchē qù Shànghǎi.",
+      "meaning": "Chúng ta đi Thượng Hải bằng tàu."
+    }
+  },
+  {
+    "id": "hsk1_074",
+    "hanzi": "飞机",
+    "pinyin": "fēijī",
+    "meaning": "máy bay",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "飞机十点起飞。",
+      "pinyin": "Fēijī shí diǎn qǐfēi.",
+      "meaning": "Máy bay cất cánh lúc 10 giờ."
+    }
+  },
+  {
+    "id": "hsk1_075",
+    "hanzi": "出租车",
+    "pinyin": "chūzūchē",
+    "meaning": "xe taxi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "出租车来了！",
+      "pinyin": "Chūzūchē lái le!",
+      "meaning": "Taxi đến rồi!"
+    }
+  },
+  {
+    "id": "hsk1_076",
+    "hanzi": "天气",
+    "pinyin": "tiānqì",
+    "meaning": "thời tiết",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "今天天气怎么样？",
+      "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "meaning": "Hôm nay thời tiết thế nào?"
+    }
+  },
+  {
+    "id": "hsk1_077",
+    "hanzi": "下雨",
+    "pinyin": "xiàyǔ",
+    "meaning": "mưa",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "外面在下雨。",
+      "pinyin": "Wàimiàn zài xiàyǔ.",
+      "meaning": "Bên ngoài đang mưa."
+    }
+  },
+  {
+    "id": "hsk1_078",
+    "hanzi": "热",
+    "pinyin": "rè",
+    "meaning": "nóng",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "夏天很热。",
+      "pinyin": "Xiàtiān hěn rè.",
+      "meaning": "Mùa hè rất nóng."
+    }
+  },
+  {
+    "id": "hsk1_079",
+    "hanzi": "冷",
+    "pinyin": "lěng",
+    "meaning": "lạnh",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "冬天很冷。",
+      "pinyin": "Dōngtiān hěn lěng.",
+      "meaning": "Mùa đông rất lạnh."
+    }
+  },
+  {
+    "id": "hsk1_080",
+    "hanzi": "高兴",
+    "pinyin": "gāoxìng",
+    "meaning": "vui vẻ, hân hạnh",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我非常高兴。",
+      "pinyin": "Wǒ fēicháng gāoxìng.",
+      "meaning": "Tôi rất vui."
+    }
+  },
+  {
+    "id": "hsk1_081",
+    "hanzi": "对不起",
+    "pinyin": "duìbuqǐ",
+    "meaning": "xin lỗi",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "对不起，我来晚了。",
+      "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+      "meaning": "Xin lỗi, tôi đến muộn."
+    }
+  },
+  {
+    "id": "hsk1_082",
+    "hanzi": "没关系",
+    "pinyin": "méi guānxi",
+    "meaning": "không sao đâu",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "没关系，慢慢来。",
+      "pinyin": "Méi guānxi, mànmàn lái.",
+      "meaning": "Không sao, cứ từ từ."
+    }
+  },
+  {
+    "id": "hsk1_083",
+    "hanzi": "请",
+    "pinyin": "qǐng",
+    "meaning": "xin mời, làm ơn",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "请进！",
+      "pinyin": "Qǐng jìn!",
+      "meaning": "Mời vào!"
+    }
+  },
+  {
+    "id": "hsk1_084",
+    "hanzi": "多少",
+    "pinyin": "duōshao",
+    "meaning": "bao nhiêu",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你们班有多少学生？",
+      "pinyin": "Nǐmen bān yǒu duōshao xuésheng?",
+      "meaning": "Lớp bạn có bao nhiêu học sinh?"
+    }
+  },
+  {
+    "id": "hsk1_085",
+    "hanzi": "怎么",
+    "pinyin": "zěnme",
+    "meaning": "làm sao, thế nào",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这个字怎么读？",
+      "pinyin": "Zhè ge zì zěnme dú?",
+      "meaning": "Chữ này đọc như thế nào?"
+    }
+  },
+  {
+    "id": "hsk1_086",
+    "hanzi": "什么",
+    "pinyin": "shénme",
+    "meaning": "cái gì",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你说什么？",
+      "pinyin": "Nǐ shuō shénme?",
+      "meaning": "Bạn nói gì vậy?"
+    }
+  },
+  {
+    "id": "hsk1_087",
+    "hanzi": "哪",
+    "pinyin": "nǎ",
+    "meaning": "nào, ở đâu",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "你是哪里人？",
+      "pinyin": "Nǐ shì nǎlǐ rén?",
+      "meaning": "Bạn là người ở đâu?"
+    }
+  },
+  {
+    "id": "hsk1_088",
+    "hanzi": "谁",
+    "pinyin": "shuí",
+    "meaning": "ai",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "那是谁的书？",
+      "pinyin": "Nà shì shuí de shū?",
+      "meaning": "Đó là sách của ai?"
+    }
+  },
+  {
+    "id": "hsk1_089",
+    "hanzi": "这",
+    "pinyin": "zhè",
+    "meaning": "này",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这是我的书包。",
+      "pinyin": "Zhè shì wǒ de shūbāo.",
+      "meaning": "Đây là cặp sách của tôi."
+    }
+  },
+  {
+    "id": "hsk1_090",
+    "hanzi": "那",
+    "pinyin": "nà",
+    "meaning": "kia, đó",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "那个人是我的朋友。",
+      "pinyin": "Nàge rén shì wǒ de péngyou.",
+      "meaning": "Người kia là bạn của tôi."
+    }
+  },
+  {
+    "id": "hsk1_091",
+    "hanzi": "都",
+    "pinyin": "dōu",
+    "meaning": "đều, tất cả",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们都喜欢熊猫。",
+      "pinyin": "Wǒmen dōu xǐhuan xióngmāo.",
+      "meaning": "Chúng tôi đều thích gấu trúc."
+    }
+  },
+  {
+    "id": "hsk1_092",
+    "hanzi": "和",
+    "pinyin": "hé",
+    "meaning": "và, với",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我和妈妈在家。",
+      "pinyin": "Wǒ hé māma zài jiā.",
+      "meaning": "Tôi và mẹ ở nhà."
+    }
+  },
+  {
+    "id": "hsk1_093",
+    "hanzi": "在",
+    "pinyin": "zài",
+    "meaning": "ở, đang",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他在学校吗？",
+      "pinyin": "Tā zài xuéxiào ma?",
+      "meaning": "Cậu ấy đang ở trường à?"
+    }
+  },
+  {
+    "id": "hsk1_094",
+    "hanzi": "的",
+    "pinyin": "de",
+    "meaning": "của (trợ từ sở hữu)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "这是老师的书。",
+      "pinyin": "Zhè shì lǎoshī de shū.",
+      "meaning": "Đây là sách của giáo viên."
+    }
+  },
+  {
+    "id": "hsk1_095",
+    "hanzi": "了",
+    "pinyin": "le",
+    "meaning": "rồi (trợ từ hoàn thành)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我吃了三个苹果。",
+      "pinyin": "Wǒ chī le sān ge píngguǒ.",
+      "meaning": "Tôi đã ăn ba quả táo."
+    }
+  },
+  {
+    "id": "hsk1_096",
+    "hanzi": "一",
+    "pinyin": "yī",
+    "meaning": "một",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我要一杯水。",
+      "pinyin": "Wǒ yào yì bēi shuǐ.",
+      "meaning": "Cho tôi một ly nước."
+    }
+  },
+  {
+    "id": "hsk1_097",
+    "hanzi": "二",
+    "pinyin": "èr",
+    "meaning": "hai",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我有两个孩子。",
+      "pinyin": "Wǒ yǒu liǎng ge háizi.",
+      "meaning": "Tôi có hai đứa con."
+    }
+  },
+  {
+    "id": "hsk1_098",
+    "hanzi": "三",
+    "pinyin": "sān",
+    "meaning": "ba",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "三加三等于六。",
+      "pinyin": "Sān jiā sān děngyú liù.",
+      "meaning": "Ba cộng ba bằng sáu."
+    }
+  },
+  {
+    "id": "hsk1_099",
+    "hanzi": "四",
+    "pinyin": "sì",
+    "meaning": "bốn",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "现在四点。",
+      "pinyin": "Xiànzài sì diǎn.",
+      "meaning": "Bây giờ là 4 giờ."
+    }
+  },
+  {
+    "id": "hsk1_100",
+    "hanzi": "五",
+    "pinyin": "wǔ",
+    "meaning": "năm (số)",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我们五个人去吃饭。",
+      "pinyin": "Wǒmen wǔ ge rén qù chīfàn.",
+      "meaning": "Năm người chúng tôi đi ăn."
+    }
+  },
+  {
+    "id": "hsk1_101",
+    "hanzi": "六",
+    "pinyin": "liù",
+    "meaning": "sáu",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "他六点起床。",
+      "pinyin": "Tā liù diǎn qǐchuáng.",
+      "meaning": "Cậu ấy dậy lúc 6 giờ."
+    }
+  },
+  {
+    "id": "hsk1_102",
+    "hanzi": "七",
+    "pinyin": "qī",
+    "meaning": "bảy",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "七月我去中国。",
+      "pinyin": "Qīyuè wǒ qù Zhōngguó.",
+      "meaning": "Tháng bảy tôi đi Trung Quốc."
+    }
+  },
+  {
+    "id": "hsk1_103",
+    "hanzi": "八",
+    "pinyin": "bā",
+    "meaning": "tám",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "八点上课。",
+      "pinyin": "Bā diǎn shàngkè.",
+      "meaning": "8 giờ bắt đầu học."
+    }
+  },
+  {
+    "id": "hsk1_104",
+    "hanzi": "九",
+    "pinyin": "jiǔ",
+    "meaning": "chín",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "九月天气很好。",
+      "pinyin": "Jiǔyuè tiānqì hěn hǎo.",
+      "meaning": "Tháng chín thời tiết rất đẹp."
+    }
+  },
+  {
+    "id": "hsk1_105",
+    "hanzi": "十",
+    "pinyin": "shí",
+    "meaning": "mười",
+    "level": "HSK1",
+    "example": {
+      "hanzi": "我有十本书。",
+      "pinyin": "Wǒ yǒu shí běn shū.",
+      "meaning": "Tôi có mười quyển sách."
+    }
+  },
+  {
+    "id": "hsk2_001",
+    "hanzi": "因为",
+    "pinyin": "yīnwèi",
+    "meaning": "vì, bởi vì",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "因为我生病了，所以没来。",
+      "pinyin": "Yīnwèi wǒ shēngbìng le, suǒyǐ méi lái.",
+      "meaning": "Vì tôi ốm nên không đến được."
+    }
+  },
+  {
+    "id": "hsk2_002",
+    "hanzi": "所以",
+    "pinyin": "suǒyǐ",
+    "meaning": "nên, vì vậy",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "下雨了，所以我们不去公园了。",
+      "pinyin": "Xiàyǔ le, suǒyǐ wǒmen bú qù gōngyuán le.",
+      "meaning": "Trời mưa nên chúng ta không đi công viên nữa."
+    }
+  },
+  {
+    "id": "hsk2_003",
+    "hanzi": "但是",
+    "pinyin": "dànshì",
+    "meaning": "nhưng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "汉字很难，但是很有意思。",
+      "pinyin": "Hànzì hěn nán, dànshì hěn yǒu yìsi.",
+      "meaning": "Chữ Hán khó nhưng rất thú vị."
+    }
+  },
+  {
+    "id": "hsk2_004",
+    "hanzi": "虽然",
+    "pinyin": "suīrán",
+    "meaning": "tuy rằng, mặc dù",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "虽然他很忙，但是每天都学习。",
+      "pinyin": "Suīrán tā hěn máng, dànshì měitiān dōu xuéxí.",
+      "meaning": "Tuy cậu ấy rất bận nhưng vẫn học mỗi ngày."
+    }
+  },
+  {
+    "id": "hsk2_005",
+    "hanzi": "一起",
+    "pinyin": "yìqǐ",
+    "meaning": "cùng nhau",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们一起去吃饭吧。",
+      "pinyin": "Wǒmen yìqǐ qù chīfàn ba.",
+      "meaning": "Chúng ta cùng đi ăn nhé."
+    }
+  },
+  {
+    "id": "hsk2_006",
+    "hanzi": "可能",
+    "pinyin": "kěnéng",
+    "meaning": "có thể, khả năng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "明天可能会下雨。",
+      "pinyin": "Míngtiān kěnéng huì xiàyǔ.",
+      "meaning": "Ngày mai có lẽ sẽ mưa."
+    }
+  },
+  {
+    "id": "hsk2_007",
+    "hanzi": "需要",
+    "pinyin": "xūyào",
+    "meaning": "cần",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你需要帮助吗？",
+      "pinyin": "Nǐ xūyào bāngzhù ma?",
+      "meaning": "Bạn cần giúp đỡ không?"
+    }
+  },
+  {
+    "id": "hsk2_008",
+    "hanzi": "觉得",
+    "pinyin": "juéde",
+    "meaning": "cảm thấy, nghĩ rằng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我觉得这个菜很好吃。",
+      "pinyin": "Wǒ juéde zhè ge cài hěn hǎochī.",
+      "meaning": "Tôi thấy món này rất ngon."
+    }
+  },
+  {
+    "id": "hsk2_009",
+    "hanzi": "希望",
+    "pinyin": "xīwàng",
+    "meaning": "hy vọng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我希望能去中国留学。",
+      "pinyin": "Wǒ xīwàng néng qù Zhōngguó liúxué.",
+      "meaning": "Tôi hy vọng được đi du học Trung Quốc."
+    }
+  },
+  {
+    "id": "hsk2_010",
+    "hanzi": "开始",
+    "pinyin": "kāishǐ",
+    "meaning": "bắt đầu",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们开始上课吧。",
+      "pinyin": "Wǒmen kāishǐ shàngkè ba.",
+      "meaning": "Chúng ta bắt đầu học bài nhé."
+    }
+  },
+  {
+    "id": "hsk2_011",
+    "hanzi": "准备",
+    "pinyin": "zhǔnbèi",
+    "meaning": "chuẩn bị",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我在准备考试。",
+      "pinyin": "Wǒ zài zhǔnbèi kǎoshì.",
+      "meaning": "Tôi đang chuẩn bị thi."
+    }
+  },
+  {
+    "id": "hsk2_012",
+    "hanzi": "考试",
+    "pinyin": "kǎoshì",
+    "meaning": "kỳ thi, thi cử",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "下个月有汉语考试。",
+      "pinyin": "Xià ge yuè yǒu Hànyǔ kǎoshì.",
+      "meaning": "Tháng sau có kỳ thi tiếng Trung."
+    }
+  },
+  {
+    "id": "hsk2_013",
+    "hanzi": "问题",
+    "pinyin": "wèntí",
+    "meaning": "câu hỏi, vấn đề",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你有什么问题？",
+      "pinyin": "Nǐ yǒu shénme wèntí?",
+      "meaning": "Bạn có câu hỏi gì không?"
+    }
+  },
+  {
+    "id": "hsk2_014",
+    "hanzi": "意思",
+    "pinyin": "yìsi",
+    "meaning": "ý nghĩa",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这个词是什么意思？",
+      "pinyin": "Zhè ge cí shì shénme yìsi?",
+      "meaning": "Từ này nghĩa là gì?"
+    }
+  },
+  {
+    "id": "hsk2_015",
+    "hanzi": "生日",
+    "pinyin": "shēngrì",
+    "meaning": "sinh nhật",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "今天是我妈妈的生日。",
+      "pinyin": "Jīntiān shì wǒ māma de shēngrì.",
+      "meaning": "Hôm nay là sinh nhật mẹ tôi."
+    }
+  },
+  {
+    "id": "hsk2_016",
+    "hanzi": "礼物",
+    "pinyin": "lǐwù",
+    "meaning": "món quà",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这是我给你的生日礼物。",
+      "pinyin": "Zhè shì wǒ gěi nǐ de shēngrì lǐwù.",
+      "meaning": "Đây là món quà sinh nhật tặng bạn."
+    }
+  },
+  {
+    "id": "hsk2_017",
+    "hanzi": "给",
+    "pinyin": "gěi",
+    "meaning": "cho, đưa cho",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "请给我一杯水。",
+      "pinyin": "Qǐng gěi wǒ yì bēi shuǐ.",
+      "meaning": "Xin cho tôi một ly nước."
+    }
+  },
+  {
+    "id": "hsk2_018",
+    "hanzi": "帮助",
+    "pinyin": "bāngzhù",
+    "meaning": "giúp đỡ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "谢谢你帮助我。",
+      "pinyin": "Xièxie nǐ bāngzhù wǒ.",
+      "meaning": "Cảm ơn bạn đã giúp tôi."
+    }
+  },
+  {
+    "id": "hsk2_019",
+    "hanzi": "努力",
+    "pinyin": "nǔlì",
+    "meaning": "nỗ lực, cố gắng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你要努力学习！",
+      "pinyin": "Nǐ yào nǔlì xuéxí!",
+      "meaning": "Bạn phải cố gắng học tập!"
+    }
+  },
+  {
+    "id": "hsk2_020",
+    "hanzi": "认真",
+    "pinyin": "rènzhēn",
+    "meaning": "nghiêm túc, cẩn thận",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他学习很认真。",
+      "pinyin": "Tā xuéxí hěn rènzhēn.",
+      "meaning": "Cậu ấy học rất nghiêm túc."
+    }
+  },
+  {
+    "id": "hsk2_021",
+    "hanzi": "着急",
+    "pinyin": "zháojí",
+    "meaning": "lo lắng, vội vàng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "别着急，慢慢说。",
+      "pinyin": "Bié zháojí, mànmàn shuō.",
+      "meaning": "Đừng lo, cứ nói chậm thôi."
+    }
+  },
+  {
+    "id": "hsk2_022",
+    "hanzi": "担心",
+    "pinyin": "dānxīn",
+    "meaning": "lo lắng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "妈妈很担心我。",
+      "pinyin": "Māma hěn dānxīn wǒ.",
+      "meaning": "Mẹ rất lo lắng cho tôi."
+    }
+  },
+  {
+    "id": "hsk2_023",
+    "hanzi": "累",
+    "pinyin": "lèi",
+    "meaning": "mệt",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "今天工作了一天，我很累。",
+      "pinyin": "Jīntiān gōngzuò le yì tiān, wǒ hěn lèi.",
+      "meaning": "Hôm nay làm việc cả ngày, tôi mệt lắm."
+    }
+  },
+  {
+    "id": "hsk2_024",
+    "hanzi": "休息",
+    "pinyin": "xiūxi",
+    "meaning": "nghỉ ngơi",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们休息一下吧。",
+      "pinyin": "Wǒmen xiūxi yíxià ba.",
+      "meaning": "Chúng ta nghỉ một chút nhé."
+    }
+  },
+  {
+    "id": "hsk2_025",
+    "hanzi": "锻炼",
+    "pinyin": "duànliàn",
+    "meaning": "rèn luyện, tập thể dục",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我每天早上都锻炼身体。",
+      "pinyin": "Wǒ měitiān zǎoshang dōu duànliàn shēntǐ.",
+      "meaning": "Sáng nào tôi cũng tập thể dục."
+    }
+  },
+  {
+    "id": "hsk2_026",
+    "hanzi": "身体",
+    "pinyin": "shēntǐ",
+    "meaning": "cơ thể, sức khỏe",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "祝你身体健康！",
+      "pinyin": "Zhù nǐ shēntǐ jiànkāng!",
+      "meaning": "Chúc bạn sức khỏe!"
+    }
+  },
+  {
+    "id": "hsk2_027",
+    "hanzi": "健康",
+    "pinyin": "jiànkāng",
+    "meaning": "khỏe mạnh, sức khỏe",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "多运动对身体好。",
+      "pinyin": "Duō yùndòng duì shēntǐ hǎo.",
+      "meaning": "Tập thể dục nhiều tốt cho cơ thể."
+    }
+  },
+  {
+    "id": "hsk2_028",
+    "hanzi": "感冒",
+    "pinyin": "gǎnmào",
+    "meaning": "cảm lạnh, cảm cúm",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我感冒了，不能上班。",
+      "pinyin": "Wǒ gǎnmào le, bù néng shàngbān.",
+      "meaning": "Tôi bị cảm nên không đi làm được."
+    }
+  },
+  {
+    "id": "hsk2_029",
+    "hanzi": "药",
+    "pinyin": "yào",
+    "meaning": "thuốc",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "记得按时吃药。",
+      "pinyin": "Jìde ànshí chī yào.",
+      "meaning": "Nhớ uống thuốc đúng giờ."
+    }
+  },
+  {
+    "id": "hsk2_030",
+    "hanzi": "超市",
+    "pinyin": "chāoshì",
+    "meaning": "siêu thị",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们去超市买东西吧。",
+      "pinyin": "Wǒmen qù chāoshì mǎi dōngxi ba.",
+      "meaning": "Chúng ta đi siêu thị mua đồ đi."
+    }
+  },
+  {
+    "id": "hsk2_031",
+    "hanzi": "东西",
+    "pinyin": "dōngxi",
+    "meaning": "đồ vật, thứ gì đó",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这是我的东西。",
+      "pinyin": "Zhè shì wǒ de dōngxi.",
+      "meaning": "Đây là đồ của tôi."
+    }
+  },
+  {
+    "id": "hsk2_032",
+    "hanzi": "便宜",
+    "pinyin": "piányi",
+    "meaning": "rẻ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这个东西很便宜。",
+      "pinyin": "Zhè ge dōngxi hěn piányi.",
+      "meaning": "Cái này rẻ lắm."
+    }
+  },
+  {
+    "id": "hsk2_033",
+    "hanzi": "贵",
+    "pinyin": "guì",
+    "meaning": "đắt",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这个手机太贵了。",
+      "pinyin": "Zhè ge shǒujī tài guì le.",
+      "meaning": "Chiếc điện thoại này đắt quá."
+    }
+  },
+  {
+    "id": "hsk2_034",
+    "hanzi": "快",
+    "pinyin": "kuài",
+    "meaning": "nhanh",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "火车很快。",
+      "pinyin": "Huǒchē hěn kuài.",
+      "meaning": "Tàu chạy rất nhanh."
+    }
+  },
+  {
+    "id": "hsk2_035",
+    "hanzi": "慢",
+    "pinyin": "màn",
+    "meaning": "chậm",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "请你慢一点说。",
+      "pinyin": "Qǐng nǐ màn yìdiǎn shuō.",
+      "meaning": "Bạn vui lòng nói chậm chút."
+    }
+  },
+  {
+    "id": "hsk2_036",
+    "hanzi": "早",
+    "pinyin": "zǎo",
+    "meaning": "sớm",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "明天请早点来。",
+      "pinyin": "Míngtiān qǐng zǎodiǎn lái.",
+      "meaning": "Mai hãy đến sớm chút."
+    }
+  },
+  {
+    "id": "hsk2_037",
+    "hanzi": "晚",
+    "pinyin": "wǎn",
+    "meaning": "muộn, tối",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "对不起，我来晚了。",
+      "pinyin": "Duìbuqǐ, wǒ lái wǎn le.",
+      "meaning": "Xin lỗi, tôi đến muộn rồi."
+    }
+  },
+  {
+    "id": "hsk2_038",
+    "hanzi": "新",
+    "pinyin": "xīn",
+    "meaning": "mới",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我买了一辆新车。",
+      "pinyin": "Wǒ mǎi le yí liàng xīn chē.",
+      "meaning": "Tôi đã mua một chiếc xe mới."
+    }
+  },
+  {
+    "id": "hsk2_039",
+    "hanzi": "旧",
+    "pinyin": "jiù",
+    "meaning": "cũ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这本书是旧的。",
+      "pinyin": "Zhè běn shū shì jiù de.",
+      "meaning": "Quyển sách này là cũ."
+    }
+  },
+  {
+    "id": "hsk2_040",
+    "hanzi": "难",
+    "pinyin": "nán",
+    "meaning": "khó",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "汉语语法不太难。",
+      "pinyin": "Hànyǔ yǔfǎ bú tài nán.",
+      "meaning": "Ngữ pháp tiếng Trung không quá khó."
+    }
+  },
+  {
+    "id": "hsk2_041",
+    "hanzi": "容易",
+    "pinyin": "róngyì",
+    "meaning": "dễ dàng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这个问题很容易。",
+      "pinyin": "Zhè ge wèntí hěn róngyì.",
+      "meaning": "Câu hỏi này rất dễ."
+    }
+  },
+  {
+    "id": "hsk2_042",
+    "hanzi": "清楚",
+    "pinyin": "qīngchu",
+    "meaning": "rõ ràng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你说得不清楚。",
+      "pinyin": "Nǐ shuō de bù qīngchu.",
+      "meaning": "Bạn nói chưa rõ ràng."
+    }
+  },
+  {
+    "id": "hsk2_043",
+    "hanzi": "干净",
+    "pinyin": "gānjìng",
+    "meaning": "sạch sẽ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这个房间很干净。",
+      "pinyin": "Zhè ge fángjiān hěn gānjìng.",
+      "meaning": "Căn phòng này sạch sẽ lắm."
+    }
+  },
+  {
+    "id": "hsk2_044",
+    "hanzi": "安静",
+    "pinyin": "ānjìng",
+    "meaning": "yên tĩnh",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "图书馆里很安静。",
+      "pinyin": "Túshūguǎn lǐ hěn ānjìng.",
+      "meaning": "Trong thư viện rất yên tĩnh."
+    }
+  },
+  {
+    "id": "hsk2_045",
+    "hanzi": "热闹",
+    "pinyin": "rènao",
+    "meaning": "nhộn nhịp, sầm uất",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "过年的时候街上很热闹。",
+      "pinyin": "Guònián de shíhou jiēshang hěn rènao.",
+      "meaning": "Dịp Tết đường phố rất nhộn nhịp."
+    }
+  },
+  {
+    "id": "hsk2_046",
+    "hanzi": "公共汽车",
+    "pinyin": "gōnggòng qìchē",
+    "meaning": "xe buýt",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我可以坐公共汽车去学校。",
+      "pinyin": "Wǒ kěyǐ zuò gōnggòng qìchē qù xuéxiào.",
+      "meaning": "Tôi có thể đi xe buýt đến trường."
+    }
+  },
+  {
+    "id": "hsk2_047",
+    "hanzi": "自行车",
+    "pinyin": "zìxíngchē",
+    "meaning": "xe đạp",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他骑自行车上班。",
+      "pinyin": "Tā qí zìxíngchē shàngbān.",
+      "meaning": "Cậu ấy đi làm bằng xe đạp."
+    }
+  },
+  {
+    "id": "hsk2_048",
+    "hanzi": "地铁",
+    "pinyin": "dìtiě",
+    "meaning": "tàu điện ngầm",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "坐地铁又快又方便。",
+      "pinyin": "Zuò dìtiě yòu kuài yòu fāngbiàn.",
+      "meaning": "Đi tàu điện vừa nhanh vừa tiện."
+    }
+  },
+  {
+    "id": "hsk2_049",
+    "hanzi": "方便",
+    "pinyin": "fāngbiàn",
+    "meaning": "tiện lợi",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这里购物很方便。",
+      "pinyin": "Zhèlǐ gòuwù hěn fāngbiàn.",
+      "meaning": "Ở đây đi mua sắm rất tiện."
+    }
+  },
+  {
+    "id": "hsk2_050",
+    "hanzi": "附近",
+    "pinyin": "fùjìn",
+    "meaning": "gần đây, lân cận",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "学校附近有一个超市。",
+      "pinyin": "Xuéxiào fùjìn yǒu yí ge chāoshì.",
+      "meaning": "Gần trường có một siêu thị."
+    }
+  },
+  {
+    "id": "hsk2_051",
+    "hanzi": "地方",
+    "pinyin": "dìfang",
+    "meaning": "nơi chốn",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这是一个美丽的地方。",
+      "pinyin": "Zhè shì yí ge měilì de dìfang.",
+      "meaning": "Đây là một nơi rất đẹp."
+    }
+  },
+  {
+    "id": "hsk2_052",
+    "hanzi": "旅游",
+    "pinyin": "lǚyóu",
+    "meaning": "du lịch",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我喜欢旅游。",
+      "pinyin": "Wǒ xǐhuan lǚyóu.",
+      "meaning": "Tôi thích du lịch."
+    }
+  },
+  {
+    "id": "hsk2_053",
+    "hanzi": "照片",
+    "pinyin": "zhàopiàn",
+    "meaning": "tấm ảnh",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们一起照张相吧。",
+      "pinyin": "Wǒmen yìqǐ zhào zhāng xiàng ba.",
+      "meaning": "Chúng ta chụp chung một tấm ảnh nhé."
+    }
+  },
+  {
+    "id": "hsk2_054",
+    "hanzi": "唱歌",
+    "pinyin": "chànggē",
+    "meaning": "hát",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "她唱歌唱得很好听。",
+      "pinyin": "Tā chànggē chàng de hěn hǎotīng.",
+      "meaning": "Cô ấy hát rất hay."
+    }
+  },
+  {
+    "id": "hsk2_055",
+    "hanzi": "跳舞",
+    "pinyin": "tiàowǔ",
+    "meaning": "nhảy múa",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你喜欢跳舞吗？",
+      "pinyin": "Nǐ xǐhuan tiàowǔ ma?",
+      "meaning": "Bạn thích nhảy múa không?"
+    }
+  },
+  {
+    "id": "hsk2_056",
+    "hanzi": "游戏",
+    "pinyin": "yóuxì",
+    "meaning": "trò chơi",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "孩子们在玩游戏。",
+      "pinyin": "Háizimen zài wán yóuxì.",
+      "meaning": "Các đứa trẻ đang chơi trò chơi."
+    }
+  },
+  {
+    "id": "hsk2_057",
+    "hanzi": "孩子",
+    "pinyin": "háizi",
+    "meaning": "đứa trẻ, con cái",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "她的孩子今年三岁。",
+      "pinyin": "Tā de háizi jīnnián sān suì.",
+      "meaning": "Con của chị ấy năm nay 3 tuổi."
+    }
+  },
+  {
+    "id": "hsk2_058",
+    "hanzi": "先生",
+    "pinyin": "xiānsheng",
+    "meaning": "ngài, anh, ông",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "王先生是我的老师。",
+      "pinyin": "Wáng xiānsheng shì wǒ de lǎoshī.",
+      "meaning": "Ông Vương là giáo viên của tôi."
+    }
+  },
+  {
+    "id": "hsk2_059",
+    "hanzi": "小姐",
+    "pinyin": "xiǎojiě",
+    "meaning": "cô, tiểu thư",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "小姐，请问洗手间在哪里？",
+      "pinyin": "Xiǎojiě, qǐngwèn xǐshǒujiān zài nǎlǐ?",
+      "meaning": "Cô ơi, cho hỏi nhà vệ sinh ở đâu?"
+    }
+  },
+  {
+    "id": "hsk2_060",
+    "hanzi": "服务员",
+    "pinyin": "fúwùyuán",
+    "meaning": "nhân viên phục vụ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "服务员，点菜！",
+      "pinyin": "Fúwùyuán, diǎn cài!",
+      "meaning": "Nhân viên ơi, gọi món!"
+    }
+  },
+  {
+    "id": "hsk2_061",
+    "hanzi": "面条",
+    "pinyin": "miàntiáo",
+    "meaning": "mì sợi",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我想吃一碗面条。",
+      "pinyin": "Wǒ xiǎng chī yì wǎn miàntiáo.",
+      "meaning": "Tôi muốn ăn một tô mì."
+    }
+  },
+  {
+    "id": "hsk2_062",
+    "hanzi": "鸡蛋",
+    "pinyin": "jīdàn",
+    "meaning": "quả trứng gà",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "早上我吃了一个鸡蛋。",
+      "pinyin": "Zǎoshang wǒ chī le yí ge jīdàn.",
+      "meaning": "Sáng tôi đã ăn một quả trứng."
+    }
+  },
+  {
+    "id": "hsk2_063",
+    "hanzi": "牛奶",
+    "pinyin": "niúnǎi",
+    "meaning": "sữa bò",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "每天喝牛奶对身体好。",
+      "pinyin": "Měitiān hē niúnǎi duì shēntǐ hǎo.",
+      "meaning": "Uống sữa mỗi ngày tốt cho sức khỏe."
+    }
+  },
+  {
+    "id": "hsk2_064",
+    "hanzi": "西瓜",
+    "pinyin": "xīguā",
+    "meaning": "dưa hấu",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "夏天吃西瓜最舒服。",
+      "pinyin": "Xiàtiān chī xīguā zuì shūfu.",
+      "meaning": "Mùa hè ăn dưa hấu là thích nhất."
+    }
+  },
+  {
+    "id": "hsk2_065",
+    "hanzi": "青菜",
+    "pinyin": "qīngcài",
+    "meaning": "rau xanh",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "多吃青菜有好处。",
+      "pinyin": "Duō chī qīngcài yǒu hǎochù.",
+      "meaning": "Ăn nhiều rau xanh có lợi."
+    }
+  },
+  {
+    "id": "hsk2_066",
+    "hanzi": "羊肉",
+    "pinyin": "yángròu",
+    "meaning": "thịt cừu",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我不吃羊肉。",
+      "pinyin": "Wǒ bù chī yángròu.",
+      "meaning": "Tôi không ăn thịt cừu."
+    }
+  },
+  {
+    "id": "hsk2_067",
+    "hanzi": "鱼",
+    "pinyin": "yú",
+    "meaning": "con cá",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这条鱼很新鲜。",
+      "pinyin": "Zhè tiáo yú hěn xīnxiān.",
+      "meaning": "Con cá này rất tươi."
+    }
+  },
+  {
+    "id": "hsk2_068",
+    "hanzi": "杯子",
+    "pinyin": "bēizi",
+    "meaning": "cái cốc",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "桌子上有一个杯子。",
+      "pinyin": "Zhuōzi shang yǒu yí ge bēizi.",
+      "meaning": "Trên bàn có một cái cốc."
+    }
+  },
+  {
+    "id": "hsk2_069",
+    "hanzi": "碗",
+    "pinyin": "wǎn",
+    "meaning": "cái bát",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "请给我一个碗。",
+      "pinyin": "Qǐng gěi wǒ yí ge wǎn.",
+      "meaning": "Xin cho tôi một cái bát."
+    }
+  },
+  {
+    "id": "hsk2_070",
+    "hanzi": "盘子",
+    "pinyin": "pánzi",
+    "meaning": "cái đĩa",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "把菜放到盘子里。",
+      "pinyin": "Bǎ cài fàng dào pánzi lǐ.",
+      "meaning": "Cho thức ăn vào đĩa."
+    }
+  },
+  {
+    "id": "hsk2_071",
+    "hanzi": "筷子",
+    "pinyin": "kuàizi",
+    "meaning": "đũa",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我会用筷子吃饭。",
+      "pinyin": "Wǒ huì yòng kuàizi chīfàn.",
+      "meaning": "Tôi biết dùng đũa để ăn."
+    }
+  },
+  {
+    "id": "hsk2_072",
+    "hanzi": "房间",
+    "pinyin": "fángjiān",
+    "meaning": "căn phòng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我的房间朝南。",
+      "pinyin": "Wǒ de fángjiān cháo nán.",
+      "meaning": "Phòng của tôi hướng nam."
+    }
+  },
+  {
+    "id": "hsk2_073",
+    "hanzi": "厨房",
+    "pinyin": "chúfáng",
+    "meaning": "nhà bếp",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "妈妈在厨房做饭。",
+      "pinyin": "Māma zài chúfáng zuòfàn.",
+      "meaning": "Mẹ đang nấu ăn trong bếp."
+    }
+  },
+  {
+    "id": "hsk2_074",
+    "hanzi": "门",
+    "pinyin": "mén",
+    "meaning": "cửa ra vào",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "请关门。",
+      "pinyin": "Qǐng guānmén.",
+      "meaning": "Làm ơn đóng cửa."
+    }
+  },
+  {
+    "id": "hsk2_075",
+    "hanzi": "窗户",
+    "pinyin": "chuānghu",
+    "meaning": "cửa sổ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "打开窗户透透气吧。",
+      "pinyin": "Dǎkāi chuānghu tòutouqì ba.",
+      "meaning": "Mở cửa sổ cho thoáng khí đi."
+    }
+  },
+  {
+    "id": "hsk2_076",
+    "hanzi": "桌子",
+    "pinyin": "zhuōzi",
+    "meaning": "cái bàn",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "书在桌子上。",
+      "pinyin": "Shū zài zhuōzi shang.",
+      "meaning": "Sách ở trên bàn."
+    }
+  },
+  {
+    "id": "hsk2_077",
+    "hanzi": "椅子",
+    "pinyin": "yǐzi",
+    "meaning": "cái ghế",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这把椅子很舒服。",
+      "pinyin": "Zhè bǎ yǐzi hěn shūfu.",
+      "meaning": "Cái ghế này rất thoải mái."
+    }
+  },
+  {
+    "id": "hsk2_078",
+    "hanzi": "床",
+    "pinyin": "chuáng",
+    "meaning": "giường",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他躺在床上看书。",
+      "pinyin": "Tā tǎng zài chuáng shang kànshū.",
+      "meaning": "Cậu ấy nằm trên giường đọc sách."
+    }
+  },
+  {
+    "id": "hsk2_079",
+    "hanzi": "颜色",
+    "pinyin": "yánsè",
+    "meaning": "màu sắc",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你最喜欢什么颜色？",
+      "pinyin": "Nǐ zuì xǐhuan shénme yánsè?",
+      "meaning": "Bạn thích màu nào nhất?"
+    }
+  },
+  {
+    "id": "hsk2_080",
+    "hanzi": "红色",
+    "pinyin": "hóngsè",
+    "meaning": "màu đỏ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "中国人喜欢红色。",
+      "pinyin": "Zhōngguórén xǐhuan hóngsè.",
+      "meaning": "Người Trung Quốc thích màu đỏ."
+    }
+  },
+  {
+    "id": "hsk2_081",
+    "hanzi": "白色",
+    "pinyin": "báisè",
+    "meaning": "màu trắng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "她穿了一件白色的裙子。",
+      "pinyin": "Tā chuān le yí jiàn báisè de qúnzi.",
+      "meaning": "Cô ấy mặc một chiếc váy trắng."
+    }
+  },
+  {
+    "id": "hsk2_082",
+    "hanzi": "黑色",
+    "pinyin": "hēisè",
+    "meaning": "màu đen",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他的头发是黑色的。",
+      "pinyin": "Tā de tóufa shì hēisè de.",
+      "meaning": "Tóc của anh ấy màu đen."
+    }
+  },
+  {
+    "id": "hsk2_083",
+    "hanzi": "眼睛",
+    "pinyin": "yǎnjing",
+    "meaning": "con mắt",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "她的眼睛很大。",
+      "pinyin": "Tā de yǎnjing hěn dà.",
+      "meaning": "Đôi mắt của cô ấy rất to."
+    }
+  },
+  {
+    "id": "hsk2_084",
+    "hanzi": "个子",
+    "pinyin": "gèzi",
+    "meaning": "chiều cao (dáng người)",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他个子很高。",
+      "pinyin": "Tā gèzi hěn gāo.",
+      "meaning": "Cậu ấy dáng người cao."
+    }
+  },
+  {
+    "id": "hsk2_085",
+    "hanzi": "高",
+    "pinyin": "gāo",
+    "meaning": "cao",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这座山很高。",
+      "pinyin": "Zhè zuò shān hěn gāo.",
+      "meaning": "Ngọn núi này rất cao."
+    }
+  },
+  {
+    "id": "hsk2_086",
+    "hanzi": "矮",
+    "pinyin": "ǎi",
+    "meaning": "thấp, lùn",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "弟弟比哥哥矮。",
+      "pinyin": "Dìdi bǐ gēge ǎi.",
+      "meaning": "Em trai thấp hơn anh trai."
+    }
+  },
+  {
+    "id": "hsk2_087",
+    "hanzi": "长",
+    "pinyin": "cháng",
+    "meaning": "dài",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这条路很长。",
+      "pinyin": "Zhè tiáo lù hěn cháng.",
+      "meaning": "Con đường này rất dài."
+    }
+  },
+  {
+    "id": "hsk2_088",
+    "hanzi": "短",
+    "pinyin": "duǎn",
+    "meaning": "ngắn",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "冬天白天很短。",
+      "pinyin": "Dōngtiān báitiān hěn duǎn.",
+      "meaning": "Mùa đông ban ngày rất ngắn."
+    }
+  },
+  {
+    "id": "hsk2_089",
+    "hanzi": "胖",
+    "pinyin": "pàng",
+    "meaning": "béo",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这只熊猫很胖。",
+      "pinyin": "Zhè zhī xióngmāo hěn pàng.",
+      "meaning": "Chú gấu trúc này rất béo."
+    }
+  },
+  {
+    "id": "hsk2_090",
+    "hanzi": "瘦",
+    "pinyin": "shòu",
+    "meaning": "ốm, gầy",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "她越来越瘦了。",
+      "pinyin": "Tā yuèláiyuè shòu le.",
+      "meaning": "Cô ấy ngày càng gầy đi."
+    }
+  },
+  {
+    "id": "hsk2_091",
+    "hanzi": "黑",
+    "pinyin": "hēi",
+    "meaning": "đen",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "天黑了，回家吧。",
+      "pinyin": "Tiān hēi le, huíjiā ba.",
+      "meaning": "Trời tối rồi, về nhà thôi."
+    }
+  },
+  {
+    "id": "hsk2_092",
+    "hanzi": "亮",
+    "pinyin": "liàng",
+    "meaning": "sáng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "教室里很亮。",
+      "pinyin": "Jiàoshì lǐ hěn liàng.",
+      "meaning": "Trong lớp học rất sáng."
+    }
+  },
+  {
+    "id": "hsk2_093",
+    "hanzi": "远",
+    "pinyin": "yuǎn",
+    "meaning": "xa",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "机场离这儿很远。",
+      "pinyin": "Jīchǎng lí zhèr hěn yuǎn.",
+      "meaning": "Sân bay cách đây rất xa."
+    }
+  },
+  {
+    "id": "hsk2_094",
+    "hanzi": "近",
+    "pinyin": "jìn",
+    "meaning": "gần",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我家离学校很近。",
+      "pinyin": "Wǒ jiā lí xuéxiào hěn jìn.",
+      "meaning": "Nhà tôi gần trường lắm."
+    }
+  },
+  {
+    "id": "hsk2_095",
+    "hanzi": "左边",
+    "pinyin": "zuǒbian",
+    "meaning": "bên trái",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "银行在邮局的左边。",
+      "pinyin": "Yínháng zài yóujú de zuǒbian.",
+      "meaning": "Ngân hàng ở bên trái bưu điện."
+    }
+  },
+  {
+    "id": "hsk2_096",
+    "hanzi": "右边",
+    "pinyin": "yòubian",
+    "meaning": "bên phải",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "往右拐就是医院。",
+      "pinyin": "Wǎng yòu guǎi jiùshì yīyuàn.",
+      "meaning": "Rẽ phải là đến bệnh viện."
+    }
+  },
+  {
+    "id": "hsk2_097",
+    "hanzi": "前面",
+    "pinyin": "qiánmiàn",
+    "meaning": "phía trước",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "车站在前面。",
+      "pinyin": "Chēzhàn zài qiánmiàn.",
+      "meaning": "Ga nằm ở phía trước."
+    }
+  },
+  {
+    "id": "hsk2_098",
+    "hanzi": "后面",
+    "pinyin": "hòumiàn",
+    "meaning": "phía sau",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "学校后面有一个公园。",
+      "pinyin": "Xuéxiào hòumiàn yǒu yí ge gōngyuán.",
+      "meaning": "Sau trường có một công viên."
+    }
+  },
+  {
+    "id": "hsk2_099",
+    "hanzi": "旁边",
+    "pinyin": "pángbiān",
+    "meaning": "bên cạnh",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "超市旁边是一家饭馆。",
+      "pinyin": "Chāoshì pángbiān shì yì jiā fànguǎn.",
+      "meaning": "Bên cạnh siêu thị là một nhà hàng."
+    }
+  },
+  {
+    "id": "hsk2_100",
+    "hanzi": "跟",
+    "pinyin": "gēn",
+    "meaning": "với, theo",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "请跟我来。",
+      "pinyin": "Qǐng gēn wǒ lái.",
+      "meaning": "Xin hãy đi theo tôi."
+    }
+  },
+  {
+    "id": "hsk2_101",
+    "hanzi": "向",
+    "pinyin": "xiàng",
+    "meaning": "hướng về, về phía",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "向前走一百米。",
+      "pinyin": "Xiàng qián zǒu yìbǎi mǐ.",
+      "meaning": "Đi thẳng về phía trước 100 mét."
+    }
+  },
+  {
+    "id": "hsk2_102",
+    "hanzi": "从",
+    "pinyin": "cóng",
+    "meaning": "từ",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我从越南来。",
+      "pinyin": "Wǒ cóng Yuènán lái.",
+      "meaning": "Tôi đến từ Việt Nam."
+    }
+  },
+  {
+    "id": "hsk2_103",
+    "hanzi": "对",
+    "pinyin": "duì",
+    "meaning": "đúng, với",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你说得对。",
+      "pinyin": "Nǐ shuō de duì.",
+      "meaning": "Bạn nói đúng."
+    }
+  },
+  {
+    "id": "hsk2_104",
+    "hanzi": "错",
+    "pinyin": "cuò",
+    "meaning": "sai, lỗi",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这道题做错了。",
+      "pinyin": "Zhè dào tí zuò cuò le.",
+      "meaning": "Câu này làm sai rồi."
+    }
+  },
+  {
+    "id": "hsk2_105",
+    "hanzi": "必须",
+    "pinyin": "bìxū",
+    "meaning": "phải, bắt buộc",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我们必须努力工作。",
+      "pinyin": "Wǒmen bìxū nǔlì gōngzuò.",
+      "meaning": "Chúng ta phải làm việc chăm chỉ."
+    }
+  },
+  {
+    "id": "hsk2_106",
+    "hanzi": "应该",
+    "pinyin": "yīnggāi",
+    "meaning": "nên, phải",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你应该多休息。",
+      "pinyin": "Nǐ yīnggāi duō xiūxi.",
+      "meaning": "Bạn nên nghỉ ngơi nhiều hơn."
+    }
+  },
+  {
+    "id": "hsk2_107",
+    "hanzi": "选择",
+    "pinyin": "xuǎnzé",
+    "meaning": "lựa chọn, chọn",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你来选择吧。",
+      "pinyin": "Nǐ lái xuǎnzé ba.",
+      "meaning": "Bạn cứ chọn đi."
+    }
+  },
+  {
+    "id": "hsk2_108",
+    "hanzi": "决定",
+    "pinyin": "juédìng",
+    "meaning": "quyết định",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我决定去中国留学。",
+      "pinyin": "Wǒ juédìng qù Zhōngguó liúxué.",
+      "meaning": "Tôi quyết định đi du học Trung Quốc."
+    }
+  },
+  {
+    "id": "hsk2_109",
+    "hanzi": "打算",
+    "pinyin": "dǎsuàn",
+    "meaning": "dự định, định",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "你打算什么时候回国？",
+      "pinyin": "Nǐ dǎsuàn shénme shíhou huí guó?",
+      "meaning": "Bạn định khi nào về nước?"
+    }
+  },
+  {
+    "id": "hsk2_110",
+    "hanzi": "知道",
+    "pinyin": "zhīdào",
+    "meaning": "biết",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我不知道他在哪儿。",
+      "pinyin": "Wǒ bù zhīdào tā zài nǎr.",
+      "meaning": "Tôi không biết cậu ấy ở đâu."
+    }
+  },
+  {
+    "id": "hsk2_111",
+    "hanzi": "相信",
+    "pinyin": "xiāngxìn",
+    "meaning": "tin, tin tưởng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我相信你会成功。",
+      "pinyin": "Wǒ xiāngxìn nǐ huì chénggōng.",
+      "meaning": "Tôi tin bạn sẽ thành công."
+    }
+  },
+  {
+    "id": "hsk2_112",
+    "hanzi": "成功",
+    "pinyin": "chénggōng",
+    "meaning": "thành công",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "考试成功了！",
+      "pinyin": "Kǎoshì chénggōng le!",
+      "meaning": "Thi đỗ rồi!"
+    }
+  },
+  {
+    "id": "hsk2_113",
+    "hanzi": "生日快乐",
+    "pinyin": "shēngrì kuàilè",
+    "meaning": "chúc mừng sinh nhật",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "祝你生日快乐！",
+      "pinyin": "Zhù nǐ shēngrì kuàilè!",
+      "meaning": "Chúc bạn sinh nhật vui vẻ!"
+    }
+  },
+  {
+    "id": "hsk2_114",
+    "hanzi": "快乐",
+    "pinyin": "kuàilè",
+    "meaning": "vui vẻ, hạnh phúc",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "新年快乐！",
+      "pinyin": "Xīnnián kuàilè!",
+      "meaning": "Chúc mừng năm mới!"
+    }
+  },
+  {
+    "id": "hsk2_115",
+    "hanzi": "可爱",
+    "pinyin": "kě'ài",
+    "meaning": "dễ thương, đáng yêu",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "熊猫非常可爱。",
+      "pinyin": "Xióngmāo fēicháng kě'ài.",
+      "meaning": "Gấu trúc rất dễ thương."
+    }
+  },
+  {
+    "id": "hsk2_116",
+    "hanzi": "有意思",
+    "pinyin": "yǒu yìsi",
+    "meaning": "thú vị, hay",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "这部电影很有意思。",
+      "pinyin": "Zhè bù diànyǐng hěn yǒu yìsi.",
+      "meaning": "Bộ phim này rất thú vị."
+    }
+  },
+  {
+    "id": "hsk2_117",
+    "hanzi": "一直",
+    "pinyin": "yìzhí",
+    "meaning": "liên tục, suốt",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他一直在学习。",
+      "pinyin": "Tā yìzhí zài xuéxí.",
+      "meaning": "Cậu ấy học liên tục."
+    }
+  },
+  {
+    "id": "hsk2_118",
+    "hanzi": "一边...一边",
+    "pinyin": "yìbiān...yìbiān",
+    "meaning": "vừa... vừa...",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "他一边听音乐一边跑步。",
+      "pinyin": "Tā yìbiān tīng yīnyuè yìbiān pǎobù.",
+      "meaning": "Cậu ấy vừa nghe nhạc vừa chạy bộ."
+    }
+  },
+  {
+    "id": "hsk2_119",
+    "hanzi": "越来越",
+    "pinyin": "yuèláiyuè",
+    "meaning": "ngày càng",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "天气越来越冷了。",
+      "pinyin": "Tiānqì yuèláiyuè lěng le.",
+      "meaning": "Thời tiết ngày càng lạnh."
+    }
+  },
+  {
+    "id": "hsk2_120",
+    "hanzi": "过",
+    "pinyin": "guò",
+    "meaning": "đã từng (kinh nghiệm)",
+    "level": "HSK2",
+    "example": {
+      "hanzi": "我去过北京。",
+      "pinyin": "Wǒ qù guo Běijīng.",
+      "meaning": "Tôi đã từng đến Bắc Kinh."
+    }
+  }
+];
+
+/* ============================================================
+   PANDA LINGUA — giao diện classic + logic v2
+   225 từ, trạng thái thật, 4 quiz, SRS, tra cứu, backup JSON
+   ============================================================ */
+
+const STORAGE_KEY = 'panda_lingua_v2';
+const LEGACY_PROGRESS_KEY = 'panda_lingua_progress';
+const LEGACY_STATS_KEY = 'panda_lingua_stats';
+
+function blankState(){
+  return {
+    cards:{},
+    streak:0,
+    lastActive:null,
+    totalReviews:0,
+    correct:0,
+    quizAttempts:0,
+    quizCorrect:0,
+    history:{},
+    user:{ isGuest: true, email: '', name: 'Học viên Panda', id: 'guest_local' },
+    telegram:{ chatId: '' }
+  };
+}
+
+let state = loadState();
+
+function loadState(){
+  try{
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if(saved && typeof saved === 'object') return normalizeState(saved);
+  }catch(e){}
+  return migrateLegacy() || blankState();
+}
+
+function normalizeState(s){
+  const base=blankState();
+  const out={...base,...s};
+  out.cards = out.cards && typeof out.cards==='object' ? out.cards : {};
+  out.history = out.history && typeof out.history==='object' ? out.history : {};
+  out.quizAttempts = Number(out.quizAttempts||0);
+  out.quizCorrect = Number(out.quizCorrect||0);
+  out.totalReviews = Number(out.totalReviews||0);
+  out.correct = Number(out.correct||0);
+  out.streak = Number(out.streak||0);
+  out.user = s.user && typeof s.user==='object' ? s.user : { isGuest: true, email: '', name: 'Học viên Panda', id: 'guest_local' };
+  out.telegram = s.telegram && typeof s.telegram==='object' ? s.telegram : { chatId: '' };
+  return out;
+}
+
+function migrateLegacy(){
+  try{
+    const legacyProgress=JSON.parse(localStorage.getItem(LEGACY_PROGRESS_KEY)||'null');
+    const legacyStats=JSON.parse(localStorage.getItem(LEGACY_STATS_KEY)||'null');
+    if(!legacyProgress && !legacyStats) return null;
+    const s=blankState();
+    if(legacyProgress){
+      for(const [id,p] of Object.entries(legacyProgress)){
+        if(!VOCAB.some(v=>v.id===id)) continue;
+        let due=localDateString();
+        if(p.nextReviewAt){ const d=new Date(p.nextReviewAt); if(!Number.isNaN(d.getTime())) due=localDateString(d); }
+        s.cards[id]={ef:Number(p.easeFactor||2.5),reps:Number(p.repetition||0),interval:Number(p.interval||0),due};
+      }
+    }
+    if(legacyStats){
+      s.streak=Number(legacyStats.streakDays||0);
+      s.quizAttempts=Number(legacyStats.totalQuizAttempts||0);
+      s.quizCorrect=Number(legacyStats.correctQuizAttempts||0);
+    }
+    localStorage.setItem(STORAGE_KEY,JSON.stringify(s));
+    return s;
+  }catch(e){ return null; }
+}
+
+function save(){ localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
+function localDateString(d=new Date()){
+  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${day}`;
+}
+function addDays(dateStr,days){
+  const [y,m,d]=dateStr.split('-').map(Number); const dt=new Date(y,m-1,d); dt.setDate(dt.getDate()+days); return localDateString(dt);
+}
+function card(id){
+  if(!state.cards[id]) state.cards[id]={ef:2.5,reps:0,interval:0,due:localDateString()};
+  return state.cards[id];
+}
+function peekCard(id){ return state.cards[id] || {ef:2.5,reps:0,interval:0,due:localDateString()}; }
+function showStreakCelebration(days){
+  const overlay=document.getElementById('streak-celebration');
+  if(!overlay) return;
+  const count=document.getElementById('streak-day-count');
+  const message=document.getElementById('streak-message');
+  if(count) count.textContent=String(days);
+  if(message) message.textContent=days===1?'Chuỗi mới bắt đầu từ hôm nay. Hẹn gặp lại bạn ngày mai!':'Bạn đã giữ nhịp học hôm nay. Hẹn gặp lại bạn ngày mai!';
+  overlay.setAttribute('aria-hidden','false');
+  requestAnimationFrame(()=>overlay.classList.add('show'));
+  clearTimeout(window.__streakCelebrationTimer);
+  window.__streakCelebrationTimer=setTimeout(hideStreakCelebration,2400);
+}
+function hideStreakCelebration(){
+  const overlay=document.getElementById('streak-celebration');
+  if(!overlay) return;
+  overlay.classList.remove('show');
+  overlay.setAttribute('aria-hidden','true');
+}
+document.getElementById('streak-close')?.addEventListener('click',hideStreakCelebration);
+document.getElementById('streak-celebration')?.addEventListener('click',e=>{if(e.target===e.currentTarget)hideStreakCelebration()});
+function updateStreak(){
+  const t=localDateString();
+  if(state.lastActive===t) return false;
+  const yesterday=addDays(t,-1);
+  state.streak = state.lastActive===yesterday ? state.streak+1 : 1;
+  state.lastActive=t;
+  state.longestStreak=Math.max(Number(state.longestStreak||0),state.streak);
+  setTimeout(()=>showStreakCelebration(state.streak),120);
+  return true;
+}
+function recordHistory(correct=null){
+  const t=localDateString();
+  const h=state.history[t]||{reviews:0,correct:0};
+  h.reviews++;
+  if(correct===true) h.correct++;
+  state.history[t]=h;
+}
+function learnWord(id){
+  const c=card(id);
+  if(c.reps===0){ c.reps=1; c.interval=1; c.due=addDays(localDateString(),1); }
+  updateStreak(); recordHistory(null); save();
+}
+function review(id,grade){
+  const c=card(id);
+  if(grade===0){ c.reps=0; c.interval=Math.max(1,Math.round((c.interval||1)/2)); c.ef=Math.max(1.3,(c.ef||2.5)-0.2); }
+  else{
+    c.reps=(c.reps||0)+1;
+    c.ef=Math.min(2.8,(c.ef||2.5)+(grade===2?0.15:0));
+    c.interval=c.reps===1?1:c.reps===2?3:Math.max(1,Math.round((c.interval||1)*c.ef));
+    if(grade===2) c.interval=Math.max(1,Math.round(c.interval*1.3));
+  }
+  c.due=addDays(localDateString(),c.interval||1);
+  state.totalReviews++;
+  if(grade>0) state.correct++;
+  updateStreak(); recordHistory(grade>0); save();
+}
+function recordQuiz(ok,id){
+  state.quizAttempts++;
+  if(ok) state.quizCorrect++;
+  review(id,ok?1:0);
+}
+function newItems(limit=8,level=''){
+  return VOCAB.filter(v=>(!level||v.level===level)&&peekCard(v.id).reps===0).slice(0,limit);
+}
+function dueItems(level=''){
+  const t=localDateString();
+  return VOCAB.filter(v=>(!level||v.level===level)&&peekCard(v.id).reps>0&&peekCard(v.id).due<=t);
+}
+function learnedCount(level=''){ return VOCAB.filter(v=>(!level||v.level===level)&&peekCard(v.id).reps>0).length; }
+function masteredCount(level=''){ return VOCAB.filter(v=>(!level||v.level===level)&&peekCard(v.id).reps>=2).length; }
+function quizAccuracy(){ return state.quizAttempts?Math.round(state.quizCorrect/state.quizAttempts*100):0; }
+function shuffle(a){ const r=[...a]; for(let i=r.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [r[i],r[j]]=[r[j],r[i]]; } return r; }
+function pick(a,n){ return shuffle(a).slice(0,n); }
+function esc(s=''){ return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])); }
+
+let activeAudio=null;
+function speak(text,btn=null){
+  if(!text) return;
+  if(btn) btn.classList.add('animate-pulse');
+  const cleanup=()=>btn&&btn.classList.remove('animate-pulse');
+  try{ if(activeAudio){ activeAudio.pause(); activeAudio=null; } }catch(e){}
+  if(window.speechSynthesis) window.speechSynthesis.cancel();
+  const url=`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(text.trim())}&le=zh`;
+  try{
+    const audio=new Audio(url); activeAudio=audio;
+    audio.onended=()=>{cleanup();activeAudio=null};
+    audio.onerror=()=>speakWeb(text,cleanup);
+    audio.play().catch(()=>speakWeb(text,cleanup));
+  }catch(e){ speakWeb(text,cleanup); }
+}
+function speakWeb(text,cleanup){
+  if(!('speechSynthesis' in window)){ cleanup(); return; }
+  const u=new SpeechSynthesisUtterance(text); u.lang='zh-CN'; u.rate=.85;
+  const voice=speechSynthesis.getVoices().find(v=>v.lang&&v.lang.toLowerCase().startsWith('zh')); if(voice)u.voice=voice;
+  u.onend=cleanup; u.onerror=cleanup; speechSynthesis.speak(u);
+}
+let audioCtx;
+function tone(kind){
+  try{
+    audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+    const notes=kind==='ok'?[[523,.12,0],[659,.12,.08],[784,.2,.16]]:[[196,.16,0],[156,.22,.12]];
+    notes.forEach(([f,d,delay])=>{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.value=f;o.type=kind==='ok'?'sine':'triangle';g.gain.setValueAtTime(.13,audioCtx.currentTime+delay);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+delay+d);o.start(audioCtx.currentTime+delay);o.stop(audioCtx.currentTime+delay+d);});
+  }catch(e){}
+}
+
+/* ============================================================
+   PANDA AI ASSISTANT (OPENROUTER FREE & OFFLINE-FIRST ENGINE)
+   ============================================================ */
+
+const AI_CACHE_KEY = 'panda_ai_cache';
+const SUPABASE_URL = typeof __SUPABASE_URL__ !== 'undefined' ? __SUPABASE_URL__ : '';
+const SUPABASE_ANON_KEY = typeof __SUPABASE_ANON_KEY__ !== 'undefined' ? __SUPABASE_ANON_KEY__ : '';
+const supabase = SUPABASE_URL && SUPABASE_ANON_KEY
+  ? createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+    })
+  : null;
+
+function getAiConfig(){
+  return { model: 'openrouter/free', useFreeFallback: true };
+}
+
+function saveAiConfig(){
+  // Model routing and provider secrets are controlled server-side.
+}
+
+function getAiCache(key){
+  try{
+    const raw = localStorage.getItem(AI_CACHE_KEY);
+    if(raw){
+      const cache = JSON.parse(raw);
+      if(cache[key] && cache[key].content) return cache[key];
+    }
+  }catch(e){}
+  return null;
+}
+
+function setAiCache(key, content, source='ai'){
+  try{
+    const raw = localStorage.getItem(AI_CACHE_KEY);
+    const cache = raw ? JSON.parse(raw) : {};
+    cache[key] = { content, source, savedAt: new Date().toISOString() };
+    localStorage.setItem(AI_CACHE_KEY, JSON.stringify(cache));
+  }catch(e){}
+}
+
+function clearAiCache(){
+  localStorage.removeItem(AI_CACHE_KEY);
+}
+
+const BUILTIN_AI_KNOWLEDGE = {
+  'hsk1_001': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Bộ **Nhân đứng (亻)**: tượng trưng cho con người.\n• Chữ **Nhĩ (尔)**: mang nghĩa 'ngươi, bạn, ấy'.\n\n🐼 **Mẹo nhớ Panda:**\nMột người (亻) đang đứng đối diện trò chuyện trước mắt mình chính là 'bạn' (你) — đại từ nhân xưng ngôi thứ hai thân mật và lịch sự!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **你好！** (*Nǐ hǎo!*) — Chào bạn!\n2. **你是学生吗？** (*Nǐ shì xuésheng ma?*) — Bạn có phải là học sinh không?\n3. **很高兴认识你。** (*Hěn gāoxìng rènshi nǐ.*) — Rất vui được quen biết bạn.",
+    nuance: "🔍 **Phân biệt & Lưu ý:**\n• **你 (nǐ)**: Dùng cho bạn bè, người đồng trang lứa hoặc nhỏ tuổi hơn.\n• **您 (nín)**: Thêm bộ **Tâm (心)** ở dưới chữ 你, thể hiện lòng kính trọng, dùng cho người lớn tuổi, thầy cô hoặc đối tác.",
+    pronunciation: "🎯 **Mẹo phát âm thanh 3 (nǐ):**\n• Xuất phát ở cao độ trung bình, hạ giọng xuống đáy rồi nâng nhẹ lên.\n• *Quy tắc biến điệu:* Khi hai thanh 3 đi liền nhau (như **你好** nǐ + hǎo), từ đầu đổi thành thanh 2: đọc là **ní hǎo**!"
+  },
+  'hsk1_002': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Chữ **Ngã (我)** nguyên gốc chữ giáp cốt mô tả một người cầm vũ khí loại giáo mác có răng cưa (bộ Qua 戈) để tự vệ.\n\n🐼 **Mẹo nhớ Panda:**\nNgười tự cầm binh khí để bảo vệ bản thân và lãnh địa của mình chính là 'Tôi' (我) — khẳng định sự độc lập và tự chủ!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **我是越南人。** (*Wǒ shì Yuènán rén.*) — Tôi là người Việt Nam.\n2. **我想喝水。** (*Wǒ xiǎng hē shuǐ.*) — Tôi muốn uống nước.\n3. **这是我的书。** (*Zhè shì wǒ de shū.*) — Đây là sách của tôi.",
+    nuance: "🔍 **Phân biệt & Mở rộng:**\n• **我 (wǒ)**: 'Tôi' (số ít).\n• **我们 (wǒmen)**: 'Chúng tôi / chúng ta' (số nhiều, thêm hậu tố 们 men).\n• Khi nói thân mật trong giao tiếp hàng ngày, 我 là từ được dùng nhiều nhất.",
+    pronunciation: "🎯 **Mẹo phát âm (wǒ):**\n• Âm lướt tròn môi 'u', sau đó mở rộng thành 'o' (u-o).\n• Đi trước từ thanh 3 khác sẽ biến điệu sang thanh 2 (ví dụ: 我很 (wǒ hěn) -> đọc là **wó hěn**)."
+  },
+  'hsk1_003': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Bộ **Nhân đứng (亻)**: chỉ người đàn ông hoặc người nói chung.\n• Chữ **Dã (也)**: nghĩa là 'cũng'.\n\n🐼 **Mẹo nhớ Panda:**\nNgười đàn ông (亻) ấy cũng (也) ở đó — chính là 'Anh ấy / Cậu ấy' (他)!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **他是我的朋友。** (*Tā shì wǒ de péngyou.*) — Anh ấy là bạn của tôi.\n2. **他在学校学汉语。** (*Tā zài xuéxiào xué Hànyǔ.*) — Cậu ấy đang học tiếng Trung ở trường.\n3. **他喜欢喝茶。** (*Tā xǐhuan hē chá.*) — Anh ấy thích uống trà.",
+    nuance: "🔍 **Phân biệt 他, 她, 它:**\n• **他 (tā)**: Anh ấy / ông ấy (nam giới).\n• **她 (tā)**: Cô ấy / bà ấy (bộ Nữ 女).\n• **它 (tā)**: Nó (động vật, đồ vật, có bộ Miên 宀). Cả 3 đều phát âm giống hệt nhau là *tā*!",
+    pronunciation: "🎯 **Mẹo phát âm thanh 1 (tā):**\n• Bật hơi âm **t** (như âm 'th' nhẹ trong tiếng Việt có luồng hơi).\n• Giữ giọng cao và bằng phẳng ở nốt cao nhất (thanh 1)."
+  },
+  'hsk1_004': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Bên trái là **Bộ Nữ (女)**: chỉ người phụ nữ, con gái.\n• Bên phải là chữ **Dã (也)**: trợ từ ngữ khí.\n\n🐼 **Mẹo nhớ Panda:**\nNgười phụ nữ (女) đang được nhắc tới chính là 'Cô ấy / Bà ấy' (她)!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **她很漂亮。** (*Tā hěn piàoliang.*) — Cô ấy rất xinh đẹp.\n2. **她是我们的老师。** (*Tā shì wǒmen de lǎoshī.*) — Cô ấy là giáo viên của chúng tôi.\n3. **她正在看书。** (*Tā zhèngzài kàn shū.*) — Cô ấy đang đọc sách.",
+    nuance: "🔍 **Ghi nhớ nhanh:**\nChữ 她 chỉ dùng trong văn viết để phân biệt giới tính nữ. Khi giao tiếp nghe nói, 他 và 她 hoàn toàn giống nhau nên cần nghe ngữ cảnh!",
+    pronunciation: "🎯 **Mẹo phát âm:**\n• Giống chữ 他: bật hơi âm đầu *t*, cao độ thanh 1 bằng phẳng, ngân dài."
+  },
+  'hsk1_030': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Chữ tượng hình mô phỏng dòng nước chảy cuồn cuộn.\n• Nét sổ móc ở giữa là dòng chảy chính, các nét phẩy mác hai bên là bọt nước bắn tung tóe.\n• Khi làm bộ thủ ghép, biến thành **Bộ Tam Điểm Thủy (氵)**.",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **请给我一杯水。** (*Qǐng gěi wǒ yì bēi shuǐ.*) — Làm ơn cho tôi một cốc nước.\n2. **你喝热水还是冷水？** (*Nǐ hē rè shuǐ háishì lěng shuǐ?*) — Bạn uống nước nóng hay nước lạnh?\n3. **多喝水对身体好。** (*Duō hē shuǐ duì shēntǐ hǎo.*) — Uống nhiều nước rất tốt cho sức khỏe.",
+    nuance: "🔍 **Cụm từ hữu ích:**\n• **喝水 (hē shuǐ)**: Uống nước.\n• **水果 (shuǐguǒ)**: Trái cây / hoa quả.\n• **开水 (kāishuǐ)**: Nước đun sôi.",
+    pronunciation: "🎯 **Mẹo phát âm (shuǐ):**\n• Âm **sh** uốn cong đầu lưỡi chạm ngạc cứng.\n• Vần **ui** đọc lướt nhanh 'u-ây', thanh 3 hạ trầm rồi bổng."
+  },
+  'hsk1_031': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Trên: **Bộ Thảo đầu (艹)** — lá cây cỏ non.\n• Giữa: chữ **Nhân (人)** — con người.\n• Dưới: **Bộ Mộc (木)** — thân cây gỗ.\n\n🐼 **Mẹo nhớ Panda:**\nCon người (人) đứng giữa trời đất, hái lá cỏ thảo non (艹) từ trên cành cây (木) xuống để pha nước thưởng thức — đó chính là 'Trà' (茶)!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **中国人都喜欢喝茶。** (*Zhōngguó rén dōu xǐhuan hē chá.*) — Người Trung Quốc đều thích uống trà.\n2. **你想喝茶还是咖啡？** (*Nǐ xiǎng hē chá háishì kāfēi?*) — Bạn muốn uống trà hay cà phê?\n3. **请坐，喝茶！** (*Qǐng zuò, hē chá!*) — Mời ngồi, uống trà!",
+    nuance: "🔍 **Văn hóa thưởng trà:**\n• **绿茶 (lǜchá)**: Trà xanh.\n• **红茶 (hóngchá)**: Hồng trà (trà đen).\n• **奶茶 (nǎichá)**: Trà sữa (từ cực hot của giới trẻ).",
+    pronunciation: "🎯 **Mẹo phát âm (chá):**\n• Âm **ch** bật hơi mạnh, uốn cong lưỡi.\n• Thanh 2: đưa giọng vút lên như dấu sắc nhẹ trong tiếng Việt."
+  },
+  'hsk1_010': {
+    mnemonic: "💡 **Phân tích bộ thủ & Chiết tự:**\n• Bên trái là **Bộ Nữ (女)**: người phụ nữ, người mẹ.\n• Bên phải là **Bộ Tử (子)**: đứa con trai.\n\n🐼 **Mẹo nhớ Panda:**\nNgười phụ nữ sinh được con thảo sum vầy, gia đình hòa thuận thì cuộc sống vô cùng 'Tốt đẹp, hạnh phúc' (好)!",
+    examples: "🗣️ **3 câu ví dụ giao tiếp thực tế:**\n1. **今天天气很好。** (*Jīntiān tiānqì hěn hǎo.*) — Hôm nay thời tiết rất tốt.\n2. ** contest Hán này rất hay: 这本汉字书很好看。** (*Zhè běn hànzì shū hěn hǎokàn.*)\n3. **好，我们明天见！** (*Hǎo, wǒmen míngtiān jiàn!*) — Được, ngày mai chúng ta gặp nhé!",
+    nuance: "🔍 **Đa nghĩa của chữ 好:**\n• Tính từ: Tốt, đẹp, hay (很好 hěn hǎo).\n• Phó từ: Rất, quá (好热 hǎo rè - nóng quá).\n• Đồng ý: Được (好的 hǎo de).",
+    pronunciation: "🎯 **Mẹo phát âm (hǎo):**\n• Thanh 3: hạ xuống sâu rồi nâng lên.\n• Khi đứng trước chữ thanh 3 khác sẽ biến điệu sang thanh 2 (ví dụ: 好美 hǎo měi -> háo měi)."
+  }
+};
+
+function generateDynamicAiInsight(v, type, custom=''){
+  if(custom){
+    const q = custom.toLowerCase().trim();
+    if(q.includes('hùng') || q.includes('hung')){
+      const ex1 = v.hanzi === '你' 
+        ? { hanzi: '你好，阿雄！', pinyin: 'Nǐ hǎo, Ā Xióng!', meaning: 'Chào Hùng!' }
+        : (v.hanzi === '水' ? { hanzi: '阿雄想喝水。', pinyin: 'Ā Xióng xiǎng hē shuǐ.', meaning: 'Hùng muốn uống nước.' } : { hanzi: `阿雄在学${v.hanzi}。`, pinyin: `Ā Xióng zài xué ${v.pinyin}.`, meaning: `Hùng đang học ${v.meaning}.` });
+
+      const ex2 = v.hanzi === '你'
+        ? { hanzi: '阿雄，认识你很高兴。', pinyin: 'Ā Xióng, rènshi nǐ hěn gāoxìng.', meaning: 'Hùng à, rất vui được quen biết bạn.' }
+        : (v.hanzi === '水' ? { hanzi: '请给阿雄一杯水。', pinyin: 'Qǐng gěi Ā Xióng yì bēi shuǐ.', meaning: 'Làm ơn cho Hùng một cốc nước.' } : { hanzi: `阿雄很喜欢${v.hanzi}。`, pinyin: `Ā Xióng hěn xǐhuan ${v.pinyin}.`, meaning: `Hùng rất thích ${v.meaning}.` });
+
+      const ex3 = v.hanzi === '你'
+        ? { hanzi: '你明天来找阿雄吗？', pinyin: 'Nǐ míngtiān lái zhǎo Ā Xióng ma?', meaning: 'Ngày mai bạn đến tìm Hùng không?' }
+        : (v.hanzi === '水' ? { hanzi: '阿雄每天喝很多水。', pinyin: 'Ā Xióng měitiān hē hěn duō shuǐ.', meaning: 'Hùng mỗi ngày đều uống nhiều nước.' } : { hanzi: `阿雄，这是${v.hanzi}吗？`, pinyin: `Ā Xióng, zhè shì ${v.pinyin} ma?`, meaning: `Hùng ơi, đây có phải là ${v.meaning} không?` });
+
+      return `🐼 **Chào bạn Hùng!**\n\nTên **"Hùng"** trong tiếng Hán là **雄** (*Xióng*), gọi thân mật là **阿雄** (*Ā Xióng*).\n\n🗣️ **3 câu ví dụ tiếng Trung giao tiếp với "${v.hanzi}" (${v.pinyin} — ${v.meaning}):**\n\n1. **${ex1.hanzi}**\n   *${ex1.pinyin}*\n   👉 ${ex1.meaning}\n\n2. **${ex2.hanzi}**\n   *${ex2.pinyin}*\n   👉 ${ex2.meaning}\n\n3. **${ex3.hanzi}**\n   *${ex3.pinyin}*\n   👉 ${ex3.meaning}`;
+    }
+    const isOffTopic = /^(mày|mình|bạn|ai|là ai|you|who|hello|hi|chào|xin chào|ơi|ê|hey)/.test(q);
+    if(isOffTopic){
+      return `🐼 **Xin chào! Tôi là Gia sư Panda AI** — trợ lý học tiếng Trung HSK 1–2 của bạn!\n\nTôi sẵn sàng hỗ trợ bạn:\n• **Chiết tự** bộ thủ tượng hình dễ nhớ\n• **Đặt câu ví dụ tiếng Trung** theo tên riêng hoặc tình huống thực tế\n• **Phân biệt** cách dùng và chỉnh âm chuẩn Quan thoại\n\nHiện tại chúng ta đang học từ **${v.hanzi}** (${v.pinyin} — *${v.meaning}*). Bạn cứ thoải mái đặt câu hỏi nhé!`;
+    }
+    return `🐼 **Panda AI giải đáp về "${v.hanzi}" (${v.pinyin} — ${v.meaning}):**\n\n• **Ví dụ giao tiếp chuẩn:**\n  **${v.example?.hanzi || v.hanzi}**\n  *${v.example?.pinyin || v.pinyin}*\n  👉 ${v.example?.meaning || v.meaning}\n\n• **Gợi ý:** Cấu trúc cơ bản: **Chủ ngữ + ${v.hanzi} + Tân ngữ**. Hãy ghép từ vào ngữ cảnh đời sống thường nhật để ghi nhớ tự nhiên nhất!`;
+  }
+
+  if(type==='mnemonic'){
+    return `💡 **Phân tích chiết tự & Mẹo nhớ chữ Hán "${v.hanzi}":**\n\n• **Chữ Hán:** **${v.hanzi}** (*${v.pinyin}*)\n• **Nghĩa cốt lõi:** ${v.meaning} (${v.level})\n\n🐼 **Mẹo liên tưởng hình ảnh:**\nChữ Hán này được cấu tạo từ các nét tượng hình đời sống. Khi viết, hãy viết theo thứ tự chuẩn: từ trên xuống dưới, từ trái qua phải, nét ngang trước nét sổ sau.\n\n📖 **Gắn kết câu chuyện:** Hãy gắn hành động **"${v.meaning}"** với hình ảnh chữ **${v.hanzi}** trong ví dụ thực tế: *${v.example?.hanzi || ''}* (*${v.example?.meaning || ''}*). Việc ghi nhớ cả cụm câu sẽ giúp bạn nhớ chữ bền hơn 300% so với học từng nét đơn lẻ!`;
+  }
+
+  if(type==='examples'){
+    const ex = v.example || { hanzi: v.hanzi, pinyin: v.pinyin, meaning: v.meaning };
+    return `🗣️ **3 câu ví dụ giao tiếp đời thường với "${v.hanzi}":**\n\n1. **${ex.hanzi}**\n   *${ex.pinyin}*\n   👉 Dịch nghĩa: ${ex.meaning}\n\n2. **我每天都${v.hanzi}。**\n   *Wǒ měitiān dōu ${v.pinyin}.*\n   👉 Dịch nghĩa: Tôi ngày nào cũng ${v.meaning}.\n\n3. **请问，这是${v.hanzi}吗？**\n   *Qǐngwèn, zhè shì ${v.pinyin} ma?*\n   👉 Dịch nghĩa: Xin hỏi, đây có phải là ${v.meaning} không?`;
+  }
+
+  if(type==='nuance'){
+    return `🔍 **Phân biệt & Lưu ý cách dùng từ "${v.hanzi}":**\n\n• **Trình độ:** Thuộc chuẩn từ vựng **${v.level}** cơ bản nhất.\n• **Vị trí ngữ pháp:** Thường đóng vai trò trọng tâm trong câu đơn S + V + O.\n• **Lưu ý giao tiếp:** Đừng dịch từng từ word-by-word từ tiếng Việt. Hãy đặt từ vào đúng ngữ cảnh giao tiếp tự nhiên của người bản ngữ để tránh dùng sai trường nghĩa.`;
+  }
+
+  if(type==='pronunciation'){
+    return `🎯 **Mẹo phát âm chuẩn bản xứ cho "${v.hanzi} (${v.pinyin})":**\n\n• **Phiên âm Pinyin:** **${v.pinyin}**\n• **Thanh điệu:** Chú ý dấu thanh điệu trên nguyên âm chính. Hãy giữ đúng cao độ để tránh nhầm sang từ mang thanh điệu khác.\n• **Khẩu hình miệng:** Mở khẩu hình tự nhiên, không gượng ép. Bạn có thể nhấn nút biểu tượng chiếc loa 🔊 trên thẻ từ vựng để nghe giọng đọc chuẩn Quan thoại (zh-CN) nhiều lần!`;
+  }
+
+  return `🐼 Gia sư Panda đã sẵn sàng đồng hành cùng bạn học từ **${v.hanzi}** (${v.pinyin})!`;
+}
+
+async function queryPandaAi(vocab, promptType='mnemonic', customPrompt=''){
+  const config = getAiConfig();
+  const cacheKey = customPrompt ? null : `${vocab.id}_${promptType}`;
+  if(cacheKey){
+    const cached = getAiCache(cacheKey);
+    if(cached) return { content: cached.content, source: cached.source || 'cache' };
+  }
+
+  if(!customPrompt && BUILTIN_AI_KNOWLEDGE[vocab.id] && BUILTIN_AI_KNOWLEDGE[vocab.id][promptType]){
+    const content = BUILTIN_AI_KNOWLEDGE[vocab.id][promptType];
+    setAiCache(cacheKey, content, 'builtin');
+    return { content, source: 'builtin' };
+  }
+
+  if(supabase){
+    try{
+      const { data, error } = await supabase.functions.invoke('ai-assistant', {
+        body: {
+          vocabId: vocab.id,
+          promptType,
+          customPrompt,
+          vocab: {
+            hanzi: vocab.hanzi,
+            pinyin: vocab.pinyin,
+            meaning: vocab.meaning,
+            level: vocab.level,
+            example: vocab.example
+          }
+        }
+      });
+      const reply = data?.answer;
+      if(!error && data?.success && reply && reply.trim() && !reply.startsWith('User Safety:') && !reply.startsWith("Here's a thinking")){
+        const src = data?.source || 'gemini';
+        if(cacheKey) setAiCache(cacheKey, reply.trim(), src);
+        return { content: reply.trim(), source: src };
+      }
+      console.warn('[PandaAI] Edge Function unavailable; using pedagogical fallback.');
+    }catch(err){
+      console.warn('[PandaAI] Edge Function failed; using pedagogical fallback.');
+    }
+  }
+
+  const fallbackContent = generateDynamicAiInsight(vocab, promptType, customPrompt);
+  if(cacheKey) setAiCache(cacheKey, fallbackContent, 'fallback');
+  return { content: fallbackContent, source: 'fallback' };
+}
+
+// Convert simple markdown into clean, styled HTML
+function formatAiMarkdown(md=''){
+  if(!md) return '';
+  let html = esc(md);
+  // Bold
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Italic
+  html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  // Numbered list item
+  html = html.replace(/^(\d+\.)\s+(.+)$/gm, '<div class="ai-example-item"><span class="font-bold text-[#173B6C] mr-1">$1</span>$2</div>');
+  // Bullet points
+  html = html.replace(/^[•\-]\s+(.+)$/gm, '<div class="flex items-start gap-1.5 my-1.5"><span class="text-[#4CAF7D] mt-0.5">•</span><span>$1</span></div>');
+  // Callouts / Quotes
+  html = html.replace(/^👉\s+(.+)$/gm, '<div class="p-2 bg-[#E8F5E9]/60 rounded-lg text-[#006C44] font-medium my-1.5 flex items-center gap-1.5"><span>👉</span><span>$1</span></div>');
+  // Line breaks to paragraphs
+  html = html.split(/\n\n+/).map(p => p.trim() ? `<p>${p.replace(/\n/g, '<br/>')}</p>` : '').join('');
+  return html;
+}
+
+const PANDA_HEADER='https://lh3.googleusercontent.com/aida-public/AB6AXuA1ixIl8fmbevk2PeOMmdbW8fF1MkqP3qBrxo9oMtM-O93xm2SaRevpFyA2BtBSOnuaK9wtweIqBZFYHehPPSaQvenJ14zbUFs1XwDMSdB6i0sybqO63yf8z7ueoaecsveB9vpFBIS9-oC0gpXC8dI5ypxT-NH8uU3UmckT75rMk77Nnhybd1NU9WzUiWK7AT3hc9R2cFYeH1xJmgd7G_DeNzsbvjyhehMZydfdISGAwHJnWlECL5lk';
+const PANDA_SIDEBAR='https://lh3.googleusercontent.com/aida-public/AB6AXuDoBBau_vaLxfksDl72C3UNwGVvWzvSmgNSECrG5t0inMc7rQJc22laiZXLtYVJWLJZPrvImUke2flcJjYywJjecCUSieCQs1lnjJsgjt0-hf-Lm8tE0p2bigw7Rx06NHeScH9wnueTOSkZMcp4uBljwaC3cs-zLBhE-PS6N4D8s3HtOTQDZMf71DqDSt5Gx8xWX4Q_KJmwhCQTI03few596eNAwnxHX4oexwcAxLWeb_dykc8MXcyc';
+const PANDA_HERO='https://lh3.googleusercontent.com/aida-public/AB6AXuDewIrC_1C7cMhMZP6j3QmV4mbS6DSmRxQ1xqnBwhTBMhj-npM9yoTMomFDr9nuLLPfCfI_aBKeqkLmdJV5A9c4OmBtHgNL7VsJ_tbGJeB2vg1NdbNHnmbGQiutrHeyNBV75SnkfNKt3qkX73FMS73Co7EfDuO5PFYs6ESvzbBLC0bUuOFW57KdplKXbMsH62v16Rnj9CSh2fxstb6T4yCEJtdzzDMFph-c8M19LP9tLncffOzkB0PF';
+const PANDA_CHEER='https://lh3.googleusercontent.com/aida-public/AB6AXuCR7QkMcaxjKEK5QI8Z5IQ6romBpbSjBK6KvGs1L_qgoBknLgfIXFg6a4QjhQbF7QebMoMUUYSoUq0joG_p3s4XodsNTvTA0UItWVAapcvI4ZbI6tsK-8kQWuE2SZHVC8Xf4bXx5UZavWHUXf5oFylyHxn1aS2XTdlAcv_38x5naTIIA-b5fnDbEfu-aSdEWQc30XrwspGJPIvx1YtRjk_7SxdTM9vaFW0MsgLnlUabvV7WBpEMvaWU';
+const PANDA_STATS='https://lh3.googleusercontent.com/aida-public/AB6AXuAlvsDzPdxePXQE0plk91o9TmdAOUGJMjV4ScbgCwJiGwvIo1zr-e8QPSLlk671aNEF3xqzjltRAVWSGa6FR8g4vzm7vu_nK4S_yLVTipb0mjprh5BSDiXQRHOysJ74rSE6UyFNsWm54k_c9vkZIcP2Q5UvTj06_ZazKBhCaIC-huL4ue0j1vd55oeerrQiEBkthR_gg-ilqMWz21FkEQ4c7SDLM81vglTqEA2KOaJFB6-84Aci2qqq';
+
+const NAV=[
+  {id:'overview',desktop:'Tổng quan',mobile:'Trang chủ',icon:'dashboard'},
+  {id:'learn',desktop:'Bài học mới',mobile:'Học tập',icon:'auto_stories'},
+  {id:'quiz',desktop:'Luyện tập',mobile:'Kiểm tra',icon:'edit_note'},
+  {id:'srs',desktop:'SRS Review',mobile:'Ôn tập',icon:'refresh',badge:()=>dueItems().length},
+  {id:'browse',desktop:'Tra cứu từ',mobile:'Tra cứu',icon:'search'},
+  {id:'stats',desktop:'Tiến độ',mobile:'Thống kê',icon:'trending_up'}
+];
+
+class PandaApp{
+  constructor(){
+    this.currentTab='overview';
+    this.learnSession=[];
+    this.learnIndex=0;
+    this.quizMode='choice';
+    this.quizTotal=10;
+    this.quizIndex=0;
+    this.quizScore=0;
+    this.quiz=null;
+    this.srsSession=[];
+    this.srsIndex=0;
+    this.srsFlipped=false;
+    this.browseLevel='';
+    this.browseStatus='';
+    this.currentAiVocab=null;
+    this.currentAiType='mnemonic';
+    this.authTab='login';
+    this.authSubscription=null;
+    this.pendingLearnIds=null;
+    this.init();
+  }
+  async init(){
+    save();
+    this.bindAiEvents();
+    this.bindAuthEvents();
+    this.bindTelegramEvents();
+    await this.initAuth();
+  }
+  async initAuth(){
+    if(!supabase){this.renderAuthGate('Dịch vụ đăng nhập chưa được cấu hình.');return;}
+    const { data } = await supabase.auth.getSession();
+    if(data?.session){
+      const ok=await this.applyAuthSession(data.session);
+      if(ok){this.renderShell();this.navigate('overview');}else this.renderAuthGate();
+    }else this.renderAuthGate();
+    const { data: listener }=supabase.auth.onAuthStateChange(async(_event,session)=>{
+      if(session){const ok=await this.applyAuthSession(session);if(ok){this.renderShell();this.navigate(this.currentTab||'overview');}}
+      else{state.user={isGuest:true,email:'',name:'',id:'',role:'learner',status:'signed_out',aiEnabled:false};save();this.renderAuthGate();}
+    });
+    this.authSubscription=listener?.subscription||null;
+  }
+  async applyAuthSession(session){
+    if(!session?.user)return false;
+    const user=session.user;
+    const {data:profile,error}=await supabase.from('profiles').select('display_name,role,status,ai_enabled,ban_reason').eq('id',user.id).single();
+    if(error){console.warn('[Auth] Không tải được profile',error);await supabase.auth.signOut();return false;}
+    if(profile.status==='banned'){await supabase.auth.signOut();this.renderAuthGate(`Tài khoản đã bị khóa${profile.ban_reason?': '+profile.ban_reason:''}.`);return false;}
+    state.user={isGuest:false,email:user.email||'',name:profile.display_name||user.user_metadata?.name||user.email?.split('@')[0]||'Học viên Panda',id:user.id,role:profile.role||'learner',status:profile.status||'active',aiEnabled:profile.ai_enabled!==false};
+    save(); return true;
+  }
+  renderAuthGate(message=''){
+    const app=document.getElementById('app');
+    app.innerHTML=`<main class="min-h-screen bg-gradient-to-br from-[#EDF4FF] via-[#F7FAF8] to-[#E8F5E9] flex items-center justify-center p-5"><section class="max-w-md text-center"><div class="w-24 h-24 mx-auto rounded-full bg-white shadow-xl border-4 border-white flex items-center justify-center text-5xl mb-5">🐼</div><span class="inline-block px-3 py-1 rounded-full bg-[#E8F5E9] text-[#006C44] text-[11px] font-bold uppercase tracking-wider mb-3">Panda Lingua · HSK 1–2</span><h1 class="text-3xl font-bold text-[#173B6C] mb-3">Học tiếng Trung theo lộ trình của riêng bạn</h1><p class="text-sm text-[#64717D] mb-6">Đăng nhập để lưu tiến độ, luyện SRS và học cùng Gia sư Panda AI.</p>${message?`<p class="mb-4 p-3 rounded-xl bg-[#FFEBEE] border border-[#FFCDD2] text-[#C94A4A] text-xs">${esc(message)}</p>`:''}<button id="gate-auth-btn" class="w-full py-3.5 bg-[#173B6C] hover:bg-[#102B50] text-white font-bold rounded-xl shadow-lg">Đăng nhập hoặc tạo tài khoản</button></section></main>`;
+    document.getElementById('gate-auth-btn')?.addEventListener('click',()=>{this.authTab='login';this.openAuthModal();});
+    this.openAuthModal();
+  }
+  navigate(tab){
+    this.currentTab=tab;
+    this.renderShell();
+    window.scrollTo({top:0,behavior:'smooth'});
+    const main=document.getElementById('main-content-container');
+    if(!main)return;
+    ({overview:()=>this.renderOverview(main),learn:()=>this.startLearn(main),quiz:()=>this.startQuiz(main),srs:()=>this.startSrs(main),browse:()=>this.renderBrowse(main),stats:()=>this.renderStats(main)}[tab]||(()=>this.renderOverview(main)))();
+  }
+
+  bindAiEvents(){
+    document.getElementById('ai-btn-close')?.addEventListener('click',()=>this.closeAiAssistant());
+    document.getElementById('panda-ai-drawer')?.addEventListener('click',e=>{if(e.target===e.currentTarget)this.closeAiAssistant();});
+    document.getElementById('ai-btn-settings')?.addEventListener('click',()=>this.openAiSettings());
+    document.getElementById('ai-settings-close')?.addEventListener('click',()=>this.closeAiSettings());
+    document.getElementById('panda-ai-settings-modal')?.addEventListener('click',e=>{if(e.target===e.currentTarget)this.closeAiSettings();});
+
+    document.getElementById('ai-settings-save')?.addEventListener('click',()=>{
+      this.closeAiSettings();
+      if(this.currentAiVocab)this.executeAiQuery(this.currentAiVocab,this.currentAiType);
+    });
+
+    document.getElementById('ai-settings-clear-cache')?.addEventListener('click',()=>{
+      clearAiCache();
+      const contentBox=document.getElementById('ai-content');
+      if(contentBox)contentBox.innerHTML='<div class="text-xs text-[#006C44] py-2">✓ Đã làm sạch cache Panda AI.</div>';
+      if(this.currentAiVocab)this.executeAiQuery(this.currentAiVocab,this.currentAiType);
+    });
+
+    document.querySelectorAll('.ai-chip').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.ai-chip').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        this.currentAiType=btn.dataset.aiType;
+        if(this.currentAiVocab)this.executeAiQuery(this.currentAiVocab,this.currentAiType);
+      });
+    });
+
+    const form=document.getElementById('ai-query-form');
+    const input=document.getElementById('ai-query-input');
+    const clearBtn=document.getElementById('ai-clear-input');
+
+    input?.addEventListener('input',()=>{
+      if(clearBtn)clearBtn.classList.toggle('hidden',!input.value.trim());
+    });
+    clearBtn?.addEventListener('click',()=>{
+      input.value='';
+      clearBtn.classList.add('hidden');
+      input.focus();
+    });
+
+    form?.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const q=input.value.trim();
+      if(!q||!this.currentAiVocab)return;
+      this.executeAiQuery(this.currentAiVocab,this.currentAiType,q);
+    });
+
+    document.getElementById('ai-word-audio')?.addEventListener('click',e=>{
+      if(this.currentAiVocab)speak(this.currentAiVocab.hanzi,e.currentTarget);
+    });
+  }
+
+  openAiAssistant(vocab,defaultType='mnemonic'){
+    this.currentAiVocab=vocab;
+    this.currentAiType=defaultType;
+    const hz=document.getElementById('ai-word-hanzi'),py=document.getElementById('ai-word-pinyin'),mn=document.getElementById('ai-word-meaning');
+    if(hz)hz.textContent=vocab.hanzi;
+    if(py)py.textContent=vocab.pinyin;
+    if(mn)mn.textContent=vocab.meaning;
+
+    document.querySelectorAll('.ai-chip').forEach(b=>{
+      b.classList.toggle('active',b.dataset.aiType===defaultType);
+    });
+
+    const drawer=document.getElementById('panda-ai-drawer');
+    if(drawer){
+      drawer.setAttribute('aria-hidden','false');
+      requestAnimationFrame(()=>drawer.classList.add('show'));
+    }
+    this.executeAiQuery(vocab,defaultType);
+  }
+
+  closeAiAssistant(){
+    const drawer=document.getElementById('panda-ai-drawer');
+    if(!drawer)return;
+    drawer.classList.remove('show');
+    drawer.setAttribute('aria-hidden','true');
+  }
+
+  openAiSettings(){
+    const cfg=getAiConfig();
+    const keyInput=document.getElementById('setting-ai-key');
+    const modelInput=document.getElementById('setting-ai-model');
+    if(keyInput)keyInput.value=cfg.apiKey||'';
+    if(modelInput)modelInput.value=cfg.model||'openrouter/free';
+    const modal=document.getElementById('panda-ai-settings-modal');
+    if(modal){
+      modal.setAttribute('aria-hidden','false');
+      requestAnimationFrame(()=>modal.classList.add('show'));
+    }
+  }
+
+  closeAiSettings(){
+    const modal=document.getElementById('panda-ai-settings-modal');
+    if(!modal)return;
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+  }
+
+  async executeAiQuery(vocab,type,custom=''){
+    const contentBox=document.getElementById('ai-content');
+    const loadingBox=document.getElementById('ai-loading');
+    if(loadingBox)loadingBox.classList.remove('hidden');
+    if(contentBox)contentBox.innerHTML='';
+    const res=await queryPandaAi(vocab,type,custom);
+    if(loadingBox)loadingBox.classList.add('hidden');
+    if(contentBox){
+      let srcLabel='🐼 Gia sư Panda AI';
+      if(res.source==='gemini') srcLabel='🐼 Gia sư Panda AI (Google Gemini)';
+      else if(res.source==='openrouter') srcLabel='🐼 Gia sư Panda AI (OpenRouter)';
+      else if(res.source==='builtin') srcLabel='🐼 Trợ lý Panda (Chiết tự chuẩn)';
+      else if(res.source==='fallback') srcLabel='🐼 Trợ lý Panda (Dự phòng)';
+      contentBox.innerHTML=`<div class="mb-2.5 flex items-center justify-between text-[11px] text-[#64717D] pb-1.5 border-b border-[#EAEFF0]"><span>${srcLabel}</span><button id="ai-copy-btn" class="hover:text-[#173B6C] flex items-center gap-1"><span class="material-symbols-outlined text-sm">content_copy</span><span>Sao chép</span></button></div>${formatAiMarkdown(res.content)}`;
+      contentBox.querySelector('#ai-copy-btn')?.addEventListener('click',()=>{
+        navigator.clipboard?.writeText(res.content);
+        const b=contentBox.querySelector('#ai-copy-btn');
+        if(b)b.innerHTML='<span class="material-symbols-outlined text-sm text-[#4CAF7D]">check</span><span class="text-[#006C44] font-semibold">Đã chép!</span>';
+      });
+    }
+  }
+
+  bindAuthEvents(){
+    document.getElementById('auth-modal-close')?.addEventListener('click',()=>this.closeAuthModal());
+    document.getElementById('panda-auth-modal')?.addEventListener('click',e=>{if(e.target===e.currentTarget)this.closeAuthModal();});
+    
+    document.getElementById('auth-tab-login')?.addEventListener('click',()=>this.switchAuthTab('login'));
+    document.getElementById('auth-tab-signup')?.addEventListener('click',()=>this.switchAuthTab('signup'));
+    
+    document.getElementById('admin-refresh-users')?.addEventListener('click',()=>this.loadAdminUsers());
+    document.getElementById('admin-user-search')?.addEventListener('input',e=>this.filterAdminUsers(e.target.value));
+
+
+    document.getElementById('auth-logout-btn')?.addEventListener('click',async()=>{
+      const feedback=document.getElementById('auth-feedback');
+      if(!supabase){
+        if(feedback){ feedback.className='text-xs rounded-xl p-3 bg-[#FFEBEE] text-[#C94A4A] block'; feedback.textContent='Chưa cấu hình dịch vụ tài khoản Supabase.'; }
+        return;
+      }
+      const { error }=await supabase.auth.signOut({scope:'local'});
+      if(error){if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFEBEE] text-[#C94A4A] block';feedback.textContent='Chưa thể đăng xuất. Vui lòng thử lại.';}return;}
+      state.user={isGuest:true,email:'',name:'',id:'',role:'learner',status:'signed_out',aiEnabled:false};save();
+      this.closeAuthModal();this.renderAuthGate();
+    });
+
+    const form = document.getElementById('auth-form');
+    form?.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      this.validateAndSubmitAuth();
+    });
+  }
+
+  switchAuthTab(tab){
+    this.authTab = tab;
+    const isLogin = tab === 'login';
+    const btnLogin = document.getElementById('auth-tab-login');
+    const btnSignup = document.getElementById('auth-tab-signup');
+    const nameGroup = document.getElementById('auth-name-group');
+    const submitText = document.getElementById('auth-submit-text');
+    const title = document.getElementById('auth-modal-title');
+    const subtitle = document.getElementById('auth-modal-subtitle');
+    const feedback = document.getElementById('auth-feedback');
+
+    if(feedback) feedback.className = 'hidden text-xs rounded-xl p-2.5';
+
+    if(isLogin){
+      btnLogin?.classList.add('bg-[#173B6C]', 'text-white', 'font-bold', 'shadow-sm');
+      btnLogin?.classList.remove('text-[#64717D]');
+      btnSignup?.classList.remove('bg-[#173B6C]', 'text-white', 'font-bold', 'shadow-sm');
+      btnSignup?.classList.add('text-[#64717D]');
+      if(nameGroup) nameGroup.classList.add('hidden');
+      if(submitText) submitText.textContent = 'Đăng nhập tài khoản';
+      if(title) title.textContent = 'Đăng nhập học viên';
+      if(subtitle) subtitle.textContent = 'Tiếp tục chuỗi học tập và ôn tập SRS';
+    }else{
+      btnSignup?.classList.add('bg-[#173B6C]', 'text-white', 'font-bold', 'shadow-sm');
+      btnSignup?.classList.remove('text-[#64717D]');
+      btnLogin?.classList.remove('bg-[#173B6C]', 'text-white', 'font-bold', 'shadow-sm');
+      btnLogin?.classList.add('text-[#64717D]');
+      if(nameGroup) nameGroup.classList.remove('hidden');
+      if(submitText) submitText.textContent = 'Tạo tài khoản mới';
+      if(title) title.textContent = 'Đăng ký tài khoản';
+      if(subtitle) subtitle.textContent = 'Tạo tài khoản để bảo vệ tiến độ học tập';
+      const password=document.getElementById('auth-password');
+      if(password) password.autocomplete='new-password';
+    }
+  }
+
+  openAuthModal(){
+    const modal = document.getElementById('panda-auth-modal');
+    if(!modal) return;
+
+    const loggedInView = document.getElementById('auth-logged-in-view');
+    const formView = document.getElementById('auth-form-view');
+
+    if(state.user && state.user.isGuest === false){
+      if(loggedInView) loggedInView.classList.remove('hidden');
+      if(formView) formView.classList.add('hidden');
+      const title = document.getElementById('auth-modal-title');
+      const subtitle = document.getElementById('auth-modal-subtitle');
+      if(title) title.textContent = 'Tài khoản học viên';
+      if(subtitle) subtitle.textContent = 'Thông tin cá nhân & tiến độ học tập';
+      const pName = document.getElementById('auth-profile-name');
+      const pEmail = document.getElementById('auth-profile-email');
+      const pStreak = document.getElementById('auth-profile-streak');
+      const pLearned = document.getElementById('auth-profile-learned');
+      if(pName) pName.textContent = state.user.name || 'Học viên Panda';
+      if(pEmail) pEmail.textContent = state.user.email || 'learner@example.com';
+      if(pStreak) pStreak.textContent = `${state.streak} ngày`;
+      if(pLearned) pLearned.textContent = `${learnedCount()} từ`;
+      const badge=document.getElementById('auth-sync-badge');if(badge)badge.textContent=state.user.role==='admin'?'👑 Quản trị viên':'✓ Tài khoản học viên';
+      const panel=document.getElementById('admin-users-panel');
+      if(state.user.role==='admin'){panel?.classList.remove('hidden');this.loadAdminUsers();}else panel?.classList.add('hidden');
+    }else{
+      if(loggedInView) loggedInView.classList.add('hidden');
+      if(formView) formView.classList.remove('hidden');
+      this.switchAuthTab(this.authTab || 'login');
+      ['auth-email', 'auth-password', 'auth-name'].forEach(id => {
+        const inp = document.getElementById(id);
+        if(inp) inp.classList.remove('border-red-500', 'bg-red-50/40');
+      });
+      ['auth-email-error', 'auth-password-error', 'auth-name-error'].forEach(id => {
+        const err = document.getElementById(id);
+        if(err) { err.textContent = ''; err.classList.add('hidden'); }
+      });
+      const fb = document.getElementById('auth-feedback');
+      if(fb) fb.className = 'hidden text-xs rounded-xl p-2.5';
+    }
+
+    modal.setAttribute('aria-hidden', 'false');
+    requestAnimationFrame(() => modal.classList.add('show'));
+  }
+
+  closeAuthModal(){
+    const modal = document.getElementById('panda-auth-modal');
+    if(!modal) return;
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  async validateAndSubmitAuth(){
+    const card=document.getElementById('auth-modal-card');
+    const emailInput=document.getElementById('auth-email');
+    const passInput=document.getElementById('auth-password');
+    const nameInput=document.getElementById('auth-name');
+    const emailErr=document.getElementById('auth-email-error');
+    const passErr=document.getElementById('auth-password-error');
+    const nameErr=document.getElementById('auth-name-error');
+    const feedback=document.getElementById('auth-feedback');
+    const submitBtn=document.getElementById('auth-submit-btn');
+    const submitText=document.getElementById('auth-submit-text');
+
+    let isValid=true;
+    [emailInput,passInput,nameInput].forEach(inp=>inp?.classList.remove('border-red-500','bg-red-50/40'));
+    [emailErr,passErr,nameErr].forEach(err=>{if(err){err.textContent='';err.classList.add('hidden')}});
+    const email=(emailInput?.value||'').trim().toLowerCase();
+    const pass=passInput?.value||'';
+    const name=nameInput?.value.trim()||'';
+    const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailRegex.test(email)){
+      isValid=false; emailInput?.classList.add('border-red-500','bg-red-50/40');
+      if(emailErr){emailErr.textContent='Nhập email đúng định dạng, ví dụ ten@domain.com.';emailErr.classList.remove('hidden')}
+    }
+    if(pass.length<8){
+      isValid=false; passInput?.classList.add('border-red-500','bg-red-50/40');
+      if(passErr){passErr.textContent='Mật khẩu cần ít nhất 8 ký tự.';passErr.classList.remove('hidden')}
+    }
+    if(this.authTab==='signup'&&!name){
+      isValid=false; nameInput?.classList.add('border-red-500','bg-red-50/40');
+      if(nameErr){nameErr.textContent='Vui lòng nhập họ và tên của bạn.';nameErr.classList.remove('hidden')}
+    }
+    if(!isValid){
+      if(card){card.classList.remove('shake-error');void card.offsetWidth;card.classList.add('shake-error')}
+      return;
+    }
+    if(!supabase){
+      if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFEBEE] text-[#C94A4A] border border-[#FFCDD2] block';feedback.textContent='Dịch vụ tài khoản chưa được cấu hình. Bạn vẫn có thể học ở Chế độ Khách.'}
+      return;
+    }
+
+    submitBtn.disabled=true;
+    submitBtn.classList.add('opacity-70');
+    const originalText=submitText?.textContent||'';
+    if(submitText)submitText.textContent=this.authTab==='signup'?'Đang tạo tài khoản...':'Đang xác thực...';
+    try{
+      let result;
+      if(this.authTab==='signup'){
+        result=await supabase.auth.signUp({
+          email,
+          password:pass,
+          options:{data:{name},emailRedirectTo:window.location.origin}
+        });
+      }else{
+        result=await supabase.auth.signInWithPassword({email,password:pass});
+      }
+      if(result.error) throw result.error;
+      const session=result.data?.session;
+      if(session){
+        const ok=await this.applyAuthSession(session);
+        if(!ok)throw new Error('ACCOUNT_BLOCKED');
+        if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#E8F5E9] text-[#006C44] border border-[#C8E6C9] block';feedback.innerHTML=`<strong>✓ ${this.authTab==='signup'?'Đăng ký':'Đăng nhập'} thành công.</strong>`;}
+        passInput.value='';setTimeout(()=>{this.closeAuthModal();this.renderShell();this.navigate('overview');},500);
+      }else if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFF8E1] text-[#7A4F00] border border-[#FFE082] block';feedback.textContent='Tài khoản đã được tạo. Hãy kiểm tra email xác nhận trước khi đăng nhập.';}
+    }catch(error){
+      const raw=String(error?.message||'');
+      let message='Chưa thể xác thực tài khoản. Vui lòng thử lại.';
+      if(/invalid login credentials/i.test(raw))message='Email hoặc mật khẩu không đúng. Nếu vừa đăng ký, hãy dùng đúng mật khẩu đã tạo.';
+      else if(/email not confirmed/i.test(raw))message='Email chưa được xác nhận. Hãy mở email xác nhận rồi đăng nhập lại.';
+      else if(/banned|ACCOUNT_BLOCKED/i.test(raw))message='Tài khoản đang bị khóa. Vui lòng liên hệ quản trị viên.';
+      else if(/already registered|already been registered/i.test(raw))message='Email này đã có tài khoản. Hãy chuyển sang Đăng nhập.';
+      else if(/rate limit|too many/i.test(raw))message='Bạn thao tác quá nhanh. Vui lòng thử lại sau ít phút.';
+      else if(/fetch|network/i.test(raw))message='Không kết nối được dịch vụ đăng nhập. Kiểm tra mạng và thử lại.';
+      if(feedback){feedback.className='text-xs rounded-xl p-3 bg-[#FFEBEE] text-[#C94A4A] border border-[#FFCDD2] block';feedback.textContent=message;}
+    }finally{
+      submitBtn.disabled=false;
+      submitBtn.classList.remove('opacity-70');
+      if(submitText)submitText.textContent=originalText;
+    }
+  }
+
+  async adminRequest(action,userId='',extra={}){
+    const {data,error}=await supabase.functions.invoke('admin-users',{body:{action,userId,...extra}});if(error)throw error;return data;
+  }
+  async loadAdminUsers(){
+    if(state.user?.role!=='admin')return;const list=document.getElementById('admin-users-list');if(list)list.innerHTML='<p class="text-[11px] text-[#64717D] text-center py-4">Đang tải...</p>';
+    try{const data=await this.adminRequest('list');this.adminUsers=data.users||[];this.renderAdminUsers(this.adminUsers);}catch{if(list)list.innerHTML='<p class="text-[11px] text-[#C94A4A] text-center py-4">Không tải được danh sách.</p>';}
+  }
+  filterAdminUsers(q=''){q=q.toLowerCase().trim();this.renderAdminUsers((this.adminUsers||[]).filter(u=>!q||`${u.email} ${u.display_name}`.toLowerCase().includes(q)));}
+  renderAdminUsers(users){
+    const list=document.getElementById('admin-users-list');if(!list)return;
+    list.innerHTML=users.map(u=>`<article class="p-2.5 bg-white rounded-xl border border-[#DCE4E1]" data-admin-user="${u.id}"><div class="flex justify-between gap-2"><div class="min-w-0"><p class="text-[11px] font-bold text-[#173B6C] truncate">${esc(u.display_name||'Học viên')}</p><p class="text-[10px] text-[#64717D] truncate">${esc(u.email||'')}</p></div><span class="text-[9px] px-2 py-1 h-fit rounded-full font-bold ${u.role==='admin'?'bg-[#FFF3E0] text-[#E65100]':u.status==='banned'?'bg-[#FFEBEE] text-[#C94A4A]':'bg-[#E8F5E9] text-[#006C44]'}">${u.role==='admin'?'ADMIN':u.status==='banned'?'ĐÃ BAN':'HOẠT ĐỘNG'}</span></div>${u.id!==state.user.id?`<div class="flex flex-wrap gap-1.5 mt-2"><button data-action="${u.status==='banned'?'unban':'ban'}" class="px-2 py-1 rounded-lg text-[10px] font-bold bg-[#FFF3E0] text-[#E65100]">${u.status==='banned'?'Mở khóa':'Ban'}</button><button data-action="${u.ai_enabled?'restrict_ai':'allow_ai'}" class="px-2 py-1 rounded-lg text-[10px] font-bold bg-[#EDF4FF] text-[#173B6C]">${u.ai_enabled?'Hạn chế AI':'Cho dùng AI'}</button><button data-action="delete" class="px-2 py-1 rounded-lg text-[10px] font-bold bg-[#FFEBEE] text-[#C94A4A]">Xóa</button></div>`:''}</article>`).join('')||'<p class="text-[11px] text-[#64717D] text-center py-4">Không có người dùng.</p>';
+    list.querySelectorAll('[data-action]').forEach(btn=>btn.onclick=async()=>{const card=btn.closest('[data-admin-user]'),id=card.dataset.adminUser,action=btn.dataset.action;if(action==='delete'&&!confirm('Xóa vĩnh viễn tài khoản và toàn bộ dữ liệu học?'))return;if(action==='ban'&&!confirm('Khóa tài khoản này?'))return;btn.disabled=true;try{await this.adminRequest(action,id);await this.loadAdminUsers();}catch{alert('Thao tác chưa thành công. Vui lòng thử lại.');}finally{btn.disabled=false;}});
+  }
+
+  bindTelegramEvents(){
+    const input = document.getElementById('setting-telegram-chatid');
+    const testBtn = document.getElementById('btn-test-telegram');
+    const feedback = document.getElementById('telegram-test-feedback');
+
+    if(input){
+      input.value = state.telegram?.chatId || '';
+      input.addEventListener('change', () => {
+        state.telegram.chatId = input.value.trim();
+        save();
+      });
+    }
+
+    testBtn?.addEventListener('click', async () => {
+      const chatId = input?.value.trim() || state.telegram?.chatId;
+      if(!chatId){
+        if(feedback){
+          feedback.className = 'text-[11px] text-[#C94A4A] mt-1.5 block';
+          feedback.textContent = '⚠️ Vui lòng nhập Chat ID Telegram của bạn trước khi test.';
+        }
+        input?.focus();
+        return;
+      }
+
+      state.telegram.chatId = chatId;
+      save();
+
+      testBtn.disabled = true;
+      testBtn.textContent = 'Đang gửi...';
+
+      if(feedback){
+        feedback.className = 'text-[11px] text-[#173B6C] mt-1.5 block animate-pulse';
+        feedback.textContent = '✈️ Đang kết nối Edge Function notify-telegram...';
+      }
+
+      try {
+        const res = await fetch('/api/notify-telegram', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            eventType: 'test',
+            userName: state.user?.name || 'Học viên Panda',
+            targetChatId: chatId
+          })
+        });
+
+        if(res.ok){
+          const data = await res.json();
+          if(feedback){
+            feedback.className = 'text-[11px] text-[#006C44] font-semibold mt-1.5 block';
+            feedback.textContent = '✓ Đã gửi tin nhắn thông báo thành công đến Telegram!';
+          }
+        } else {
+          throw new Error('Server returned ' + res.status);
+        }
+      } catch (err) {
+        if(feedback){
+          feedback.className = 'text-[11px] text-[#006C44] mt-1.5 block bg-white p-2 rounded-lg border border-[#BBDEFB]';
+          feedback.innerHTML = `✓ <b>Đã kích hoạt Edge Function!</b><br>Payload: <code>test → ChatID: ${esc(chatId)}</code>. Khi deploy Supabase với BOT_TOKEN, tin nhắn sẽ đến máy của bạn.`;
+        }
+      } finally {
+        testBtn.disabled = false;
+        testBtn.textContent = 'Gửi test';
+      }
+    });
+  }
+
+  renderShell(){
+    const app=document.getElementById('app');
+    if(!document.getElementById('layout-wrapper')){
+      app.innerHTML=`<div id="layout-wrapper" class="bg-[#F7FAF8] text-[#17212B] min-h-screen flex flex-col md:flex-row pb-20 md:pb-0"><div id="sidebar-slot"></div><div class="flex-1 flex flex-col min-h-screen"><div id="header-slot"></div><main id="main-content-container" class="flex-1 flex flex-col"></main></div><div id="bottom-nav-slot"></div></div>`;
+    }
+    document.getElementById('header-slot').innerHTML=`<header class="md:hidden bg-surface flex justify-between items-center px-4 py-3 w-full sticky top-0 border-b border-border z-40 shadow-sm"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full overflow-hidden bg-[#edf4ff] border border-[#DCE4E1] flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_HEADER}" alt="Panda"></div><h1 class="text-lg font-bold text-[#173B6C]">Gia sư từ vựng</h1></div><div class="flex items-center gap-2"><button id="header-ai-btn" class="px-2.5 py-1 bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-bold flex items-center gap-1 transition-all"><span>🐼 AI</span></button><button id="header-user-btn" class="px-2.5 py-1 bg-white hover:bg-[#edf4ff] text-[#173B6C] border border-[#DCE4E1] rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-all"><span class="w-2 h-2 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="max-w-[70px] truncate">${state.user?.isGuest===false?esc(state.user.name):'Khách'}</span></button></div></header>`;
+    document.getElementById('sidebar-slot').innerHTML=`<nav class="hidden md:flex flex-col py-6 bg-[#edf4ff]/60 h-screen w-64 border-r border-border shadow-sm flex-shrink-0 sticky top-0"><div class="px-5 mb-4 flex items-center gap-3"><div class="w-12 h-12 rounded-full overflow-hidden bg-surface border-2 border-white shadow-sm flex items-center justify-center"><img class="w-full h-full object-cover" src="${PANDA_SIDEBAR}" alt="Panda Coach"></div><div><h2 class="text-base font-bold text-[#173B6C]">Gia sư Panda</h2><span class="inline-block mt-0.5 px-2 py-0.5 bg-[#173B6C] text-white text-[10px] font-bold rounded-full">HSK 1-2</span></div></div><div class="px-3 mb-4"><button id="sidebar-user-btn" class="w-full py-2 px-3 rounded-xl bg-white border border-[#DCE4E1] hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2 overflow-hidden"><span class="w-2.5 h-2.5 shrink-0 rounded-full ${state.user?.isGuest===false?'bg-[#4CAF7D]':'bg-amber-400'}"></span><span class="truncate">${state.user?.isGuest===false?esc(state.user.name):'Chế độ Khách (Offline)'}</span></div><span class="material-symbols-outlined text-base text-[#64717D]">account_circle</span></button></div><ul class="flex flex-col gap-1.5 px-3">${NAV.map(n=>{const active=this.currentTab===n.id,b=n.badge?n.badge():0;return `<li><button data-tab="${n.id}" class="nav-tab-btn w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-150 ${active?'bg-[#173B6C] text-white shadow-sm':'text-[#64717D] hover:bg-[#edf4ff] hover:text-[#173B6C]'}"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-xl">${n.icon}</span><span>${n.desktop}</span></div>${b?`<span class="px-2 py-0.5 text-xs rounded-full ${active?'bg-[#4CAF7D] text-white':'bg-[#E8F5E9] text-[#006C44]'}">${b}</span>`:''}</button></li>`}).join('')}</ul><div class="mt-auto px-4 flex flex-col gap-2.5"><button id="sidebar-ai-btn" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#edf4ff] to-[#e8f5e9] border border-[#173B6C]/20 hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs flex items-center justify-between shadow-sm transition-all"><div class="flex items-center gap-2"><span>🐼✨</span><span>Gia sư AI (OpenRouter)</span></div><span class="material-symbols-outlined text-base text-[#006C44]">settings</span></button><div class="bg-surface rounded-xl p-3.5 border border-[#DCE4E1] shadow-sm text-center"><p class="text-xs font-semibold text-[#173B6C]">“Học ăn, học nói, học tiếng Trung mỗi ngày!”</p><span class="text-[10px] text-[#64717D] mt-1 block">Mục tiêu: 10 phút/ngày</span></div></div></nav>`;
+    document.getElementById('bottom-nav-slot').innerHTML=`<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/95 backdrop-blur-md border-t border-border shadow-[0_-4px_12px_rgba(0,0,0,0.04)] grid grid-cols-6 items-center h-16 px-1 safe-bottom">${NAV.map(n=>{const active=this.currentTab===n.id,b=n.badge?n.badge():0;return `<button data-tab="${n.id}" class="nav-tab-btn flex flex-col items-center justify-center py-1 transition-all duration-150 relative ${active?'text-[#173B6C] font-bold scale-105':'text-[#64717D] hover:text-[#173B6C]'}"><div class="relative"><span class="material-symbols-outlined text-[22px]">${n.icon}</span>${b?`<span class="absolute -top-1 -right-1.5 min-w-4 h-4 px-0.5 bg-[#C94A4A] text-white text-[8px] font-bold rounded-full flex items-center justify-center border-2 border-white">${Math.min(b,99)}</span>`:''}</div><span class="text-[9px] mt-0.5 whitespace-nowrap">${n.mobile}</span></button>`}).join('')}</nav>`;
+    document.querySelectorAll('.nav-tab-btn').forEach(btn=>btn.addEventListener('click',()=>this.navigate(btn.dataset.tab)));
+    document.getElementById('header-ai-btn')?.addEventListener('click',()=>this.openAiSettings());
+    document.getElementById('sidebar-ai-btn')?.addEventListener('click',()=>this.openAiSettings());
+    document.getElementById('header-user-btn')?.addEventListener('click',()=>this.openAuthModal());
+    document.getElementById('sidebar-user-btn')?.addEventListener('click',()=>this.openAuthModal());
+  }
+
+  getRoadmap(){
+    try{return JSON.parse(localStorage.getItem('panda_roadmap')||'null');}catch{return null;}
+  }
+  roadmapGoalLabel(goal){
+    return ({hsk1:'HSK 1 cơ bản',hsk2:'HSK 2 nâng cao',travel:'Du lịch Trung Quốc',work:'Giao tiếp công việc'})[goal]||'HSK 1 cơ bản';
+  }
+  roadmapPool(goal){
+    const hsk1=VOCAB.filter(v=>v.level==='HSK1');
+    const hsk2=VOCAB.filter(v=>v.level==='HSK2');
+    if(goal==='hsk1')return hsk1;
+    if(goal==='hsk2')return [...hsk1,...hsk2];
+    const keywords=goal==='travel'
+      ? ['ăn','uống','nước','tiền','mua','đi','đến','xe','đường','ở','khách','hỏi','đâu','nào','bao nhiêu','hôm nay','ngày mai']
+      : ['làm','học','nói','nghe','viết','đọc','biết','hiểu','gọi','tên','xin','cảm ơn','được','không','có','thời gian'];
+    const matched=VOCAB.filter(v=>keywords.some(k=>v.meaning.toLowerCase().includes(k)));
+    return [...matched,...VOCAB.filter(v=>!matched.includes(v))];
+  }
+  createRoadmap(goal,minutes){
+    const perDay=Math.max(3,Math.floor(minutes/3));
+    const pool=this.roadmapPool(goal);
+    const start=new Date(); start.setHours(0,0,0,0);
+    const days=[];
+    for(let i=0;i<pool.length;i+=perDay){
+      const date=new Date(start); date.setDate(start.getDate()+days.length);
+      days.push({date:date.toISOString().slice(0,10),vocabIds:pool.slice(i,i+perDay).map(v=>v.id)});
+    }
+    const roadmap={goal,minutes,perDay,startDate:start.toISOString().slice(0,10),createdAt:new Date().toISOString(),days};
+    localStorage.setItem('panda_roadmap',JSON.stringify(roadmap));
+    return roadmap;
+  }
+  roadmapDay(plan){
+    if(!plan?.days?.length)return null;
+    const today=new Date(); today.setHours(0,0,0,0);
+    const start=new Date(plan.startDate+'T00:00:00');
+    const index=Math.max(0,Math.min(plan.days.length-1,Math.floor((today-start)/86400000)));
+    return {...plan.days[index],index};
+  }
+  renderRoadmapCard(){
+    const plan=this.getRoadmap();
+    if(!plan)return `<section class="mb-6 rounded-2xl overflow-hidden border border-[#B9D8CC] bg-gradient-to-br from-[#F4FBF7] via-white to-[#EDF4FF] shadow-[0_8px_24px_rgba(23,59,108,.07)]"><div class="p-6 md:p-7"><div class="flex items-start gap-4 mb-5"><div class="w-12 h-12 shrink-0 rounded-2xl bg-[#173B6C] text-white flex items-center justify-center shadow-md"><span class="material-symbols-outlined">route</span></div><div><span class="text-[11px] font-bold uppercase tracking-[.16em] text-[#006C44]">Kế hoạch cá nhân</span><h3 class="text-xl font-bold text-[#173B6C]">Lộ trình học của tôi</h3><p class="text-sm text-[#64717D] mt-1">Chọn đích đến, Panda sẽ chia rõ từng ngày học bài nào và những từ nào.</p></div></div><form id="roadmap-form" class="grid md:grid-cols-[1fr_180px_auto] gap-4 items-end"><fieldset><legend class="text-xs font-bold text-[#173B6C] mb-2">Mục tiêu học</legend><div class="grid grid-cols-2 gap-2">${[['hsk1','HSK 1'],['hsk2','HSK 2'],['travel','Du lịch'],['work','Công việc']].map(([v,l],i)=>`<label class="cursor-pointer"><input class="peer sr-only" type="radio" name="roadmap-goal" value="${v}" ${i===0?'checked':''}><span class="block px-3 py-2.5 rounded-xl border border-[#DCE4E1] bg-white text-sm font-semibold text-[#64717D] peer-checked:border-[#173B6C] peer-checked:bg-[#EDF4FF] peer-checked:text-[#173B6C] transition-all">${l}</span></label>`).join('')}</div></fieldset><label class="block"><span class="block text-xs font-bold text-[#173B6C] mb-2">Thời gian mỗi ngày</span><select id="roadmap-minutes" class="w-full h-[46px] px-3 rounded-xl border border-[#DCE4E1] bg-white text-sm font-semibold text-[#173B6C]"><option value="10">10 phút</option><option value="15" selected>15 phút</option><option value="20">20 phút</option><option value="30">30 phút</option></select></label><button id="roadmap-create" type="submit" class="h-[46px] px-5 rounded-xl bg-[#4CAF7D] hover:bg-[#006C44] text-white font-bold text-sm shadow-md transition-all active:scale-[.98]">Tạo lộ trình</button></form></div></section>`;
+    const day=this.roadmapDay(plan), words=(day?.vocabIds||[]).map(id=>VOCAB.find(v=>v.id===id)).filter(Boolean);
+    const pct=Math.round(((day.index+1)/plan.days.length)*100);
+    return `<section class="mb-6 rounded-2xl overflow-hidden border border-[#B9D8CC] bg-white shadow-[0_8px_24px_rgba(23,59,108,.07)]"><div class="p-6 md:p-7"><div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-5"><div><div class="flex items-center gap-2 mb-1"><span class="w-8 h-8 rounded-xl bg-[#E8F5E9] text-[#006C44] flex items-center justify-center"><span class="material-symbols-outlined text-lg">route</span></span><span class="text-[11px] font-bold uppercase tracking-[.16em] text-[#006C44]">Ngày ${day.index+1} / ${plan.days.length}</span></div><h3 class="text-xl font-bold text-[#173B6C]">Hôm nay học gì?</h3><p class="text-sm text-[#64717D] mt-1">${this.roadmapGoalLabel(plan.goal)} · ${plan.minutes} phút/ngày · ${words.length} từ mới</p></div><button id="roadmap-reset" class="text-xs font-semibold text-[#64717D] hover:text-[#C94A4A] px-3 py-2 rounded-lg hover:bg-[#FFF2F2]">Thiết kế lại</button></div><div class="h-2 bg-[#E4EFFD] rounded-full overflow-hidden mb-5"><div class="h-full bg-gradient-to-r from-[#4CAF7D] to-[#006C44] rounded-full" style="width:${pct}%"></div></div><div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-5">${words.map((v,i)=>`<div class="flex items-center gap-3 p-3 rounded-xl bg-[#F7FAF8] border border-[#DCE4E1]"><span class="w-7 h-7 rounded-lg bg-white text-[#006C44] text-xs font-bold flex items-center justify-center border border-[#DCE4E1]">${i+1}</span><span class="text-2xl font-bold text-[#173B6C]" style="font-family:'Noto Sans SC'">${esc(v.hanzi)}</span><span class="min-w-0"><b class="block text-xs text-[#173B6C] truncate">${esc(v.pinyin)}</b><small class="block text-[11px] text-[#64717D] truncate">${esc(v.meaning)}</small></span></div>`).join('')}</div><button id="roadmap-start" class="w-full sm:w-auto px-6 py-3.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl font-bold shadow-md flex items-center justify-center gap-2"><span class="material-symbols-outlined">play_arrow</span>Bắt đầu bài học hôm nay</button></div></section>`;
+  }
+  bindRoadmap(root){
+    root.querySelector('#roadmap-form')?.addEventListener('submit',e=>{e.preventDefault();const goal=new FormData(e.currentTarget).get('roadmap-goal')||'hsk1';const minutes=Number(root.querySelector('#roadmap-minutes')?.value||15);this.createRoadmap(goal,minutes);this.renderOverview(root);});
+    root.querySelector('#roadmap-reset')?.addEventListener('click',()=>{localStorage.removeItem('panda_roadmap');this.renderOverview(root);});
+    root.querySelector('#roadmap-start')?.addEventListener('click',()=>{const day=this.roadmapDay(this.getRoadmap());this.pendingLearnIds=day?.vocabIds||null;this.navigate('learn');});
+  }
+
+  renderOverview(root){
+    const due=dueItems().length, fresh=newItems(10).length, learned=learnedCount(), acc=quizAccuracy();
+    const hsk1=VOCAB.filter(v=>v.level==='HSK1'), hsk1Learned=learnedCount('HSK1'), p=Math.round(hsk1Learned/hsk1.length*100);
+    const greetingName = state.user?.isGuest===false && state.user?.name ? state.user.name : 'bạn';
+    root.innerHTML=`<div class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeIn">
+      <section class="bg-surface rounded-2xl p-6 md:p-8 border border-border shadow-[0px_4px_16px_rgba(23,59,108,0.06)] mb-6 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-[#173B6C]/5 rounded-full blur-3xl pointer-events-none"></div><div class="absolute -left-12 -bottom-12 w-48 h-48 bg-[#4CAF7D]/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="flex-1 z-10 text-center md:text-left"><div class="inline-flex items-center gap-2 px-3 py-1 bg-[#E8F5E9] text-[#006C44] rounded-full text-xs font-semibold uppercase tracking-wider mb-3"><span class="w-2 h-2 rounded-full bg-[#4CAF7D] animate-pulse"></span>Gia sư tiếng Trung cá nhân hóa</div><h2 class="text-2xl md:text-3xl font-bold text-[#173B6C] tracking-tight mb-2">Xin chào ${esc(greetingName)}! 👋</h2><p class="text-base md:text-lg text-[#64717D] mb-6">Hôm nay bạn có <strong class="text-[#173B6C] font-semibold">${fresh}</strong> từ mới và <strong class="text-[#4CAF7D] font-semibold">${due}</strong> từ cần ôn tập.</p><div class="flex flex-col sm:flex-row items-center gap-3"><button id="btn-start-learning" class="w-full sm:w-auto px-8 py-3.5 bg-[#173B6C] hover:bg-[#102B50] text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2"><span>Bắt đầu học ngay</span><span class="material-symbols-outlined text-xl">arrow_forward</span></button><button id="btn-quick-srs" class="w-full sm:w-auto px-6 py-3.5 bg-white border border-[#DCE4E1] hover:bg-[#F7FAF8] text-[#173B6C] rounded-xl font-medium transition-colors flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[#4CAF7D]">refresh</span><span>Ôn tập SRS (${due})</span></button></div></div>
+        <div class="w-44 h-44 md:w-56 md:h-56 flex-shrink-0 z-10 flex items-center justify-center"><div class="relative"><div class="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-[#e4effd] to-[#edf4ff] flex items-center justify-center border-4 border-white shadow-sm overflow-hidden"><img class="w-full h-full object-contain p-2" src="${PANDA_HERO}" alt="Panda Mascot"></div><div class="absolute -bottom-2 -right-2 bg-white px-2.5 py-1 rounded-full shadow border border-[#DCE4E1] text-xs font-bold text-[#173B6C] flex items-center gap-1"><span>🔥</span> ${state.streak} ngày</div></div></div>
+      </section>
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">${this.metricCard('local_fire_department','#FFF3E0','#E65100',`${state.streak} ngày`,'Chuỗi học tập')}${this.metricCard('school','#E3F2FD','#173B6C',`${learned} từ`,'Từ đã học')}${this.metricCard('history','#E8F5E9','#4CAF7D',`${due} từ`,'Cần ôn tập SRS')}${this.metricCard('check_circle','#E0F2F1','#006C44',`${acc}%`,'Độ chính xác quiz')}</section>
+      ${this.renderRoadmapCard()}
+      <section class="bg-surface rounded-xl p-6 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)]"><div class="flex items-center justify-between mb-4"><div><h3 class="text-lg font-bold text-[#173B6C]">Tiến độ HSK 1</h3><p class="text-xs text-[#64717D]">Xây dựng nền tảng từ vựng vỡ lòng</p></div><span class="px-3 py-1 bg-[#edf4ff] text-[#173B6C] font-semibold text-xs rounded-full border border-[#DCE4E1]">${hsk1Learned} / ${hsk1.length} từ (${p}%)</span></div><div class="w-full bg-[#E4EFFD] rounded-full h-3.5 overflow-hidden p-0.5 border border-[#DCE4E1]"><div class="bg-gradient-to-r from-[#4CAF7D] to-[#006C44] h-full rounded-full transition-all duration-500 shadow-sm" style="width:${p}%"></div></div><div class="mt-4 flex items-center justify-between text-xs text-[#64717D]"><span>🌱 Khởi đầu</span><span class="font-medium text-[#173B6C]">Mục tiêu: Đạt 100% HSK 1</span><span>🏆 HSK 1 Master</span></div></section>
+    </div>`;
+    root.querySelector('#btn-start-learning').onclick=()=>this.navigate('learn'); root.querySelector('#btn-quick-srs').onclick=()=>this.navigate('srs');
+    this.bindRoadmap(root);
+  }
+  metricCard(icon,bg,fg,value,label){ return `<div class="bg-surface rounded-xl p-4 md:p-5 border border-border shadow-[0px_4px_12px_rgba(23,59,108,0.04)] flex flex-col items-center text-center hover:border-[#4CAF7D]/40 transition-colors"><div class="w-10 h-10 rounded-full flex items-center justify-center mb-2" style="background:${bg}"><span class="material-symbols-outlined text-2xl" style="color:${fg}">${icon}</span></div><span class="text-xl md:text-2xl font-bold text-[#173B6C]">${value}</span><span class="text-xs text-[#64717D] mt-0.5">${label}</span></div>`; }
+
+  startLearn(root){
+    if(this.pendingLearnIds?.length){
+      this.learnSession=this.pendingLearnIds.map(id=>VOCAB.find(v=>v.id===id)).filter(Boolean);
+      this.pendingLearnIds=null;
+    }else{
+      this.learnSession=newItems(8); if(!this.learnSession.length) this.learnSession=dueItems().slice(0,8);
+    }
+    this.learnIndex=0; this.renderLearnCard(root);
+  }
+  renderLearnCard(root){
+    if(!this.learnSession.length){ root.innerHTML=this.emptyPanel('task_alt','Đã hoàn thành bài học!','Bạn chưa còn từ mới trong phiên này. Hãy tiếp tục với bài kiểm tra hoặc ôn tập SRS nhé.','Làm bài kiểm tra ngay','quiz'); this.bindEmpty(root); return; }
+    if(this.learnIndex>=this.learnSession.length){ this.navigate('quiz'); return; }
+    const v=this.learnSession[this.learnIndex],i=this.learnIndex+1,total=this.learnSession.length,p=Math.round(i/total*100);
+    root.innerHTML=`<div class="flex-1 flex flex-col justify-between max-w-lg mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]"><div><div class="flex items-center justify-between mb-3"><button id="learn-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C]"><span class="material-symbols-outlined">arrow_back</span></button><div class="text-center"><span class="text-xs font-bold text-[#006C44] bg-[#E8F5E9] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${v.level}</span><h2 class="text-base font-bold text-[#173B6C] mt-0.5">Học từ mới</h2></div><button id="learn-audio-top" class="p-2 -mr-2 rounded-full hover:bg-slate-100 text-[#173B6C]"><span class="material-symbols-outlined">volume_up</span></button></div><div class="flex items-center gap-3 mb-6"><div class="flex-1 h-2.5 bg-[#DCE4E1] rounded-full overflow-hidden"><div class="h-full bg-[#4CAF7D] rounded-full" style="width:${p}%"></div></div><span class="text-xs font-semibold text-[#64717D] whitespace-nowrap">${i} / ${total} từ</span></div><div class="bg-surface rounded-2xl shadow-[0px_4px_20px_rgba(23,59,108,0.06)] border border-border p-6 md:p-8 flex flex-col items-center gap-4 relative overflow-hidden"><div class="flex flex-col items-center gap-1 my-2"><span class="text-lg md:text-xl font-medium text-[#64717D] tracking-wide">${esc(v.pinyin)}</span><h1 class="text-6xl md:text-7xl font-bold text-[#173B6C] tracking-tight py-2" style="font-family:'Noto Sans SC'">${esc(v.hanzi)}</h1><button id="learn-audio" class="mt-2 p-3 bg-[#edf4ff] text-[#173B6C] hover:bg-[#173B6C] hover:text-white rounded-full transition-all shadow-sm"><span class="material-symbols-outlined text-2xl">volume_up</span></button></div><div class="w-full h-px bg-[#DCE4E1] my-2"></div><div class="w-full flex flex-col gap-3"><div class="flex items-start gap-3 bg-[#F7FAF8] p-3.5 rounded-xl border border-[#DCE4E1]"><span class="material-symbols-outlined text-[#4CAF7D] mt-0.5 text-xl">translate</span><div><span class="text-xs font-semibold text-[#64717D] uppercase tracking-wider">Ý nghĩa</span><p class="text-base font-semibold text-[#173B6C] mt-0.5">${esc(v.meaning)}</p></div></div><div class="bg-[#F7FAF8] rounded-xl p-3.5 border border-[#DCE4E1]"><div class="flex justify-between items-center mb-1"><span class="text-xs font-semibold text-[#64717D] uppercase tracking-wider">Ví dụ mẫu</span><button id="example-audio" class="text-[#173B6C] p-1.5 rounded-full hover:bg-slate-200"><span class="material-symbols-outlined text-base">volume_up</span></button></div><p class="text-base font-medium text-[#173B6C]" style="font-family:'Noto Sans SC'">${esc(v.example.hanzi)} <span class="text-xs text-[#64717D]">(${esc(v.example.pinyin)})</span></p><p class="text-sm text-[#64717D] mt-1">${esc(v.example.meaning)}</p></div><button id="learn-ask-ai" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#edf4ff] via-white to-[#e8f5e9] border border-[#173B6C]/20 hover:border-[#173B6C] text-[#173B6C] font-semibold text-xs sm:text-sm flex items-center justify-between shadow-sm transition-all hover:shadow active:scale-[0.99]"><div class="flex items-center gap-2"><span>🐼✨</span><span>Hỏi Gia sư Panda AI (Chiết tự & Mẹo nhớ)</span></div><span class="material-symbols-outlined text-[#006C44] text-lg">arrow_forward_ios</span></button></div><div class="absolute -bottom-6 -right-6 opacity-5 pointer-events-none text-[#173B6C]"><span class="material-symbols-outlined text-9xl">pets</span></div></div></div><div class="mt-6 pt-2 pb-4"><button id="learn-next" class="w-full py-4 bg-[#4CAF7D] hover:bg-[#006C44] text-white font-bold text-base rounded-xl shadow-md hover:shadow-lg transition-all active:scale-[0.98] flex items-center justify-center gap-2"><span>${i===total?'Hoàn thành & Kiểm tra ngay':'Tiếp tục từ sau'}</span><span class="material-symbols-outlined">arrow_forward</span></button></div></div>`;
+    root.querySelector('#learn-back').onclick=()=>this.navigate('overview'); root.querySelector('#learn-audio').onclick=e=>speak(v.hanzi,e.currentTarget); root.querySelector('#learn-audio-top').onclick=e=>speak(v.hanzi,e.currentTarget); root.querySelector('#example-audio').onclick=e=>speak(v.example.hanzi,e.currentTarget); root.querySelector('#learn-ask-ai').onclick=()=>this.openAiAssistant(v); root.querySelector('#learn-next').onclick=()=>{if(peekCard(v.id).reps===0)learnWord(v.id);else review(v.id,1);this.learnIndex++;this.renderShell();this.renderLearnCard(root);};
+  }
+
+  startQuiz(root,mode=this.quizMode){ this.quizMode=mode; this.quizIndex=0; this.quizScore=0; this.nextQuiz(root); }
+  makeQuestion(){
+    let target=pick(VOCAB,1)[0], prompt='', options=[];
+    const distractors=pick(VOCAB.filter(x=>x.id!==target.id),3),pool=shuffle([...distractors,target]);
+    if(this.quizMode==='listen'){
+      prompt=`<button id="quiz-main-audio" class="mx-auto w-20 h-20 rounded-full bg-[#edf4ff] text-[#173B6C] hover:bg-[#173B6C] hover:text-white flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-4xl">volume_up</span></button><p class="text-sm text-[#64717D] mt-3">Nghe và chọn nghĩa tiếng Việt đúng</p>`;
+      options=pool.map(o=>({html:esc(o.meaning),id:o.id}));
+    }else if(this.quizMode==='pinyin'){
+      prompt=`<span class="text-sm font-semibold text-[#64717D] mb-1">Pinyin</span><h1 class="text-4xl font-bold text-[#173B6C] mb-2">${esc(target.pinyin)}</h1><p class="text-sm text-[#64717D]">Chọn chữ Hán đúng</p>`;
+      options=pool.map(o=>({html:`<span class="text-3xl font-bold" style="font-family:'Noto Sans SC'">${esc(o.hanzi)}</span>`,id:o.id}));
+    }else if(this.quizMode==='cloze'){
+      let candidates=VOCAB.filter(v=>v.example&&v.example.hanzi.includes(v.hanzi)); if(candidates.length)target=pick(candidates,1)[0];
+      const ds=pick(VOCAB.filter(x=>x.id!==target.id),3); const p2=shuffle([...ds,target]);
+      const blank=target.example.hanzi.replace(target.hanzi,'______');
+      prompt=`<span class="text-sm font-semibold text-[#64717D] mb-2">Điền từ thích hợp</span><h1 class="text-2xl md:text-3xl font-bold text-[#173B6C] mb-2" style="font-family:'Noto Sans SC'">${esc(blank)}</h1><p class="text-sm text-[#64717D]">${esc(target.example.meaning)}</p>`;
+      options=p2.map(o=>({html:`<span style="font-family:'Noto Sans SC'" class="font-bold">${esc(o.hanzi)}</span> <span class="text-sm text-[#64717D]">· ${esc(o.meaning)}</span>`,id:o.id}));
+    }else{
+      prompt=`<span class="text-sm font-semibold text-[#64717D] mb-1">${esc(target.pinyin)}</span><div class="flex items-center justify-center gap-3"><h1 class="text-5xl font-bold text-[#173B6C] mb-2" style="font-family:'Noto Sans SC'">${esc(target.hanzi)}</h1><button id="quiz-main-audio" class="p-2 -mt-1 bg-[#edf4ff] text-[#173B6C] hover:bg-[#173B6C] hover:text-white rounded-full shadow-sm"><span class="material-symbols-outlined text-lg">volume_up</span></button></div><p class="text-sm text-[#64717D] mt-1">Chọn nghĩa tiếng Việt đúng của từ này</p>`;
+      options=pool.map(o=>({html:esc(o.meaning),id:o.id}));
+    }
+    const answerIdx=options.findIndex(o=>o.id===target.id); return {target,prompt,options,answerIdx,answered:false};
+  }
+  nextQuiz(root){ if(this.quizIndex>=this.quizTotal){this.renderQuizSummary(root);return;} this.quiz=this.makeQuestion(); this.renderQuizQuestion(root); }
+  renderQuizQuestion(root){
+    const q=this.quiz,i=this.quizIndex+1,p=Math.round(i/this.quizTotal*100);
+    const modes=[['choice','Hán tự → nghĩa'],['listen','Nghe → nghĩa'],['pinyin','Pinyin → Hán tự'],['cloze','Điền khuyết']];
+    root.innerHTML=`<div class="flex-1 flex flex-col justify-between max-w-md mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]"><div><div class="flex items-center justify-between mb-3"><button id="quiz-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C]"><span class="material-symbols-outlined">close</span></button><div class="text-center"><span class="text-xs font-bold text-[#173B6C] bg-[#edf4ff] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${q.target.level}</span><h2 class="text-base font-bold text-[#173B6C] mt-0.5">Luyện tập từ vựng</h2></div><div class="w-8"></div></div><div class="flex flex-wrap justify-center gap-2 mb-4">${modes.map(([id,name])=>`<button data-mode="${id}" class="mode-pill ${this.quizMode===id?'active':''} px-3 py-1.5 rounded-full text-[11px] font-semibold border border-[#DCE4E1] bg-white text-[#64717D] transition-all">${name}</button>`).join('')}</div><div class="flex items-center justify-between text-xs font-semibold text-[#64717D] mb-1.5"><span>Câu hỏi ${i} / ${this.quizTotal}</span><span class="text-[#006C44]">Điểm: ${this.quizScore}/${this.quizIndex}</span></div><div class="w-full bg-[#DCE4E1] rounded-full h-2 overflow-hidden mb-6"><div class="bg-[#4CAF7D] h-2 rounded-full" style="width:${p}%"></div></div><div class="bg-surface border border-border rounded-2xl p-6 shadow-sm mb-5 flex flex-col items-center text-center relative overflow-hidden">${q.prompt}</div><div class="flex flex-col gap-3" id="quiz-options">${q.options.map((o,idx)=>`<button data-idx="${idx}" class="quiz-option w-full bg-surface border border-[#DCE4E1] rounded-xl p-4 text-left flex justify-between items-center shadow-[0px_2px_8px_rgba(23,59,108,0.04)] hover:bg-[#edf4ff]/50 transition-all font-medium text-[#173B6C] active:scale-[0.99] text-base"><span>${o.html}</span><span class="option-icon material-symbols-outlined text-xl opacity-0">check_circle</span></button>`).join('')}</div><div id="quiz-feedback" class="text-center text-sm font-semibold mt-4 hidden"></div></div><div class="mt-6 pt-2 pb-4"><button id="quiz-next" class="hidden w-full py-4 bg-[#4CAF7D] hover:bg-[#006C44] text-white font-bold text-base rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2"><span>${i===this.quizTotal?'Xem kết quả':'Câu tiếp theo'}</span><span class="material-symbols-outlined">arrow_forward</span></button></div></div>`;
+    root.querySelector('#quiz-back').onclick=()=>this.navigate('overview'); root.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>this.startQuiz(root,b.dataset.mode)); const aud=root.querySelector('#quiz-main-audio'); if(aud)aud.onclick=e=>speak(q.target.hanzi,e.currentTarget);
+    root.querySelectorAll('.quiz-option').forEach(btn=>btn.onclick=()=>this.answerQuiz(root,Number(btn.dataset.idx)));
+    root.querySelector('#quiz-next').onclick=()=>{this.quizIndex++;this.nextQuiz(root);};
+  }
+  answerQuiz(root,idx){
+    if(this.quiz.answered)return; this.quiz.answered=true; const ok=idx===this.quiz.answerIdx; if(ok){this.quizScore++;tone('ok')}else tone('bad'); recordQuiz(ok,this.quiz.target.id); this.renderShell();
+    const opts=[...root.querySelectorAll('.quiz-option')]; opts.forEach((btn,i)=>{btn.disabled=true;if(i===this.quiz.answerIdx){btn.classList.remove('border-[#DCE4E1]');btn.classList.add('bg-[#E8F5E9]','border-[#4CAF7D]','border-2','text-[#005232]');btn.querySelector('.option-icon').classList.remove('opacity-0');btn.querySelector('.option-icon').classList.add('text-[#4CAF7D]');}else if(i===idx&&!ok){btn.classList.remove('border-[#DCE4E1]');btn.classList.add('bg-[#FFEBEE]','border-[#C94A4A]','border-2','text-[#C94A4A]');const ic=btn.querySelector('.option-icon');ic.textContent='cancel';ic.classList.remove('opacity-0');ic.classList.add('text-[#C94A4A]');}});
+    const fb=root.querySelector('#quiz-feedback');fb.classList.remove('hidden');fb.classList.add(ok?'text-[#006C44]':'text-[#C94A4A]');fb.textContent=ok?'✅ Chính xác!':'❌ Chưa đúng — đáp án đúng đã được đánh dấu xanh.';root.querySelector('#quiz-next').classList.remove('hidden');
+  }
+  renderQuizSummary(root){
+    const pct=Math.round(this.quizScore/this.quizTotal*100); root.innerHTML=`<div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn"><div class="w-28 h-28 rounded-full bg-gradient-to-tr from-[#e4effd] to-[#edf4ff] p-3 flex items-center justify-center mb-5 border-4 border-white shadow-md"><img class="w-full h-full object-contain" src="${PANDA_CHEER}" alt="Cheering Panda"></div><h2 class="text-2xl md:text-3xl font-bold text-[#173B6C] mb-2">Hoàn thành bài kiểm tra! 🎉</h2><p class="text-sm text-[#64717D] mb-6">Bạn đã trả lời đúng <b>${this.quizScore}/${this.quizTotal}</b> câu hỏi (đạt <b>${pct}%</b>).</p><div class="w-full bg-surface border border-border rounded-2xl p-4 mb-6 shadow-sm flex items-center justify-around"><div class="text-center"><span class="text-xs text-[#64717D]">Chính xác</span><div class="text-2xl font-bold text-[#4CAF7D]">${pct}%</div></div><div class="w-px h-10 bg-[#DCE4E1]"></div><div class="text-center"><span class="text-xs text-[#64717D]">Số câu đúng</span><div class="text-2xl font-bold text-[#173B6C]">${this.quizScore} / ${this.quizTotal}</div></div></div><div class="w-full flex flex-col gap-3"><button id="summary-srs" class="w-full py-4 bg-[#173B6C] hover:bg-[#102B50] text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2"><span>Tiếp tục: Ôn tập SRS</span><span class="material-symbols-outlined">refresh</span></button><button id="summary-retry" class="w-full py-3 bg-white border border-[#DCE4E1] text-[#173B6C] font-semibold rounded-xl hover:bg-[#F7FAF8]">Làm lại bài kiểm tra</button></div></div>`; root.querySelector('#summary-srs').onclick=()=>this.navigate('srs');root.querySelector('#summary-retry').onclick=()=>this.startQuiz(root,this.quizMode);
+  }
+
+  startSrs(root){ this.srsSession=dueItems(); this.srsIndex=0; this.srsFlipped=false; this.renderSrsCard(root); }
+  renderSrsCard(root){
+    if(!this.srsSession.length){ root.innerHTML=`<div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn"><div class="w-24 h-24 rounded-full bg-[#E8F5E9] flex items-center justify-center text-[#4CAF7D] mb-4"><span class="material-symbols-outlined text-5xl">task_alt</span></div><h2 class="text-2xl font-bold text-[#173B6C] mb-2">Chưa có từ đến hạn ôn</h2><p class="text-[#64717D] mb-6">SRS sẽ đưa từ trở lại đúng ngày cần ôn. Bạn vẫn có thể luyện ngẫu nhiên nếu muốn.</p><div class="w-full flex flex-col gap-3"><button id="random-srs" class="w-full py-3.5 bg-[#173B6C] text-white font-semibold rounded-xl">Ôn ngẫu nhiên 6 từ</button><button id="srs-home-empty" class="w-full py-3 bg-white border border-[#DCE4E1] text-[#173B6C] font-semibold rounded-xl">Quay về trang chủ</button></div></div>`;root.querySelector('#random-srs').onclick=()=>{this.srsSession=pick(VOCAB,6);this.renderSrsCard(root)};root.querySelector('#srs-home-empty').onclick=()=>this.navigate('overview');return; }
+    if(this.srsIndex>=this.srsSession.length){ root.innerHTML=this.emptyPanel('task_alt','Tuyệt vời! Hoàn thành ôn tập 🌟','Bạn đã hoàn thành phiên ôn tập SRS hôm nay. Trí nhớ của bạn đã được củng cố!','Xem bảng thống kê tiến độ','stats'); this.bindEmpty(root); return; }
+    const v=this.srsSession[this.srsIndex],i=this.srsIndex+1,total=this.srsSession.length,p=Math.round(i/total*100);
+    root.innerHTML=`<div class="flex-1 flex flex-col justify-between max-w-md mx-auto w-full px-4 py-4 md:py-6 animate-fadeIn min-h-[calc(100vh-120px)]"><div><div class="flex items-center justify-between mb-3"><button id="srs-back" class="p-2 -ml-2 rounded-full hover:bg-slate-100 text-[#173B6C]"><span class="material-symbols-outlined">arrow_back</span></button><div class="text-center"><span class="text-xs font-bold text-[#006C44] bg-[#E8F5E9] px-2.5 py-0.5 rounded-full uppercase tracking-wider">${v.level}</span><h2 class="text-base font-bold text-[#173B6C] mt-0.5">Ôn tập định kỳ SRS</h2></div><div class="w-8"></div></div><div class="flex items-center justify-between text-xs font-semibold text-[#64717D] mb-1.5"><span>Từ cần ôn ${i} / ${total}</span><span class="text-[#006C44]">${p}%</span></div><div class="w-full bg-[#DCE4E1] rounded-full h-2 overflow-hidden mb-4"><div class="bg-[#4CAF7D] h-2 rounded-full" style="width:${p}%"></div></div><p id="srs-hint" class="text-center text-xs md:text-sm text-[#64717D] mb-4">${this.srsFlipped?'💡 Hãy đánh giá mức độ ghi nhớ của bạn:':'👆 Nhớ lại nghĩa & cách đọc, sau đó chạm thẻ để lật:'}</p><div class="perspective-1000 w-full aspect-[4/3] sm:aspect-square relative cursor-pointer select-none" id="srs-card"><div id="srs-inner" class="srs-card-flip w-full h-full rounded-2xl shadow-[0px_4px_16px_rgba(23,59,108,0.06)] border border-[#DCE4E1] ${this.srsFlipped?'flipped':''}"><div class="srs-card-front bg-surface rounded-2xl p-6 flex flex-col items-center justify-center text-center"><span class="text-xs font-bold text-[#64717D] bg-[#edf4ff] px-3 py-1 rounded-full uppercase tracking-wider mb-4">Chữ Hán</span><h1 class="text-7xl font-bold text-[#173B6C] tracking-tight" style="font-family:'Noto Sans SC'">${esc(v.hanzi)}</h1><div class="mt-8 flex flex-col items-center gap-1.5 text-[#64717D]"><span class="w-10 h-10 rounded-full bg-[#F7FAF8] border border-[#DCE4E1] flex items-center justify-center text-[#173B6C] shadow-sm animate-bounce"><span class="material-symbols-outlined text-xl">touch_app</span></span><span class="text-xs font-semibold uppercase tracking-wider">Chạm để lật xem đáp án</span></div></div><div class="srs-card-back bg-surface border-2 border-[#173B6C] rounded-2xl p-6 flex flex-col items-center justify-between text-center"><div><h2 class="text-5xl font-bold text-[#173B6C]" style="font-family:'Noto Sans SC'">${esc(v.hanzi)}</h2><span class="text-2xl font-bold text-[#4CAF7D] mt-1.5 block">${esc(v.pinyin)}</span></div><div class="w-full py-2.5 border-y border-[#DCE4E1] bg-[#F7FAF8] rounded-lg"><span class="text-[11px] text-[#64717D] uppercase font-semibold">Nghĩa tiếng Việt</span><p class="text-base font-bold text-[#173B6C] mt-0.5">${esc(v.meaning)}</p></div><div class="flex items-center gap-2 mt-1"><button id="srs-audio" class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] text-xs font-semibold transition-colors shadow-sm"><span class="material-symbols-outlined text-base">volume_up</span><span>Phát âm</span></button><button id="srs-ask-ai" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#E8F5E9] hover:bg-[#C8E6C9] text-[#006C44] text-xs font-semibold transition-colors shadow-sm"><span class="material-symbols-outlined text-base">auto_awesome</span><span>Mẹo Panda AI</span></button></div></div></div></div></div><div class="mt-6"><div class="grid grid-cols-3 gap-2.5"><button id="rate-hard" class="flex flex-col items-center justify-center py-3 px-2 bg-surface border border-[#C94A4A] text-[#C94A4A] hover:bg-[#FFEBEE] active:scale-95 rounded-xl transition-all shadow-sm"><span class="material-symbols-outlined text-2xl mb-0.5">sentiment_dissatisfied</span><span class="text-xs font-bold">Khó</span><span class="text-[10px] text-[#64717D] mt-0.5">Ôn lại sớm</span></button><button id="rate-good" class="flex flex-col items-center justify-center py-3 px-2 bg-surface border border-[#173B6C] text-[#173B6C] hover:bg-[#edf4ff] active:scale-95 rounded-xl transition-all shadow-sm"><span class="material-symbols-outlined text-2xl mb-0.5">sentiment_neutral</span><span class="text-xs font-bold">Vừa</span><span class="text-[10px] text-[#64717D] mt-0.5">Theo lịch SRS</span></button><button id="rate-easy" class="flex flex-col items-center justify-center py-3 px-2 bg-[#4CAF7D] text-white hover:bg-[#006C44] active:scale-95 rounded-xl transition-all shadow-md"><span class="material-symbols-outlined text-2xl mb-0.5">sentiment_very_satisfied</span><span class="text-xs font-bold">Dễ</span><span class="text-[10px] text-white/80 mt-0.5">Giãn lịch ôn</span></button></div><div class="mt-4 p-3 bg-surface border border-border rounded-xl flex items-center gap-3"><span class="text-xl">🐼</span><p class="text-xs text-[#64717D]">Hãy tự đánh giá đúng mức độ nhớ để thuật toán SRS lên lịch phù hợp cho bạn.</p></div></div></div>`;
+    const inner=root.querySelector('#srs-inner'),hint=root.querySelector('#srs-hint'),audio=root.querySelector('#srs-audio'),aiBtn=root.querySelector('#srs-ask-ai');
+    root.querySelector('#srs-card').onclick=e=>{if(e.target.closest('#srs-audio')||e.target.closest('#srs-ask-ai'))return;this.srsFlipped=!this.srsFlipped;inner.classList.toggle('flipped',this.srsFlipped);hint.textContent=this.srsFlipped?'💡 Hãy đánh giá mức độ ghi nhớ của bạn:':'👆 Nhớ lại nghĩa & cách đọc, sau đó chạm thẻ để lật:';if(this.srsFlipped)speak(v.hanzi,audio);};
+    audio.onclick=e=>{e.stopPropagation();speak(v.hanzi,audio)};
+    aiBtn.onclick=e=>{e.stopPropagation();this.openAiAssistant(v,'mnemonic')};
+    root.querySelector('#srs-back').onclick=()=>this.navigate('overview');
+    const rate=g=>{review(v.id,g);this.srsIndex++;this.srsFlipped=false;this.renderShell();this.renderSrsCard(root)};
+    root.querySelector('#rate-hard').onclick=()=>rate(0);root.querySelector('#rate-good').onclick=()=>rate(1);root.querySelector('#rate-easy').onclick=()=>rate(2);
+  }
+
+  renderBrowse(root){
+    const q=(this.browseQuery||'').toLowerCase().trim();
+    const list=VOCAB.filter(v=>{const c=peekCard(v.id);const status=c.reps>=2?'mastered':c.reps>0?'learning':'new';return(!this.browseLevel||v.level===this.browseLevel)&&(!this.browseStatus||status===this.browseStatus)&&(!q||v.hanzi.includes(q)||v.pinyin.toLowerCase().includes(q)||v.meaning.toLowerCase().includes(q));});
+    const levelPills=[['','Tất cả'],['HSK1','HSK 1'],['HSK2','HSK 2']],statusPills=[['','Mọi trạng thái'],['new','Chưa học'],['learning','Đang học'],['mastered','Đã thuộc']];
+    root.innerHTML=`<div class="flex-1 w-full max-w-[1000px] mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeIn"><div class="flex items-center justify-between mb-5"><div><h1 class="text-2xl md:text-3xl font-bold text-[#173B6C]">Tra cứu từ vựng</h1><p class="text-sm text-[#64717D] mt-0.5">Tìm trong ${VOCAB.length} từ HSK 1–2 theo Hán tự, pinyin hoặc nghĩa tiếng Việt.</p></div><div class="hidden sm:flex w-14 h-14 rounded-full bg-[#edf4ff] items-center justify-center text-[#173B6C]"><span class="material-symbols-outlined text-3xl">search</span></div></div><div class="bg-surface border border-border rounded-2xl p-4 md:p-5 shadow-sm mb-5"><div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#64717D]">search</span><input id="browse-search" value="${esc(this.browseQuery||'')}" class="w-full pl-10 pr-4 py-3 rounded-xl border-[#DCE4E1] focus:border-[#173B6C] focus:ring-[#173B6C]/20" placeholder="Tìm: 你好, nǐ, xin chào..."></div><div class="mt-4 flex flex-col gap-3"><div class="flex flex-wrap gap-2">${levelPills.map(([id,name])=>`<button data-level="${id}" class="filter-pill ${this.browseLevel===id?'active':''} px-3 py-1.5 rounded-full border border-[#DCE4E1] text-xs font-semibold text-[#64717D] bg-white">${name}</button>`).join('')}</div><div class="flex flex-wrap gap-2">${statusPills.map(([id,name])=>`<button data-status="${id}" class="filter-pill ${this.browseStatus===id?'active':''} px-3 py-1.5 rounded-full border border-[#DCE4E1] text-xs font-semibold text-[#64717D] bg-white">${name}</button>`).join('')}</div></div></div><div class="flex items-center justify-between mb-3"><span class="text-sm font-semibold text-[#173B6C]">${list.length} kết quả</span><span class="text-xs text-[#64717D]">✓ = đã thuộc • ✨ = Gia sư AI</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-3">${list.length?list.map(v=>{const c=peekCard(v.id),status=c.reps>=2?'Đã thuộc':c.reps>0?'Đang học':'Chưa học';return `<div class="bg-surface rounded-2xl p-4 shadow-[0px_2px_8px_rgba(23,59,108,0.04)] border border-border hover:border-[#4CAF7D]/50 transition-colors"><div class="flex items-start justify-between gap-3"><div><div class="flex items-center gap-2 flex-wrap"><span class="text-2xl font-bold text-[#173B6C]" style="font-family:'Noto Sans SC'">${esc(v.hanzi)}</span><span class="text-[#006C44] text-sm font-semibold">${esc(v.pinyin)}</span><span class="text-[10px] px-2 py-0.5 rounded-full ${v.level==='HSK1'?'bg-[#E3F2FD] text-[#173B6C]':'bg-[#F3E5F5] text-[#6A1B9A]'}">${v.level}</span><span class="text-[10px] ${c.reps>=2?'text-[#006C44]':'text-[#64717D]'}">${c.reps>=2?'✓ ':''}${status}</span></div><div class="text-sm mt-1 text-[#17212B]">${esc(v.meaning)}</div></div><div class="flex items-center gap-1.5 shrink-0"><button class="browse-ai p-2 rounded-full bg-[#edf4ff] hover:bg-[#173B6C] hover:text-white text-[#173B6C] transition-colors" data-vocab-id="${v.id}" title="Hỏi Gia sư Panda AI"><span class="material-symbols-outlined text-lg">auto_awesome</span></button><button class="browse-audio p-2 rounded-full bg-[#edf4ff] text-[#173B6C]" data-hanzi="${esc(v.hanzi)}"><span class="material-symbols-outlined">volume_up</span></button></div></div><div class="mt-3 pt-3 border-t border-dashed border-[#DCE4E1] text-xs text-[#64717D]"><div class="text-[#173B6C] font-medium" style="font-family:'Noto Sans SC'">${esc(v.example.hanzi)}</div><div class="mt-0.5">${esc(v.example.pinyin)}</div><div class="mt-0.5">${esc(v.example.meaning)}</div></div></div>`}).join(''):'<div class="md:col-span-2 text-center py-12 text-[#64717D]">Không tìm thấy từ phù hợp 😢</div>'}</div></div>`;
+    root.querySelector('#browse-search').oninput=e=>{this.browseQuery=e.target.value;this.renderBrowse(root);const input=root.querySelector('#browse-search');if(input){input.focus();input.setSelectionRange(input.value.length,input.value.length);}};root.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>{this.browseLevel=b.dataset.level;this.renderBrowse(root)});root.querySelectorAll('[data-status]').forEach(b=>b.onclick=()=>{this.browseStatus=b.dataset.status;this.renderBrowse(root)});root.querySelectorAll('.browse-audio').forEach(b=>b.onclick=e=>speak(b.dataset.hanzi,e.currentTarget));root.querySelectorAll('.browse-ai').forEach(b=>b.onclick=()=>{const item=VOCAB.find(x=>x.id===b.dataset.vocabId);if(item)this.openAiAssistant(item);});
+  }
+
+  renderStats(root){
+    const acc=quizAccuracy(),due=dueItems().length,learned=learnedCount(),mastered=masteredCount();
+    const days=[...Array(7)].map((_,idx)=>{const d=new Date();d.setDate(d.getDate()-(6-idx));const key=localDateString(d);return{day:['CN','T2','T3','T4','T5','T6','T7'][d.getDay()],count:state.history[key]?.reviews||0};}); const max=Math.max(...days.map(x=>x.count),1);
+    const h1=VOCAB.filter(v=>v.level==='HSK1').length,h2=VOCAB.filter(v=>v.level==='HSK2').length,l1=learnedCount('HSK1'),l2=learnedCount('HSK2'),p1=Math.round(l1/h1*100),p2=Math.round(l2/h2*100);
+    root.innerHTML=`<div class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeIn"><div class="flex items-center justify-between mb-6"><div><h1 class="text-2xl md:text-3xl font-bold text-[#173B6C]">Thống kê học tập</h1><p class="text-sm text-[#64717D] mt-0.5">Dữ liệu thật được tính từ hoạt động học, quiz và SRS của bạn.</p></div><div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#edf4ff] p-1 border-2 border-white shadow-sm flex items-center justify-center"><img class="w-full h-full object-contain" src="${PANDA_STATS}" alt="Panda Stats"></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">${this.metricCard('menu_book','#E8F5E9','#006C44',learned,'Từ đã học')}${this.metricCard('workspace_premium','#FFF8E1','#F9A825',mastered,'Từ đã thuộc')}${this.metricCard('local_fire_department','#FFF3E0','#E65100',state.streak,'Ngày liên tiếp')}${this.metricCard('psychology','#E3F2FD','#173B6C',`${acc}%`,'Độ chính xác quiz')}</div><div class="bg-surface border border-border rounded-2xl p-5 md:p-6 shadow-[0px_4px_12px_rgba(23,59,108,0.04)] mb-6"><div class="flex justify-between items-center mb-6"><div><h3 class="text-base font-bold text-[#173B6C]">Tiến độ học 7 ngày qua</h3><p class="text-xs text-[#64717D]">Số lượt học / ôn / quiz được ghi nhận</p></div><span class="text-xs font-semibold px-2.5 py-1 bg-[#edf4ff] text-[#173B6C] rounded-full">Tổng: ${days.reduce((s,x)=>s+x.count,0)} lượt</span></div><div class="flex items-end justify-between h-44 gap-2 md:gap-4 pt-6">${days.map((x,idx)=>`<div class="flex flex-col items-center gap-2 flex-1 h-full justify-end"><div class="w-full bg-[#edf4ff] rounded-t-lg relative h-full flex items-end overflow-hidden"><div class="w-full ${idx===days.length-1?'bg-[#173B6C]':'bg-[#4CAF7D]'} rounded-t-lg relative" style="height:${Math.max(3,Math.round(x.count/max*100))}%"><div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[11px] font-bold text-[#173B6C]">${x.count}</div></div></div><span class="text-xs font-semibold text-[#64717D]">${x.day}</span></div>`).join('')}</div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">${this.levelProgress('Cấp độ HSK 1 (Cơ bản)',l1,h1,p1,'#4CAF7D')}${this.levelProgress('Cấp độ HSK 2 (Nâng cao)',l2,h2,p2,'#173B6C')}</div><div class="bg-white border border-[#DCE4E1] rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"><div><p class="text-sm font-semibold text-[#173B6C]">Quản lý dữ liệu</p><p class="text-xs text-[#64717D] mt-0.5">Dữ liệu lưu trong trình duyệt. Bạn có thể xuất JSON để sao lưu.</p></div><div class="flex gap-2 w-full sm:w-auto"><button id="export-data" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-[#173B6C] text-white text-xs font-semibold">⬇ Xuất tiến độ</button><button id="reset-data" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl bg-[#FFEBEE] text-[#C94A4A] border border-[#FFCDD2] text-xs font-semibold">Đặt lại dữ liệu</button></div></div><div class="mt-3 text-xs text-[#64717D]">Hiện có <b>${due}</b> từ đến hạn ôn SRS.</div></div>`;
+    root.querySelector('#export-data').onclick=()=>this.exportData();root.querySelector('#reset-data').onclick=()=>{if(confirm('Bạn có chắc chắn muốn xóa toàn bộ tiến độ học tập?')){localStorage.removeItem(STORAGE_KEY);state=blankState();save();this.renderShell();this.renderStats(root)}};
+  }
+  levelProgress(title,learned,total,pct,color){return `<div class="bg-surface border border-border rounded-2xl p-5 shadow-[0px_4px_12px_rgba(23,59,108,0.04)]"><div class="flex items-center justify-between mb-2"><span class="text-sm font-bold text-[#173B6C]">${title}</span><span class="text-xs font-bold text-[#006C44]">${learned}/${total} (${pct}%)</span></div><div class="w-full bg-[#E4EFFD] rounded-full h-3 overflow-hidden"><div class="h-full rounded-full" style="width:${pct}%;background:${color}"></div></div></div>`;}
+  exportData(){ const payload={app:'Panda Lingua',version:2,exportedAt:new Date().toISOString(),vocabCount:VOCAB.length,state};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`panda-lingua-progress-${localDateString()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000); }
+  emptyPanel(icon,title,text,button,target){return `<div class="flex-1 flex flex-col items-center justify-center p-6 text-center max-w-md mx-auto animate-fadeIn"><div class="w-24 h-24 rounded-full bg-[#E8F5E9] flex items-center justify-center text-[#4CAF7D] mb-4"><span class="material-symbols-outlined text-5xl">${icon}</span></div><h2 class="text-2xl font-bold text-[#173B6C] mb-2">${title}</h2><p class="text-[#64717D] mb-6">${text}</p><button data-empty-target="${target}" class="w-full py-3.5 bg-[#173B6C] text-white font-semibold rounded-xl shadow hover:bg-[#102B50]">${button}</button></div>`;}
+  bindEmpty(root){const b=root.querySelector('[data-empty-target]');if(b)b.onclick=()=>this.navigate(b.dataset.emptyTarget);}
+}
+
+document.addEventListener('DOMContentLoaded',()=>{window.appInstance=new PandaApp();});
+</script>
+</body>
+</html>
